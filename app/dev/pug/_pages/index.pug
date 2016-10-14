@@ -1,0 +1,301 @@
+extends ../base
+
+block title
+	| Крутой сайт за 3000 рублей
+
+block main-content
+	section.main-screen
+		.main-screen__wrap
+			h1.main-screen__header
+				| Запустите ваш бизнес в он-лайн
+				br
+				| за 3000 рублей сегодня!
+				small Сайт и инструменты аналитики с возможностью развития
+			a.btn.btn--main.btn--order(href="#" data-msg="Кнопка на гланом экране") Запустить бизнес
+
+	section.tabs-section.tabs-section--top#start
+		.tabs-section__wrap
+			header.tabs-section__header
+				| Что вы получите
+		.tabs-section__container.tabs-section__container--flex
+			aside.tabs-section__tabs
+				ul.tabs-section__list
+					li.tabs-section__item
+						a.tabs-section__tab.tabs-section__tab--active(href="#" data-number="1")
+							.tabs-section__tab-img
+								include ../svg/funnel.pug
+							.tabs-section__tab-descr
+								header.tabs-section__tab-header Одностраничный сайт
+								p Для потока потенциальных клиентов. Он будет эстетичным и адаптивным. Плюс, вы сможете самостоятельно редактировать некоторые текста после его запуска.
+					li.tabs-section__item
+						a.tabs-section__tab(href="#" data-number="2")
+							.tabs-section__tab-img
+								include ../svg/graph.pug
+							.tabs-section__tab-descr
+								header.tabs-section__tab-header Инструменты аналитики
+								p Покажут, откуда люди идут на сайт и как они себя ведут. Своевременная реакция на эту обратную связь поможет значительно увеличить конверсию.
+					li.tabs-section__item
+						a.tabs-section__tab(href="#" data-number="3")
+							.tabs-section__tab-img
+								include ../svg/paper-plane.pug
+							.tabs-section__tab-descr
+								header.tabs-section__tab-header Возможность развития
+								p Работа на этом не заканчивается. С ростом вашего бизнеса вам будет нужен более сложный интернет-ресурс. Мы сможем вместе вырастить его из этого маленького решения.
+
+			.tabs-section__content
+				ul.tabs-section__content-list
+					li.tabs-section__content-item.tabs-section__content-item--active(data-number="1")
+						img(src="./static/img/tabs-section/content-1.png")
+					li.tabs-section__content-item.tabs-section__content-item--moved-left(data-number="2")
+						img(src="./static/img/tabs-section/mockup.png")
+					li.tabs-section__content-item(data-number="3")
+						.tabs-section__rocket
+							include ../svg/rocket.pug
+							include ../svg/fire.pug
+
+	section.portfolio-section#portfolio
+		.portfolio-section__wrap
+			header.portfolio-section__header
+				| Наши работы
+			.portfolio-section__grid
+				a(href="#").portfolio-section__grid-item.portfolio-section__grid-item--wide
+					img(src="./static/img/portfolio-section/small/direct.png" alt="direct-all-in")
+					.portfolio-section__grid-info
+						b Direct-All-In Агенство по контекстной рекламе
+						p Вертка корпоративного сайта
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item
+					img(src="./static/img/portfolio-section/small/redline.png" alt="redline")
+					.portfolio-section__grid-info
+						b Redline Строительная компания
+						p Корпоративный сайт и интеграция в CMS 1C Битрикс
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item
+					img(src="./static/img/portfolio-section/small/pullart.png" alt="pullart")
+					.portfolio-section__grid-info
+						b Pull-Art натяжные потолки
+						p Полная разработка продающего сайта
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item.portfolio-section__grid-item--high
+					img(src="./static/img/portfolio-section/small/artmedika.png" alt="artmedika")
+					.portfolio-section__grid-info
+						b Артмедика
+						p Верстка корпоративного сайта
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item.portfolio-section__grid-item--high
+					img(src="./static/img/portfolio-section/small/realityhosting.png" alt="realityhosting")
+					.portfolio-section__grid-info
+						b Reality Hosting
+						p Разработка сервиса хостинга с нуля
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item
+					img(src="./static/img/portfolio-section/small/autores.png" alt="autores")
+					.portfolio-section__grid-info
+						b Авто ресурс негабаритные перевозки
+						p Разработка корпоративного сайта компании по грузоперевозкам
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item
+					img(src="./static/img/portfolio-section/small/nta.png" alt="nta")
+					.portfolio-section__grid-info
+						b НТА ремонт компьютеров
+						p Разработка имиджевого сайта
+						i Нажмите, чтобы узнать подробности
+				a(href="#").portfolio-section__grid-item.portfolio-section__grid-item--wide
+					img(src="./static/img/portfolio-section/small/acierto.png" alt="acierto")
+					.portfolio-section__grid-info
+						b Acierto Print Печать на футболках
+						p Верстка и разработка конструктора футболок
+						i Нажмите, чтобы узнать подробности
+
+	section.info-section
+		.info-section__wrap
+			.info-section__cta
+				p Пусть люди увидят вас!
+				a.btn.btn--main.btn--order(href="#" data-msg="Призыв Пусть люди") Заявить о себе
+
+	section.advantages-section
+		.advantages-section__wrap
+			header.advantages-section__header
+				| Три шага до вашего сайта
+			ul.advantages-section__list
+				li.advantages-section__item
+					header.advantages-section__item-header
+						| Контакт
+					p.advantages-section__item-descr
+						| Оставьте свой номер телефона или позвоните нам.
+				li.advantages-section__item
+					header.advantages-section__item-header
+						| Подготовка материалов
+					p.advantages-section__item-descr
+						| От Вас нужны будут текста, картинки, пожелания по структуре и цветовой гамме сайта.
+				li.advantages-section__item
+					header.advantages-section__item-header
+						| Исполнение
+					p.advantages-section__item-descr
+						| В течение 24 часов после получения материалов мы выполняем Ваш заказ.
+
+			form.form.form--inline(action="" method="")
+				label.form__label
+					span Один звонок и мы в деле!
+					input.form__input(type="tel" placeholder="+7 999 999-99-99")
+				input.btn.btn--order(type="submit" value="Перезвоните мне" data-msg="3 шага работы")
+
+	section.tabs-section.tabs-section--inline.tabs-section--no-padding#extra
+		header.tabs-section__attention-header
+			| Зоны роста
+		.tabs-section__container.tabs-section__container--no-width
+			.tabs-section__tabs.tabs-section__tabs--inline.tabs-section__tabs--design
+				ul.tabs-section__list.tabs-section__list--pos-ab
+					li.tabs-section__item
+						a.tabs-section__tab.tabs-section__tab--active(href="#" data-number="1")
+							.tabs-section__tab-img
+								include ../svg/idea.pug
+							header.tabs-section__tab-header
+								| Дизайн
+					li.tabs-section__item
+						a.tabs-section__tab(href="#" data-number="2")
+							.tabs-section__tab-img
+								include ../svg/pie-chart.pug
+							header.tabs-section__tab-header
+								| Аналитика
+					li.tabs-section__item
+						a.tabs-section__tab(href="#" data-number="3")
+							.tabs-section__tab-img
+								include ../svg/megaphone.pug
+							header.tabs-section__tab-header
+								| Реклама
+					li.tabs-section__item
+						a.tabs-section__tab(href="#" data-number="4")
+							.tabs-section__tab-img
+								include ../svg/settings.pug
+							header.tabs-section__tab-header
+								| функционал
+
+			.tabs-section__content.tabs-section__content--opacity-items.tabs-section__content--full-size
+				ul.tabs-section__content-list.tabs-section__content-list--full-size-items
+					li.tabs-section__content-item.tabs-section__content-item--design.tabs-section__content-item--active(data-number="1")
+						article.tabs-section__content-article
+							header.tabs-section__content-header
+								| Разработка дизайна
+							ul
+								li
+									.tabs-section__content-img
+										include ../svg/suitcase.pug
+									.tabs-section__content-descr
+										header Вариант 1: Подбор готового решения
+										p Подберем 3 варианта дизайна, подходящих к Вашему бизнесу. Варианты будем искать среди готовых работ лучших дизайнеров мира. Так Вы сможете сразу увидеть конечный результат и сообщить пожелания. Стоимость реализации 12 000 руб.
+								li
+									.tabs-section__content-img
+										include ../svg/idea.pug
+									.tabs-section__content-descr
+										header Вариант 2: Разработка уникального дизайна
+										p Наш профессионал разработает решение, которое поможет дифференцироваться среди конкурентов, передаст философию вашей компании и будет удобным пользователю. Стоимость реализации 30 000 руб.
+							a.btn.btn--main.btn--order(href="#" data-msg="Дизайн") Заказать разработку дизайна
+					li.tabs-section__content-item.tabs-section__content-item--analytics(data-number="2")
+						article.tabs-section__content-article
+							header.tabs-section__content-header
+								| Аналитика вашей сферы
+							ul
+								li
+									.tabs-section__content-img
+										include ../svg/binoculars.pug
+									.tabs-section__content-descr
+										header Конкурентная разведка
+										p Изучаем коммерческие предложения, сильные и слабые стороны ваших конкурентов. Это поможет определить пути дифференцирования.
+								li
+									.tabs-section__content-img
+										include ../svg/change.pug
+									.tabs-section__content-descr
+										header Оценка спроса
+										p Узнаем боли и потребности вашей целевой аудитории. Это поможет определить, какие стороны вашего продукта их интересуют и какое предложение они будут рады увидеть.
+								li
+									.tabs-section__content-img
+										include ../svg/gift.pug
+									.tabs-section__content-descr
+										header Упаковка Вашего бизнеса
+										p Извлечем всю суть вашей компании и, на основе предыдущих исследований, продумаем, как Вас преподнести. Давайте начнем с бесплатной консультации!
+
+							a.btn.btn--main.btn--order(href="#" data-msg="Аналитика") Получить бесплатную консультацию
+
+					li.tabs-section__content-item.tabs-section__content-item--adw(data-number="3")
+						article.tabs-section__content-article
+							header.tabs-section__content-header
+								| Привлечение клиентов
+							ul
+								li
+									.tabs-section__content-img
+										include ../svg/search.pug
+									.tabs-section__content-descr
+										header Настройка контекстной рекламы
+										p Подберем 3 варианта дизайна, подходящих к Вашему бизнесу. Варианты будем искать среди готовых работ лучших дизайнеров мира. Так Вы сможете сразу увидеть конечный результат и сообщить пожелания. Стоимость реализации 12 000 руб.
+								li
+									.tabs-section__content-img
+										include ../svg/network.pug
+									.tabs-section__content-descr
+										header Настройка рекламы в Соц сетях
+										p Наш профессионал разработает решение, которое поможет дифференцироваться среди конкурентов, передаст философию вашей компании и будет удобным пользователю. Стоимость реализации 30 000 руб.
+							a.btn.btn--main.btn--order(href="#" data-msg="Реклама") Заказать разработку дизайна
+
+					li.tabs-section__content-item.tabs-section__content-item--func(data-number="4")
+						.tabs-section__content-svg.tabs-section__content-svg--left
+							include ../svg/cog.pug
+							include ../svg/cog.pug
+							include ../svg/cog.pug
+						article.tabs-section__content-article
+							header.tabs-section__content-header
+								| Дополнительные технологии
+							ul
+								li
+									.tabs-section__content-img
+										include ../svg/login.pug
+									.tabs-section__content-descr
+										header Улучшение админки
+										p Позволит Вам редактировать все текста и картинки на сайте, а также запускать А/В тестирование для оценки эффективности разных вариантов предложения.
+								li
+									.tabs-section__content-img
+										include ../svg/magic-wand.pug
+									.tabs-section__content-descr
+										header Магия
+										p Разработка интерактивных элементов, конструкторов, 3D моделей, доступных для просмтотра прямо в брузере. Реализовать возможно практически любую идею.
+								li
+									.tabs-section__content-img
+										include ../svg/server.pug
+									.tabs-section__content-descr
+										header Бизнес-логика
+										p Включает в себя проектирование и подключение баз данных, внедрение CRM систем, разработку каталога вашей продукции и создание базы клиентов для последующих маркетинговых целей.
+							a.btn.btn--main.btn--order(href="#" data-msg="Дополнительные технологии") Получить бесплатную консультацию
+
+						.tabs-section__content-svg.tabs-section__content-svg--right
+							include ../svg/cog-2.pug
+							include ../svg/cog-2.pug
+							include ../svg/cog-2.pug
+							include ../svg/cog-2.pug
+
+	section.contacts-section#contacts
+		.contacts-section__wrap
+			.contacts-section__left
+				header.contacts-section__header
+					| Наши контакты
+				ul.contacts-section__list
+					li.contacts-section__item
+						.contacts-section__img
+							img(src="./static/img/contacts-section/icons/icon-mail.png")
+						.contacts-section__info
+							header Пишите нам
+							p: a(href="mailto:support@jokerinteractive.ru") support@jokerinteractive.ru
+					li.contacts-section__item
+						.contacts-section__img
+							img(src="./static/img/contacts-section/icons/icon-tel.png")
+						.contacts-section__info
+							header Звоните нам
+							p: a(href="tel:+79999999999") +7 (999) 999-99-99
+			.contacts-section__right
+				.contacts-section__header
+					| Напишите нам
+				form.form(method="post" action="/send-mail")
+					label.form__label
+						input.form__input(type="email" required placeholder="Ваш e-mail")
+					label.form__label
+						input.form__input(type="text" required placeholder="Ваше имя")
+					textarea.form__textarea(placeholder="Ваше сообщение" rows="7")
+					input.btn.btn--main(type="submit" value="Написать сообщение")

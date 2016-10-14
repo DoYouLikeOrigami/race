@@ -1,0 +1,60 @@
+.main-header
+	display: block
+	position: fixed
+
+	width: 100%
+	left: 0
+	top: 0
+
+	background: transparent
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.149)
+
+	z-index: 99
+
+	transition: $effect-time
+
+	&--moved
+		background: rgba(0, 0, 0, .702)
+
+		.main-header__logo
+			font-size: $fontXMd
+			line-height: $fontXMd
+
+	&__wrap
+		@include wrap
+		@include flex
+		max-width: 960px
+
+		@media #{$tablet}
+			padding: 0 15px
+
+		@media #{$mobile}
+			padding: 15px
+
+	&__logo
+		display: block
+
+		text-align: center
+		font-size: $fontBig
+		line-height: $fontBig
+		letter-spacing: 1px
+		color: $akcent-color
+
+		transition: $effect-time
+		outline: none
+
+		@media #{$tablet}
+			font-size: $fontXMd
+			line-height: $fontXMd
+			letter-spacing: 0
+
+		small
+			display: block
+			font-size: $fontMd
+			line-height: $fontMd
+			letter-spacing: 0
+
+			@media #{$tablet}
+				font-size: $fontMicro
+				line-height: $fontMicro

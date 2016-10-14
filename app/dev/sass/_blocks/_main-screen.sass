@@ -1,0 +1,30 @@
+.main-screen
+	display: block
+	position: relative
+
+	background: url(../img/main-screen/bg.jpg) center fixed
+	background-size: cover
+
+	&::before
+		@include before_darken
+
+	&__wrap
+		@include wrap
+		height: 100vh
+		min-height: 480px
+
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+		z-index: 1
+
+	&__header
+		@include page_header
+		font-weight: 700
+		color: $font-secondary-color
+
+		small
+			color: $font-secondary-color
+

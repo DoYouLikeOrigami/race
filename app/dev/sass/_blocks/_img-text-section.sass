@@ -1,0 +1,98 @@
+
+.img-text-section
+	margin-bottom: 60px
+
+	@media #{$tablet}
+		margin-bottom: 20px
+
+	&:nth-of-type(2n+1)
+		.img-text-section
+			&__wrap
+				flex-direction: row-reverse
+
+				@media #{$mobile}
+					flex-direction: column
+
+			&__text-block
+				margin: 0 0 0 60px
+
+				@media #{$tablet}
+					margin: 0
+
+	&--no-margin-mobile
+		@media #{$mobile}
+			margin-bottom: 0
+
+	&__wrap
+		@include wrap
+		@include flex
+		align-items: stretch
+		justify-content: flex-end
+		max-width: 1440px
+		padding: 0
+
+		@media #{$mobile}
+			flex-direction: column
+			align-items: center
+
+	&__text-block
+		max-width: 400px
+		margin-right: 60px
+		@include flex_column
+
+		@media #{$tablet}
+			width: 50%
+			box-sizing: border-box
+
+			align-items: center
+
+			padding: 25px 20px
+			margin: 0
+
+		@media #{$mobile}
+			width: 100%
+
+	&__header
+		display: block
+		margin-bottom: 60px
+
+		color: $special-color
+		text-transform: uppercase
+		font-size: $fontXBig
+		letter-spacing: 5px
+		font-weight: 300
+
+		@media #{$tablet}
+			margin-bottom: 20px
+			letter-spacing: 3px
+			font-size: $fontXMd
+
+		@media #{$mobile}
+			font-size: $fontBigMd
+			letter-spacing: 1px
+
+		&--main
+			color: $akcent-color
+			font-size: $fontLg
+
+			@media #{$tablet}
+				font-size: $fontXBig
+
+	&__par
+		font-size: $fontSm
+		color: $font-par-color
+		margin: 0 0 60px
+
+		@media #{$tablet}
+			margin: 0 0 40px
+
+	&__img-block
+		display: block
+		width: 50%
+
+		@media #{$mobile}
+			width: 100%
+
+		img
+			display: block
+			width: 100%

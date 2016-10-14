@@ -1,0 +1,42 @@
+.btn
+	display: inline-block
+	padding: 20px 30px
+
+	box-sizing: border-box
+
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-size: $fontXSm
+	font-weight: bold
+
+	background: transparent;
+	border: 1px solid $border-color
+
+	transition: $effect-time
+
+	@media #{$mobile}
+		padding: 20px
+
+	&:active
+		transform: translateY(3px)
+
+	&--main
+		color: $secondary-color
+		background: $akcent-color
+		border: none
+		font-weight: 700
+
+		&:hover
+			background: lighten($akcent-color, 10%)
+
+	&--popup
+		width: 270px
+		margin-bottom: 30px
+
+		&.btn--secondary
+			margin-bottom: 0
+
+	&--secondary
+		text-align: center
+		&:hover
+			background: $border-color

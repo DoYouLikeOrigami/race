@@ -1,0 +1,107 @@
+.contacts-section
+	padding: 140px 0
+	background: url("../img/contacts-section/bg-headphones.jpg") 0 3%, url("../img/contacts-section/bg-glasses.jpg") 45% 55%, url("../img/contacts-section/bg-clips.jpg") 2% 97%, url("../img/contacts-section/bg-pencil.jpg") right 95%, url("../img/contacts-section/bg-pen-holder.jpg") right 3%
+	background-repeat: no-repeat
+
+	@media #{$mobile}
+		background: url("../img/contacts-section/bg-pencil.jpg") right 95%, url("../img/contacts-section/bg-pen-holder.jpg") 125% 3%
+		background-repeat: no-repeat
+		padding: 100px 0 80px
+
+	&__wrap
+		@include wrap
+		@include flex
+
+		align-items: flex-start
+
+		@media #{$tablet}
+			flex-wrap: wrap
+
+	&__header
+		@include section_header
+		font-size: $fontBig
+		letter-spacing: 1px
+
+	&__left,
+	&__right
+		display: block
+		box-sizing: border-box
+
+	&__left
+		width: 400px
+
+		@media #{$tablet}
+			width: 100%
+			margin-bottom: 30px
+
+	&__right
+		width: 570px
+
+		@media #{$tablet}
+			width: 100%
+
+	&__list
+		@media #{$tablet}
+			@include flex
+			align-items: flex-start
+
+			@media #{$mobile}
+				flex-wrap: wrap
+
+	&__item
+		display: flex
+		margin-bottom: 55px
+
+		@media #{$tablet}
+			width: 50%
+			margin-bottom: 0
+
+		@media #{$mobile}
+			width: 100%
+			margin-bottom: 30px
+
+			&:last-of-type
+				margin-bottom: 0
+
+	&__img
+		display: block
+		position: relative
+
+		width: 60px
+		height: 60px
+
+		margin-right: 40px
+
+		background-image: url("../img/contacts-section/icons/icon-bg.png")
+		background-size: cover
+
+		img
+			display: inline-block
+			position: relative
+
+			top: 50%
+			left: 45%
+
+			transform: translate(-50%, -50%)
+
+	&__info
+		display: block
+		font-size: $fontSm
+
+		header
+			display: block
+
+			text-transform: uppercase
+			font-weight: 700
+			letter-spacing: 1px
+
+			margin-bottom: 15px
+
+		p, a
+			color: $font-par-color
+			font-size: $fontXSm
+
+	&__link
+		margin-left: 5px
+		&:first-of-type
+			margin-left: 0

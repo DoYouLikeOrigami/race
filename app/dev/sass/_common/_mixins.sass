@@ -1,0 +1,145 @@
+
+@mixin wrap
+	display: block
+	position: relative
+
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+@mixin page_section
+	padding-top: 150px
+
+	@media #{$tablet}
+		padding-top: 120px
+
+	@media #{$mobile}
+		padding-top: 80px
+
+@mixin flex
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+@mixin flex_column
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: flex-start
+
+@mixin section_header
+	display: inline-block
+	position: relative
+
+	padding: 30px 0
+	margin: 0 0 60px
+
+	font-size: $fontXBig
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: $font-color
+	font-weight: bold
+	//font-family: $header-font
+
+	border-bottom: 1px solid $border-color
+
+	&::after
+		content: ""
+
+		display: inline-block
+		position: absolute
+
+		bottom: 0
+		left: 0
+
+		width: 50px
+		height: 3px
+
+		background: $akcent-color
+
+	@media #{$mobile}
+		font-size: $fontBig
+		letter-spacing: 1px
+		margin-bottom: 40px
+		padding: 0 0 30px
+
+	@media #{$mobileSm}
+		font-size: $fontMd
+		padding-bottom: 20px
+
+@mixin page_header
+	display: block
+	margin-bottom: 60px
+
+	text-align: center
+	font-size: $fontLg
+	letter-spacing: 2px
+	text-transform: uppercase
+	color: $akcent-color
+	font-weight: 400
+
+	small
+		display: block
+		margin-top: 30px
+
+		font-size: $fontXMd
+		color: $akcent-color
+		font-weight: 400
+		text-transform: none
+		letter-spacing: 0
+
+		@media #{$tablet}
+			margin-top: 20px
+			font-weight: 300
+
+	@media #{$tablet}
+		font-size: $fontXBig
+		letter-spacing: 1px
+		margin-bottom: 50px
+
+	@media #{$mobile}
+		font-size: $fontXMd
+		margin-bottom: 40px
+
+@mixin attention-header
+	display: block
+
+	padding: 60px 0
+	background: $akcent-color
+
+	color: $font-secondary-color
+
+	font-size: $fontBig
+	font-weight: bold
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-align: center
+
+	@media #{$tablet}
+		padding: 40px 0
+		font-size: $fontXMd
+
+@mixin clearfix
+	&::before,
+	&::after
+		display: table
+		content: ""
+		line-height: 0
+	&::after
+		clear: both
+
+@mixin before_darken
+	content: ""
+
+	display: block
+	position: absolute
+
+	left: 0
+	top: 0
+
+	width: 100%
+	height: 100%
+
+	background: rgba(0, 0, 0, .702)
+	z-index: 0

@@ -1,0 +1,39 @@
+.socials
+	margin: 0
+	text-align: right
+
+	&__item
+		display: inline-block
+		margin-left: 35px
+
+		&:first-of-type
+			margin-left: 0
+
+	&__link
+		color: $font-footer-secondary-color
+		transition: $effect-time
+
+		&:hover
+			color: $akcent-color
+
+	&__icon
+		font-size: $fontBigMd
+
+	&__icon::before
+		display: inline-block
+		font-family: "fontello"
+
+		line-height: 1em
+
+		font-variant: normal
+		text-transform: none
+		font-style: normal
+
+	&__icon--vk:before
+		content: '\e800'
+
+	&__icon--fb:before
+		content: '\f09a'
+
+	&__icon--inst:before
+		content: '\f16d'
