@@ -66,12 +66,13 @@ var mainModule = (function () {
 			popup.classList.remove('popup--active');
 		});
 
+		// FIXME: и каждую отправку навешиваем новый листенер...
 		popupForm.addEventListener('submit', function (ev) {
 			ev.preventDefault();
 			var data = {
-            tel: formInput.value,
-            hidden: hiddenInput.value
-          };
+        tel: formInput.value,
+        hidden: hiddenInput.value
+      };
       request('post', '/order', data, function (response) {
         if (response === 'OK') {
           swal('Отличное решение!', 'Мы свяжемся с Вами в ближайшее время!', 'success');
