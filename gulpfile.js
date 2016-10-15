@@ -15,7 +15,7 @@ var
     pug: {
       pages: './app/dev/pug/_pages/*.pug',
       watch: ['./app/dev/pug/**/*.pug'],
-      convertFolder: './app'
+      convertFolder: './app/templates'
     }
   };
 
