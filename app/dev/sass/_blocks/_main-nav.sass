@@ -7,6 +7,22 @@
 		@media #{$mobile}
 			display: none
 
+		&--popup
+			@media #{$mobile}
+				display: block
+				margin-bottom: 20px
+
+			.main-nav__item
+				display: block
+				text-align: center
+				margin: 0
+
+			.main-nav__link
+				font-size: $fontXSm
+
+				&--active
+					border-bottom: none
+
 	&__item
 		display: inline-block
 		margin-right: 15px

@@ -8,6 +8,7 @@
 	letter-spacing: 1px
 	font-size: $fontXSm
 	font-weight: bold
+	text-align: center
 
 	background: transparent;
 	border: 1px solid $border-color
@@ -36,7 +37,24 @@
 		&.btn--secondary
 			margin-bottom: 0
 
+	&--alt
+		border: none
+		color: $font-secondary-color
+		font-weight: 400
+
 	&--secondary
-		text-align: center
 		&:hover
 			background: $border-color
+
+	&--nav
+		display: none
+		padding: 10px 15px
+		color: $akcent-color
+		border-color: $akcent-color
+
+		&:hover
+			background-color: $akcent-color
+			color: $secondary-color
+
+		@media #{$mobile}
+			display: block
