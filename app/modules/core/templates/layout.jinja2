@@ -13,7 +13,6 @@
 	</head>
 	<body>
 		<div class="container">
-<<<<<<< HEAD
           {% include "header.jinja2" %}
 
           {% block content%}{% endblock %}
@@ -25,17 +24,6 @@
           <script src="{{ url_for('static', filename='js/main.js') }}"></script>
           <script src="{{ url_for('static', filename='js/piwik.js') }}"></script>
           <noscript><p><img src="//stat.z-gu.ru/piwik.php?idsite=27" style="border:0;" alt="" /></p></noscript>
-=======
-			{% include "header.jinja2" %}
-
-		  {% block content%}{% endblock %}
-
-			{% include "footer.jinja2" %}
-			{% include "popup.jinja2" %}
-			<script src="{{ url_for('static', filename='js/jump.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/sweetalert2.min.js') }}"></script>
-			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
->>>>>>> 99bdb8b6bee8ce5629b55e6e8a1882f5b40de6da
 		</div>
 	</body>
 </html>

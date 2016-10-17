@@ -94,17 +94,10 @@ var mainModule = (function () {
 		popupForm.addEventListener('submit', function (ev) {
 			ev.preventDefault();
 			var data = {
-<<<<<<< HEAD
-        tel: formInput.value,
-        hidden: hiddenInput.value
-      };
-      request('post', '/order', data, function (response) {
-=======
             tel: formInput.value,
             hidden: hiddenInput.value
           };
       request(method, action, data, function (response) {
->>>>>>> 99bdb8b6bee8ce5629b55e6e8a1882f5b40de6da
         if (response === 'OK') {
           swal('Отличное решение!', 'Мы свяжемся с Вами в ближайшее время!', 'success');
         }
