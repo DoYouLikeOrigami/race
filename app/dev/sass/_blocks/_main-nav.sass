@@ -34,16 +34,18 @@
 		display: block
 		padding: 20px 5px
 
-		font-size: $fontXSm - 1px
+		font-size: $fontXSm
 		text-transform: uppercase
-		letter-spacing: 2px
+		letter-spacing: 1px
 		color: $font-secondary-color
 
 		transition: $effect-time
 
+		border-bottom: 3px solid transparent
+
 		&--active
 			color: $akcent-color
-			border-bottom: 2px solid $akcent-color
+			border-color: $akcent-color
 
 		&:hover
 			color: $akcent-color

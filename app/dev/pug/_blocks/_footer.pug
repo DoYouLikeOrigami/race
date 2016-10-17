@@ -12,14 +12,14 @@ footer.main-footer
 					| Новости
 				p.main-footer__text
 					| Подпишитесь. Мы будем делиться опытом и рассказывать о новых продуктах и спецпредложениях.
-				form.form--footer(action="" method="post")
-					input.form__input(type="text" placeholder="Ваш Email" required)
+				form.form.form--footer(action="subscribe" method="post")
+					input.form__input(type="email" placeholder="Ваш Email" required)
 					input.form__submit(type="submit" value="")
 
 	.main-footer__bottom
 		.main-footer__wrap.main-footer__wrap--bottom
 			.main-footer__bottom-left
-				| Jokerinteractive © 2016
+				| Jokerinteractive © 2012-2016
 			.main-footer__bottom-right
 				ul.socials
 					li.socials__item
@@ -28,6 +28,6 @@ footer.main-footer
 					li.socials__item
 						a.socials__link(href="#")
 							i.socials__icon.socials__icon--vk
-					li.socials__item
+					li.socials__item(style="display: none")
 						a.socials__link(href="#")
 							i.socials__icon.socials__icon--inst

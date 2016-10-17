@@ -62,6 +62,9 @@
 			&::placeholder
 				color: $font-footer-color
 
+			&:focus + .form__submit
+				border-color: $akcent-color
+
 		.form__submit
 			display: inline-block
 			box-sizing: border-box
@@ -72,8 +75,14 @@
 			border: 1px solid $font-footer-color
 			border-left: none
 
-			background: transparent
+			background-color: transparent
+			background-image: url("../img/form/footer-submit-icon.png")
+			background-repeat: no-repeat
+			background-position: center
 			vertical-align: top
+
+			&:hover
+				background-color: $akcent-color
 
 	&--popup
 		.form__input
@@ -83,6 +92,9 @@
 	&__label
 		display: inline-block
 		margin: 0 25px 20px 0
+
+		@media #{$mobile}
+			margin: 0 0 20px
 
 		&:nth-of-type(2n)
 			margin-right: 0
@@ -121,6 +133,9 @@
 		margin-bottom: 20px
 
 		resize: none
+
+		@media #{$mobile}
+			width: 270px
 
 	&__submit
 		transition: $effect-time

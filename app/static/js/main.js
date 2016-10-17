@@ -8,6 +8,9 @@ var mainModule = (function () {
 	var _setUpListeners = function () {
 		window.addEventListener('scroll', _scrollFunctions);
 		document.querySelector('.btn--nav').addEventListener('click', _showNavPopup);
+		document.querySelector('.form--mail').addEventListener('submit', _sendMail);
+		document.querySelector('.form--footer').addEventListener('submit', _subscribe);
+		document.querySelector('.form--steps').addEventListener('submit', _sendPhone);
 		_navScroll();
 		_orderBtns();
 	};
@@ -29,7 +32,8 @@ var mainModule = (function () {
 	var _jumpTo = function (event) {
 		event.preventDefault();
 		var navItems = document.querySelectorAll('.main-nav__link'),
-		    menuPopup = document.querySelector('.popup--menu');
+		    menuPopup = document.querySelector('.popup--menu'),
+		    mainHeaderHeight = document.querySelector('.main-header').clientHeight;
 
 		for (var i = 0; i < navItems.length; i++) {
 			navItems[i].classList.remove('main-nav__link--active');
@@ -38,7 +42,7 @@ var mainModule = (function () {
 		menuPopup.classList.remove('popup--active');
 
 		Jump(this.dataset.link, {
-			offset: -50
+			offset: mainHeaderHeight * (-1)
 		});
 
 		this.classList.add('main-nav__link--active');
@@ -130,6 +134,78 @@ var mainModule = (function () {
       }
     });
     xhr.send(JSON.stringify(data));
+  };
+
+  var _sendMail = function (event) {
+  	event.preventDefault();
+
+  	var form = this,
+  	    mail = form.querySelector('.form__input[type="email"]'),
+  	    name = form.querySelector('.form__input[type="text"]'),
+  	    msg = form.querySelector('.form__textarea'),
+  	    method = form.method,
+  	    action = form.action,
+  	    data = {
+            mail: mail.value,
+            name: name.value,
+            msg: msg.value
+          };
+
+  	request(method, action, data, function (response) {
+      if (response === 'OK') {
+        swal('Мы получили ваше сообщение!', 'Ответим в ближайшее время!', 'success');
+      }
+      else {
+        swal('Что-то пошло не так!', 'Попробуйте нам позвонить!', 'error');
+      }
+      mail.value = "";
+      name.value = "";
+      msg.value = "";
+    });
+  };
+
+  var _subscribe = function (event) {
+  	event.preventDefault();
+
+  	var form = this,
+  	    mail = form.querySelector('.form__input[type="email"]'),
+  	    method = form.method,
+  	    action = form.action,
+  	    data = {
+            mail: mail.value
+          };
+
+  	request(method, action, data, function (response) {
+      if (response === 'OK') {
+        swal('Подписка оформлена!', 'Полезные материалы скоро будут отправлены вам на почту.', 'success');
+      }
+      else {
+        swal('Что-то пошло не так!', 'Исправим в скором времени!', 'error');
+      }
+      mail.value = "";
+    });
+  };
+
+  var _sendPhone = function (event) {
+  	event.preventDefault();
+
+  	var form = this,
+  	    tel = form.querySelector('.form__input[type="tel"]'),
+  	    method = form.method,
+  	    action = form.action,
+  	    data = {
+            tel: tel.value
+          };
+
+  	request(method, action, data, function (response) {
+      if (response === 'OK') {
+        swal('Отличное решение!', 'Мы свяжемся с Вами в ближайшее время!', 'success');
+      }
+      else {
+        swal('Что-то пошло не так!', 'Попробуйте нам позвонить!', 'error');
+      }
+      mail.value = "";
+    });
   };
 
 	var _advantagesSectionAnimate = function (wOffset) {
