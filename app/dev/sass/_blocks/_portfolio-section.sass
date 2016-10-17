@@ -1,5 +1,6 @@
 .portfolio-section
-	padding: 0 0 80px
+	padding: 60px 0 80px
+	background: $border-color
 
 	&__wrap
 		@include wrap
@@ -13,10 +14,8 @@
 
 		@media #{$tablet}
 			margin: 0 auto
-			width: 600px
-
-		@media #{$mobile}
-			width: 270px
+			width: 100%
+			max-width: 900px
 
 	&__grid-item
 		display: block
@@ -24,14 +23,18 @@
 
 		float: left
 
-		width: 270px
+		width: 23%
 		height: 300px
 
-		margin: 0 0 30px 30px
-
-		background: #959595
+		margin: 0 0 30px 2%
 
 		overflow: hidden
+
+		@media #{$tablet}
+			width: 48%
+
+		@media #{$mobile}
+			width: 100%
 
 		img
 			display: block
@@ -44,28 +47,28 @@
 
 		&:hover
 			.portfolio-section__grid-info
-				transform: translate(-50%, -50%)
+				transform: translateY(0)
 			img
 				filter: none
 
 		&--wide
-			width: 570px
+			width: 48%
 
-			@media #{$mobile}
-				width: 270px
+			@media #{$tablet}
+				width: 48%
 
 				img
 					width: auto
 					height: 100%
 
+			@media #{$mobile}
+				width: 100%
+
 		&--high
 			height: 630px
 
-			@media #{$mobile}
+			@media #{$tablet}
 				height: 300px
-
-			.portfolio-section__grid-info
-				transform: translate(-50%, -500px)
 
 		@media #{$mobile}
     	margin-left: 0
@@ -75,17 +78,20 @@
 		position: absolute
 		box-sizing: border-box
 
-		width: 80%
+		width: 100%
 		padding: 20px 25px
 
-		top: 50%
-		left: 50%
+		bottom: 0
+		left: 0
 
-		transform: translate(-50%, -300%)
+		transform: translateY(100%)
 
 		transition: $effect-time - 0.05s ease-out
 
 		color: $font-secondary-color
+
+		@media #{$tablet}
+			transform: translateY(0)
 
 		p
 			margin: 10px 0 15px

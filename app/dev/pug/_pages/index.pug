@@ -7,9 +7,9 @@ block main-content
 	section.main-screen
 		.main-screen__wrap
 			h1.main-screen__header
-				| Запустите ваш бизнес в он-лайн
-				br
-				| за 3000 рублей сегодня!
+				| Запустите ваш бизнес в&nbsp;он-лайн &nbsp;
+				b за&nbsp;3000&nbsp;рублей &nbsp;
+				| сегодня!
 				small Сайт и инструменты аналитики с возможностью развития
 			a.btn.btn--main.btn--order(href="#" data-msg="Кнопка на гланом экране") Запустить бизнес
 
@@ -26,7 +26,7 @@ block main-content
 								include ../svg/funnel.pug
 							.tabs-section__tab-descr
 								header.tabs-section__tab-header Одностраничный сайт
-								p Для потока потенциальных клиентов. Он будет эстетичным и адаптивным. Плюс, вы сможете самостоятельно редактировать некоторые текста после его запуска.
+								p Для потока потенциальных клиентов. Он будет эстетичным и адаптивным. Плюс, вы сможете самостоятельно редактировать некоторые тексты после его запуска.
 					li.tabs-section__item
 						a.tabs-section__tab(href="#" data-number="2")
 							.tabs-section__tab-img
@@ -107,7 +107,7 @@ block main-content
 						p Верстка и разработка конструктора футболок
 						i Нажмите, чтобы узнать подробности
 
-	section.info-section
+	section.info-section.info-section--cta
 		.info-section__wrap
 			.info-section__cta
 				p Пусть люди увидят вас!
@@ -127,20 +127,20 @@ block main-content
 					header.advantages-section__item-header
 						| Подготовка материалов
 					p.advantages-section__item-descr
-						| От Вас нужны будут текста, картинки, пожелания по структуре и цветовой гамме сайта.
+						| От Вас нужны будут тексты, картинки, пожелания по структуре и цветовой гамме сайта.
 				li.advantages-section__item
 					header.advantages-section__item-header
 						| Исполнение
 					p.advantages-section__item-descr
 						| В течение 24 часов после получения материалов мы выполняем Ваш заказ.
 
-			form.form.form--inline(action="" method="")
+			form.form.form--inline.form--steps(action="/order" method="post")
 				label.form__label
 					span Один звонок и мы в деле!
-					input.form__input(type="tel" placeholder="+7 999 999-99-99")
-				input.btn.btn--order(type="submit" value="Перезвоните мне" data-msg="3 шага работы")
+					input.form__input(type="tel" required placeholder="+7 999 999-99-99")
+				input.btn(type="submit" value="Перезвоните мне" data-msg="3 шага работы")
 
-	section.tabs-section.tabs-section--inline.tabs-section--no-padding#extra
+	section.tabs-section.tabs-section--inline#extra
 		header.tabs-section__attention-header
 			| Зоны роста
 		.tabs-section__container.tabs-section__container--no-width
@@ -216,7 +216,6 @@ block main-content
 										p Извлечем всю суть вашей компании и, на основе предыдущих исследований, продумаем, как Вас преподнести. Давайте начнем с бесплатной консультации!
 
 							a.btn.btn--main.btn--order(href="#" data-msg="Аналитика") Получить бесплатную консультацию
-
 					li.tabs-section__content-item.tabs-section__content-item--adw(data-number="3")
 						article.tabs-section__content-article
 							header.tabs-section__content-header
@@ -227,15 +226,14 @@ block main-content
 										include ../svg/search.pug
 									.tabs-section__content-descr
 										header Настройка контекстной рекламы
-										p Подберем 3 варианта дизайна, подходящих к Вашему бизнесу. Варианты будем искать среди готовых работ лучших дизайнеров мира. Так Вы сможете сразу увидеть конечный результат и сообщить пожелания. Стоимость реализации 12 000 руб.
+										p Настроим рекламную компанию в Яндекс.Директ и Google Аdwords. Узнать наши кейсы, получить полезную информацию и утвердить бюджет Вы сможете на бесплатной консультации. Чтобы ее получить, нажмите на кнопку ниже.
 								li
 									.tabs-section__content-img
 										include ../svg/network.pug
 									.tabs-section__content-descr
 										header Настройка рекламы в Соц сетях
-										p Наш профессионал разработает решение, которое поможет дифференцироваться среди конкурентов, передаст философию вашей компании и будет удобным пользователю. Стоимость реализации 30 000 руб.
-							a.btn.btn--main.btn--order(href="#" data-msg="Реклама") Заказать разработку дизайна
-
+										p Настроим таргетированную рекламную компанию в ВКонтакте. Также поделимся опытом ведения группы и блога для вашей компании. Начать можем с бесплатной консультации. Чтобы ее получить, нажмите на кнопку ниже.
+							a.btn.btn--main.btn--order(href="#" data-msg="Реклама") Получить бесплатную консультацию
 					li.tabs-section__content-item.tabs-section__content-item--func(data-number="4")
 						.tabs-section__content-svg.tabs-section__content-svg--left
 							include ../svg/cog.pug
@@ -250,7 +248,7 @@ block main-content
 										include ../svg/login.pug
 									.tabs-section__content-descr
 										header Улучшение админки
-										p Позволит Вам редактировать все текста и картинки на сайте, а также запускать А/В тестирование для оценки эффективности разных вариантов предложения.
+										p Позволит Вам редактировать все тексты и картинки на сайте, а также запускать А/В тестирование для оценки эффективности разных вариантов предложения.
 								li
 									.tabs-section__content-img
 										include ../svg/magic-wand.pug
@@ -282,20 +280,20 @@ block main-content
 							img(src="./static/img/contacts-section/icons/icon-mail.png")
 						.contacts-section__info
 							header Пишите нам
-							p: a(href="mailto:support@jokerinteractive.ru") support@jokerinteractive.ru
+							p: a(href="mailto:mail@jokerinteractive.ru") mail@jokerinteractive.ru
 					li.contacts-section__item
 						.contacts-section__img
 							img(src="./static/img/contacts-section/icons/icon-tel.png")
 						.contacts-section__info
 							header Звоните нам
-							p: a(href="tel:+79999999999") +7 (999) 999-99-99
+							p: a(href="tel:+79992390940") +7 (999) 239-09-40
 			.contacts-section__right
 				.contacts-section__header
 					| Напишите нам
-				form.form(method="post" action="/send-mail")
+				form.form.form--mail(method="post" action="/send-mail")
 					label.form__label
 						input.form__input(type="email" required placeholder="Ваш e-mail")
 					label.form__label
-						input.form__input(type="text" required placeholder="Ваше имя")
+						input.form__input(type="text" placeholder="Ваше имя")
 					textarea.form__textarea(placeholder="Ваше сообщение" rows="7")
 					input.btn.btn--main(type="submit" value="Написать сообщение")

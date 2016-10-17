@@ -1,7 +1,20 @@
 .popup.popup--order
 	.popup__body
-		form.form.form--popup
+		form.form.form--popup(action="/order" method="post")
 			input.form__hidden(type="hidden" value="")
 			input.form__input(type="tel" placeholder="Ваш номер телефона" required)
 			input.btn.btn--popup.btn--main(type="submit" value="Свяжитесь со мной")
 		a.btn.btn--secondary.btn--popup.btn--close-popup(href="#") Закрыть окно
+
+.popup.popup--menu
+	.popup__body
+		ul.main-nav__list.main-nav__list--popup
+			li.main-nav__item
+				a.main-nav__link(href="#start" data-link="#start") Старт за 3000
+			li.main-nav__item
+				a.main-nav__link(href="#portfolio" data-link="#portfolio") Наши работы
+			li.main-nav__item
+				a.main-nav__link(href="#extra" data-link="#extra") Зоны роста
+			li.main-nav__item
+				a.main-nav__link(href="#contacts" data-link="#contacts") Контакты
+		a.btn.btn--popup.btn--alt.btn--close-popup(href="#") Закрыть окно

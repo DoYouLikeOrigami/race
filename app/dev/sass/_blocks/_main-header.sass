@@ -17,6 +17,10 @@
 	&--moved
 		background: rgba(0, 0, 0, .702)
 
+		.main-header__wrap
+			@media #{$mobile}
+				padding: 8px 15px
+
 		.main-header__logo
 			font-size: $fontXMd
 			line-height: $fontXMd
@@ -25,6 +29,7 @@
 		@include wrap
 		@include flex
 		max-width: 960px
+		transition: $effect-time
 
 		@media #{$tablet}
 			padding: 0 15px

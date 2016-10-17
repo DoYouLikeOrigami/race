@@ -4,12 +4,11 @@ html(lang="ru")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width")
-		link(rel="shortcut icon", href="./favicon.ico", type="image/x-icon")
+		link(rel="shortcut icon", href="./static/favicon.ico", type="image/x-icon")
 
 		//SEO
-		meta(name="description", content="")
-		meta(name="keywords", content="")
-		meta(name="author", content="")
+		meta(name="description", content="Создание веб сайта за 3000 рублей. Конструктор Landing Page от веб студии. Настройка контекстной рекламы и продвижение сайта.")
+		meta(name="author", content="jokerinteractive.ru")
 
 		link(rel="stylesheet", href="./static/css/style.min.css")
 		link(rel="slylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&subset=cyrillic")
@@ -22,10 +21,9 @@ html(lang="ru")
 			include _blocks/_header
 			block main-content
 			include _blocks/_footer
+			include _blocks/_popups
 
 			script(src="./static/js/jump.min.js")
 			link(rel="stylesheet", href="./static/css/sweetalert2.min.css")
 			script(src="./static/js/sweetalert2.min.js")
 			script(src="./static/js/main.js")
-
-			include _blocks/_popups
