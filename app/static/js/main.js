@@ -72,7 +72,6 @@ var mainModule = (function () {
 		});
 
 		document.addEventListener('keydown', function (e) {
-			e.preventDefault();
 			if( e.keyCode === 27 ) {
 				navPopup.classList.remove('popup--active');
 			}
