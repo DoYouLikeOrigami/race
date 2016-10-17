@@ -15,7 +15,7 @@ var
     pug: {
       pages: './app/dev/pug/_pages/*.pug',
       watch: ['./app/dev/pug/**/*.pug'],
-      convertFolder: './app'
+      convertFolder: './app/modules/core/templates'
     }
   };
 
@@ -24,6 +24,9 @@ gulp.task('pug', function() {
 		.pipe(pug({
 			pretty: '\t',
 		}))
+		.pipe(rename({
+      extname: ".jinja2"
+    }))
 		.pipe(gulp.dest(paths.pug.convertFolder));
 });
 

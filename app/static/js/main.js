@@ -78,7 +78,9 @@ var mainModule = (function () {
 		    popupForm = popup.querySelector('.form'),
 		    hiddenInput = popupForm.querySelector('.form__hidden'),
 		    formInput = popupForm.querySelector('.form__input'),
-		    closePopup = popup.querySelector('.btn--close-popup');
+		    closePopup = popup.querySelector('.btn--close-popup'),
+		    action = popupForm.action,
+		    method = popupForm.method;
 
 		hiddenInput.value = hiddenMsg;
 		popup.classList.add('popup--active');
@@ -94,7 +96,7 @@ var mainModule = (function () {
             tel: formInput.value,
             hidden: hiddenInput.value
           };
-      request('post', '/order', data, function (response) {
+      request(method, action, data, function (response) {
         if (response === 'OK') {
           swal('Отличное решение!', 'Мы свяжемся с Вами в ближайшее время!', 'success');
         }
@@ -194,7 +196,8 @@ var mainModule = (function () {
   	    method = form.method,
   	    action = form.action,
   	    data = {
-            tel: tel.value
+            tel: tel.value,
+            hidden: 'Три шага'
           };
 
   	request(method, action, data, function (response) {
@@ -204,7 +207,7 @@ var mainModule = (function () {
       else {
         swal('Что-то пошло не так!', 'Попробуйте нам позвонить!', 'error');
       }
-      mail.value = "";
+      tel.value = "";
     });
   };
 

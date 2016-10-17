@@ -1,6 +1,6 @@
 .popup.popup--order
 	.popup__body
-		form.form.form--popup
+		form.form.form--popup(action="/order" method="post")
 			input.form__hidden(type="hidden" value="")
 			input.form__input(type="tel" placeholder="Ваш номер телефона" required)
 			input.btn.btn--popup.btn--main(type="submit" value="Свяжитесь со мной")

@@ -719,7 +719,7 @@ li {
     text-align: right; }
 
 .main-nav--moved .main-nav__link {
-  padding: 17px 5px; }
+  padding: 17px 5px 14px; }
 
 @media screen and (max-width: 640px) {
   .main-nav__list {
@@ -748,7 +748,7 @@ li {
 
 .main-nav__link {
   display: block;
-  padding: 20px 5px;
+  padding: 20px 5px 17px;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;

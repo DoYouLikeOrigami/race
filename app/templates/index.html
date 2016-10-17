@@ -47,7 +47,7 @@
 									</div>
 									<div class="tabs-section__tab-descr">
 										<header class="tabs-section__tab-header">Одностраничный сайт</header>
-										<p>Для потока потенциальных клиентов. Он будет эстетичным и адаптивным. Плюс, вы сможете самостоятельно редактировать некоторые текста после его запуска.</p>
+										<p>Для потока потенциальных клиентов. Он будет эстетичным и адаптивным. Плюс, вы сможете самостоятельно редактировать некоторые тексты после его запуска.</p>
 									</div></a></li>
 							<li class="tabs-section__item"><a class="tabs-section__tab" href="#" data-number="2">
 									<div class="tabs-section__tab-img">
@@ -175,14 +175,14 @@
 						</li>
 						<li class="advantages-section__item">
 							<header class="advantages-section__item-header">Подготовка материалов</header>
-							<p class="advantages-section__item-descr">От Вас нужны будут текста, картинки, пожелания по структуре и цветовой гамме сайта.</p>
+							<p class="advantages-section__item-descr">От Вас нужны будут тексты, картинки, пожелания по структуре и цветовой гамме сайта.</p>
 						</li>
 						<li class="advantages-section__item">
 							<header class="advantages-section__item-header">Исполнение</header>
 							<p class="advantages-section__item-descr">В течение 24 часов после получения материалов мы выполняем Ваш заказ.</p>
 						</li>
 					</ul>
-					<form class="form form--inline form--steps" action="order" method="post">
+					<form class="form form--inline form--steps" action="/order" method="post">
 						<label class="form__label"><span>Один звонок и мы в деле!</span>
 							<input class="form__input" type="tel" required placeholder="+7 999 999-99-99">
 						</label>
@@ -424,7 +424,7 @@
 											</div>
 											<div class="tabs-section__content-descr">
 												<header>Улучшение админки</header>
-												<p>Позволит Вам редактировать все текста и картинки на сайте, а также запускать А/В тестирование для оценки эффективности разных вариантов предложения.</p>
+												<p>Позволит Вам редактировать все тексты и картинки на сайте, а также запускать А/В тестирование для оценки эффективности разных вариантов предложения.</p>
 											</div>
 										</li>
 										<li>
@@ -559,7 +559,7 @@
 						<div class="main-footer__section">
 							<header class="main-footer__header">Новости</header>
 							<p class="main-footer__text">Подпишитесь. Мы будем делиться опытом и рассказывать о новых продуктах и спецпредложениях.</p>
-							<form class="form form--footer" action="subscribe" method="post">
+							<form class="form form--footer" action="/subscribe" method="post">
 								<input class="form__input" type="email" placeholder="Ваш Email" required>
 								<input class="form__submit" type="submit" value="">
 							</form>
@@ -581,7 +581,7 @@
 			</footer>
 			<div class="popup popup--order">
 				<div class="popup__body">
-					<form class="form form--popup">
+					<form class="form form--popup" action="/order" method="post">
 						<input class="form__hidden" type="hidden" value="">
 						<input class="form__input" type="tel" placeholder="Ваш номер телефона" required>
 						<input class="btn btn--popup btn--main" type="submit" value="Свяжитесь со мной">
