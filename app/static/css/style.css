@@ -356,7 +356,8 @@ th {
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-  background: #fff; }
+  background: #fff;
+  -webkit-appearance: none; }
 
 a {
   text-decoration: none;
@@ -1058,7 +1059,10 @@ li {
   .popup--menu {
     background: none; }
     .popup--menu .popup__body {
-      background: rgba(0, 0, 0, 0.8); }
+      background: rgba(0, 0, 0, 0.8);
+      top: 5%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
   .popup__body {
     display: block;
     position: absolute;

@@ -7,10 +7,10 @@ var mainModule = (function () {
 
 	var _setUpListeners = function () {
 		window.addEventListener('scroll', _scrollFunctions);
-		document.querySelector('.btn--nav').addEventListener('click', _showNavPopup);
 		document.querySelector('.form--mail').addEventListener('submit', _sendMail);
 		document.querySelector('.form--footer').addEventListener('submit', _subscribe);
 		document.querySelector('.form--steps').addEventListener('submit', _sendPhone);
+		_navPopupListenters();
 		_navScroll();
 		_orderBtns();
 	};
@@ -48,17 +48,34 @@ var mainModule = (function () {
 		this.classList.add('main-nav__link--active');
 	};
 
-	var _showNavPopup = function (event) {
-		event.preventDefault();
-
+	var _navPopupListenters = function () {
 		var navPopup = document.querySelector('.popup--menu'),
-		    btnClose = navPopup.querySelector('.btn--close-popup');
-
-		navPopup.classList.add('popup--active');
+		    btnClose = navPopup.querySelector('.btn--close-popup'),
+		    navPopupBody = navPopup.querySelector('.popup__body'),
+		    navBtn = document.querySelector('.btn--nav');
 
 		btnClose.addEventListener('click', function (e) {
 			e.preventDefault();
 			navPopup.classList.remove('popup--active');
+		});
+
+		navPopup.addEventListener('click', function (e) {
+			e.preventDefault();
+			navPopup.classList.remove('popup--active');
+		});
+
+		navBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			var mainHeaderHeight = document.querySelector('.main-header').clientHeight;
+			navPopupBody.style.top = mainHeaderHeight + 'px';
+			navPopup.classList.toggle('popup--active');
+		});
+
+		document.addEventListener('keydown', function (e) {
+			e.preventDefault();
+			if( e.keyCode === 27 ) {
+				navPopup.classList.remove('popup--active');
+			}
 		});
 	};
 
