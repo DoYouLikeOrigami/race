@@ -9,6 +9,11 @@ def index():
     return render_template('index.jinja2')
 
 
+@core.route('/work')
+def work():
+    return render_template('work.jinja2')
+
+
 @core.route('/order', methods=['POST'])
 def order():
     data = request.get_json()

@@ -2565,6 +2565,91 @@ li {
     font-size: 14px;
     color: #787878; }
 
+.work-aside {
+  display: block;
+  position: fixed;
+  width: 33%;
+  right: 0;
+  top: 0;
+  background: #eeeeee; }
+  .work-aside__img {
+    display: block;
+    height: 500px;
+    text-align: center;
+    overflow: hidden; }
+    .work-aside__img img {
+      display: inline-block;
+      height: 100%; }
+  .work-aside__descr {
+    padding: 30px 20px; }
+  .work-aside__header {
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-weight: 700; }
+  .work-aside__descr-item {
+    font-size: 18px;
+    margin-bottom: 30px; }
+    .work-aside__descr-item:last-of-type {
+      margin-bottom: 0; }
+    .work-aside__descr-item b {
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 700; }
+
+.work-description {
+  display: block;
+  position: relative;
+  width: 77%;
+  left: 0;
+  top: 0; }
+  .work-description__img {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px; }
+    .work-description__img--main {
+      text-align: center;
+      margin-bottom: 0; }
+      .work-description__img--main img {
+        display: inline-block;
+        height: 100%; }
+    .work-description__img img {
+      display: block; }
+  .work-description__header {
+    display: inline-block;
+    position: relative;
+    padding: 30px 0;
+    margin: 0 0 60px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: bold;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 22px;
+    margin: 30px 0 40px; }
+    .work-description__header::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #ff7200; }
+    @media screen and (max-width: 640px) {
+      .work-description__header {
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        padding: 0 0 30px; } }
+    @media screen and (max-width: 380px) {
+      .work-description__header {
+        font-size: 18px;
+        padding-bottom: 20px; } }
+  .work-description__text {
+    margin-bottom: 30px;
+    font-size: 18px; }
+
 .goods-card {
   padding-top: 150px;
   margin-bottom: 30px; }
