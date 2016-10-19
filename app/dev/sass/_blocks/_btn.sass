@@ -10,14 +10,17 @@
 	font-weight: bold
 	text-align: center
 
-	background: transparent;
+	background: transparent
 	border: 1px solid $border-color
 
 	transition: $effect-time
 	outline: none
 
+	@media #{$tablet}
+			padding: 15px 25px
+
 	@media #{$mobile}
-		padding: 20px
+			padding: 15px 20px
 
 	&:active
 		transform: translateY(3px)
@@ -25,13 +28,16 @@
 	&--main
 		color: $secondary-color
 		background: $akcent-color
-		border: none
+		border-color: $akcent-color
 		font-weight: 700
 		padding: 20px 45px
 		font-size: $fontSm
 
+		@media #{$tablet}
+			padding: 15px 30px
+
 		@media #{$mobile}
-			padding: 20px 25px
+			padding: 15px 25px
 			font-size: $fontXSm
 
 		&:hover
@@ -39,10 +45,16 @@
 
 	&--popup
 		width: 270px
+		padding: 20px 0
 		margin-bottom: 30px
 
-		&.btn--secondary
+		// FIXME: марджины криво настроены
+
+		&:last-of-type
 			margin-bottom: 0
+
+		&.btn--main
+			margin-bottom: 30px
 
 	&--alt
 		border: none
@@ -53,15 +65,33 @@
 		&:hover
 			background: $border-color
 
-	&--nav
-		display: none
+	&--special
+		display: inline-block
 		padding: 10px 15px
 		color: $akcent-color
 		border-color: $akcent-color
+		font-weight: 400
+		font-size: $fontSm
+
+		@media #{$tablet}
+			font-size: $fontXSm
 
 		&:hover
 			background-color: $akcent-color
 			color: $secondary-color
 
+	&--big
+		padding: 15px 25px
+
+		@media #{$tablet}
+			padding: 10px 20px
+
+	&--small
+		font-size: $fontXSm
+		padding: 8px 15px
+
+	&--mobile-only
+		display: none
+
 		@media #{$mobile}
-			display: block
+			display: inline-block

@@ -28,7 +28,6 @@
 	&__wrap
 		@include wrap
 		@include flex
-		max-width: 960px
 		transition: $effect-time
 
 		@media #{$tablet}
@@ -63,3 +62,14 @@
 			@media #{$tablet}
 				font-size: $fontMicro
 				line-height: $fontMicro
+
+	&__call
+		display: none
+
+		@media #{$desktop}
+			display: block
+
+	&__tel
+		font-size: $fontMd
+		color: $akcent-color
+		margin-right: 20px

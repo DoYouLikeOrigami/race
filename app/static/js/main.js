@@ -7,25 +7,33 @@ var mainModule = (function () {
 
 	var _setUpListeners = function () {
 		window.addEventListener('scroll', _scrollFunctions);
-		document.querySelector('.form--mail').addEventListener('submit', _sendMail);
-		document.querySelector('.form--footer').addEventListener('submit', _subscribe);
-		document.querySelector('.form--steps').addEventListener('submit', _sendPhone);
+		if (document.querySelector('.form--mail')) {
+			document.querySelector('.form--mail').addEventListener('submit', _sendMail);
+		};
+		if (document.querySelector('.form--footer')) {
+			document.querySelector('.form--footer').addEventListener('submit', _subscribe);
+		};
+		if (document.querySelector('.form--steps')) {
+			document.querySelector('.form--steps').addEventListener('submit', _sendPhone);
+		};
 		_navPopupListenters();
 		_navScroll();
 		_orderBtns();
 	};
 
 	var _defaultRun = function () {
-		if (document.getElementsByClassName('goods-card')) _goodsCard();
-		if (document.getElementsByClassName('tabs-section--top')) _changeTabs();
-		if (document.getElementsByClassName('tabs-section--inline')) _changeInlineTabs();
+		if (document.querySelector('.goods-card')) _goodsCard();
+		if (document.querySelector('.tabs-section--top')) _changeTabs();
+		if (document.querySelector('.tabs-section--inline')) _changeInlineTabs();
 	};
 
 	var _navScroll = function () {
-		var navItems = document.querySelectorAll('.main-nav__link');
+		var navItems = document.querySelectorAll('.main-nav__link') || false;
 
-		for (var i = 0; i < navItems.length; i++) {
-			navItems[i].addEventListener('click', _jumpTo);
+		if (navItems) {
+			for (var i = 0; i < navItems.length; i++) {
+				navItems[i].addEventListener('click', _jumpTo);
+			}
 		}
 	};
 
@@ -49,10 +57,13 @@ var mainModule = (function () {
 	};
 
 	var _navPopupListenters = function () {
-		var navPopup = document.querySelector('.popup--menu'),
-		    btnClose = navPopup.querySelector('.btn--close-popup'),
+		var navPopup = document.querySelector('.popup--menu');
+
+		if (!navPopup) return;
+
+		var btnClose = navPopup.querySelector('.btn--close-popup'),
 		    navPopupBody = navPopup.querySelector('.popup__body'),
-		    navBtn = document.querySelector('.btn--nav');
+		    navBtn = document.querySelector('.btn--js-nav');
 
 		btnClose.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -80,6 +91,8 @@ var mainModule = (function () {
 
 	var _orderBtns = function () {
 		var orderBtns = document.querySelectorAll('.btn--order');
+
+		if (!orderBtns) return;
 
 		for (var i = 0; i < orderBtns.length; i++) {
 			orderBtns[i].addEventListener('click', _showOrderPopup);
@@ -128,8 +141,11 @@ var mainModule = (function () {
 	};
 
 	var _fixHeader = function (wOffset) {
-		var header = document.querySelector('.main-header'),
-		    nav = header.querySelector('.main-nav');
+		var header = document.querySelector('.main-header');
+
+		if (!header) return;
+
+		var nav = header.querySelector('.main-nav');
 
 		if (wOffset > 0) {
 			header.classList.add('main-header--moved');
@@ -229,8 +245,11 @@ var mainModule = (function () {
   };
 
 	var _advantagesSectionAnimate = function (wOffset) {
-		var advantagesSection = document.querySelector('.advantages-section'),
-		    advantagesSectionYOffset = advantagesSection.offsetTop - 100;
+		var advantagesSection = document.querySelector('.advantages-section');
+
+		if(!advantagesSection) return;
+
+		var advantagesSectionYOffset = advantagesSection.offsetTop - 100;
 
   	if (advantagesSection.classList.contains('advantages-section--animated')) return;
 
@@ -272,7 +291,7 @@ var mainModule = (function () {
 	// Находит все табы на странице и вешает прослушку на кнопки смены таба
 	var _changeTabs = function () {
 		var tabsSectionTop = document.querySelector('.tabs-section--top'),
-			  tabsSectionTop__tabs = tabsSectionTop.querySelectorAll('.tabs-section__tab'),
+				tabsSectionTop__tabs = tabsSectionTop.querySelectorAll('.tabs-section__tab'),
 			  tabsSectionTop__items = tabsSectionTop.querySelectorAll('.tabs-section__content-item');
 
 			// Вешает прослушку на кнопки

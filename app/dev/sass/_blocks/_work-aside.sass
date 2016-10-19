@@ -3,16 +3,21 @@
 	position: fixed
 
 	width: 33%
+	height: 100%
 
 	right: 0
 	top: 0
 
 	background: $border-color
+	overflow: scroll
+
+	@media #{$mobile}
+		display: none
 
 	&__img
 		display: block
 
-		height: 500px
+		height: 300px
 
 		text-align: center
 
@@ -31,14 +36,19 @@
 		margin-bottom: 40px
 		font-weight: 700
 
+		@media #{$tablet}
+			font-size: $fontXMd
+			margin-bottom: 30px
+
 	&__descr-item
 		font-size: $fontMd
 		margin-bottom: 30px
 
-		&:last-of-type
-			margin-bottom: 0
+		@media #{$tablet}
+			font-size: $fontSm
+			margin-bottom: 25px
 
 		b
 			display: block
-			margin-bottom: 20px
+			margin-bottom: 15px
 			font-weight: 700
