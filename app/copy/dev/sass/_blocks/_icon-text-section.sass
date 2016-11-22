@@ -1,0 +1,206 @@
+$red-color: #8b0305
+$second-color: #fff
+$red-bg: #ff0000
+
+.icon-text-section
+	padding: 50px 0
+	text-align: center
+
+	&--red-bg
+		background: url(../img/icon-text-section/bg-pattern.png) repeat
+
+		.icon-text-section
+
+			&__header
+				color: $second-color
+
+			&__text
+				header
+					font-size: 16px
+					line-height: 22px
+					color: $second-color
+
+					@media #{$mobile}
+						font-size: 14px
+						line-height: 20px
+
+				p
+					color: $second-color
+
+	&__wrap
+		@include wrap
+		max-width: 990px
+		padding: 0
+
+	&__header
+		display: block
+		margin-bottom: 50px
+
+		text-align: center
+		font-size: 30px
+		font-weight: bold
+		text-transform: uppercase
+		color: $red-color
+
+		&--big-margin
+			margin-bottom: 90px
+
+			@media #{$tablet}
+				margin-bottom: 50px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: flex-start
+
+		margin-bottom: 50px
+
+		@media #{$tablet}
+			margin-bottom: 20px
+
+		&--space-around
+			justify-content: space-around
+
+	&__item
+		display: flex
+		justify-content: space-between
+
+		flex-direction: row
+		align-items: center
+
+		text-align: left
+
+		@media #{$tablet}
+			margin: 0 0 30px !important
+			flex-direction: row !important
+			width: 48%
+			justify-content: space-around
+			align-items: center
+
+		@media #{$mobile}
+			flex-direction: column !important
+
+		&--row-reverse
+			flex-direction: row-reverse
+			text-align: right
+
+			@media #{$tablet}
+				text-align: left
+
+			.icon-text-section__text
+				margin: 0 20px 0 0
+
+		&--column
+			flex-direction: column
+			align-items: flex-end
+
+			.icon-text-section__text
+				margin: 20px 0 0
+
+		&--column-reverse
+			flex-direction: column-reverse
+			align-items: flex-end
+
+			.icon-text-section__text
+				margin: 0 0 20px
+
+				&--small
+					width: 100px
+
+		&--width-half
+			width: 48%
+
+			@media #{$tablet}
+				width: 100%
+
+				.icon-text-section__text
+					max-width: 60%
+
+			@media #{$mobile}
+				.icon-text-section__text
+					max-width: 100%
+
+		&--width-third
+			width: 30%
+
+			@media #{$tablet}
+				width: 48%
+
+		&--tablet-big
+			@media #{$tablet}
+				width: 100%
+				.icon-text-section__text
+					max-width: 60%
+
+			@media #{$mobile}
+				.icon-text-section__text
+					max-width: 100%
+
+		&--tablet-order-2
+			@media #{$tablet}
+				order: 2
+
+	&__icon img
+		@media #{$mobile}
+			transform: scale(.8)
+
+	&__text
+		margin: 0 0 0 20px
+		max-width: 240px
+
+		@media #{$tablet}
+			margin: 0 0 0 20px !important
+			align-self: center !important
+
+		@media #{$mobile}
+			margin: 20px 0 0 0 !important
+
+		&--small
+			width: 140px
+			@media #{$tablet}
+				width: 50%
+
+			@media #{$mobile}
+				width: 100%
+
+		&--self-start
+			align-self: flex-start
+
+		&--self-end
+			align-self: flex-end
+
+		&--self-center
+			align-self: flex-center
+
+		header
+			font-size: 18px
+			line-height: 24px
+			font-weight: bold
+			text-transform: uppercase
+			color: $red-color
+
+			@media #{$mobile}
+				font-size: 16px
+				line-height: 22px
+
+		small
+			margin-bottom: 20px
+			font-style: italic
+			font-size: 14px
+			line-height: 20px
+
+		p
+			font-size: 14px
+			line-height: 20px
+
+.but
+	display: inline-block
+
+	padding: 15px 50px
+	background: $red-bg
+
+	color: $second-color
+	font-size: 16px
+	text-transform: uppercase
+	font-weight: bold

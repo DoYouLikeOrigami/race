@@ -1,0 +1,65 @@
+.contacts-section
+	padding: 60px 0 0
+
+	&__wrap
+		@include wrap
+
+	&__header
+		@include section_header
+		font-size: $fontLg
+		line-height: $fontLg
+		font-family: $headers-font
+		letter-spacing: 1px
+
+	&__top
+		display: block
+		margin-bottom: 30px
+		text-align: center
+
+	&__address
+		display: inline-block
+
+		font-size: $fontBigMd
+		line-height: $fontBigMd + 6
+
+		text-align: left
+
+		a
+			color: $akcent-color
+			text-decoration: underline
+
+	&__bottom
+		@include flex
+		padding: 15px 0
+
+	&__logo
+		display: flex
+		align-items: center
+
+		img
+			display: block
+			max-width: 110px
+			margin-right: 18px
+
+		span
+			font-size: $fontMd
+
+	&__tel
+		display: block
+
+		max-width: 30%
+
+		text-align: center
+
+	&__tel-number
+		display: block
+
+		margin-bottom: 5px
+
+		font-size: $fontXBig - 2
+		line-height: $fontXBig - 2
+		font-weight: bold
+		color: $akcent-color
+
+		&:hover
+			text-decoration: underline

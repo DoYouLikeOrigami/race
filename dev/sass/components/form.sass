@@ -1,0 +1,150 @@
+.form
+	display: block
+
+	&--inline
+		margin-top: 90px
+		text-align: center
+
+		@media #{$mobile}
+			margin-top: 50px
+
+		.form
+			&__label
+				display: inline-block
+
+				font-size: $fontSm
+				text-transform: uppercase
+				font-weight: 700
+				letter-spacing: 1px
+
+				margin: 0 40px 0 0
+
+				@media #{$tablet}
+					margin-bottom: 30px
+
+				@media #{$mobile}
+					display: block
+					margin-right: 0
+					text-align: center
+
+			&__input
+				display: inline-block
+
+				margin-left: 40px
+
+				@media #{$mobile}
+					margin: 30px 0 0
+
+	&--footer
+		&:hover
+			.form__input,
+			.form__submit
+				border-color: $akcent-color
+
+		.form__input
+			display: inline-block
+			box-sizing: border-box
+
+			width: 230px
+			margin-right: -4px
+
+			padding: 7px 17px
+
+			border-color: $font-footer-color
+			border-right: none
+
+			font-size: $fontXSm
+			line-height: 9px
+
+			background: transparent
+			vertical-align: top
+
+			&::placeholder
+				color: $font-footer-color
+
+			&:focus + .form__submit
+				border-color: $akcent-color
+
+		.form__submit
+			display: inline-block
+			box-sizing: border-box
+
+			width: 34px
+			height: 35px
+
+			border: 1px solid $font-footer-color
+			border-left: none
+
+			background-color: transparent
+			background-image: url("../img/form/footer-submit-icon.png")
+			background-repeat: no-repeat
+			background-position: center
+			vertical-align: top
+
+			&:hover
+				background-color: $akcent-color
+
+	&--popup
+		.form__input
+			margin-bottom: 30px
+			border-color: $akcent-color
+
+	&--cta
+		display: flex
+		justify-content: center
+
+		.form
+			&__input
+				margin-right: 30px
+
+	&__label
+		display: inline-block
+		margin: 0 25px 20px 0
+
+		@media #{$mobile}
+			margin: 0 0 20px
+
+		&:nth-of-type(2n)
+			margin-right: 0
+
+	&__input,
+	&__textarea
+		display: block
+		box-sizing: border-box
+
+		width: 270px
+
+		padding: 20px 15px
+
+		border: 1px solid $input-border
+
+		font-size: $fontXSm
+		font-weight: 400
+		color: $akcent-color
+
+		transition: $effect-time
+		outline: $akcent-color
+
+		&::placeholder
+			font-size: $fontXSm
+			color: $font-par-color
+
+		&:hover,
+		&:focus
+			border-color: $akcent-color
+
+	&__textarea
+		display: block
+
+		width: 100%
+		max-width: 570px
+		margin-bottom: 20px
+
+		resize: none
+
+		@media #{$mobile}
+			width: 270px
+
+	&__submit
+		transition: $effect-time
+

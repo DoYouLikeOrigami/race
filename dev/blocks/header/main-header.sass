@@ -1,0 +1,60 @@
+.main-header
+	display: block
+
+	padding: 15px 0
+	margin-top: 60px
+
+	&__wrap
+		@include wrap
+		@include flex
+
+		justify-content: space-between
+
+		@media #{$tablet}
+			padding: 0 15px
+
+	&__logo
+		display: flex
+		align-items: center
+
+		img
+			display: block
+			max-width: 110px
+			margin-right: 20px
+
+		span
+			font-size: $fontMd
+			line-height: 20px
+
+	&__address
+		display: block
+		max-width: 30%
+
+		font-size: $fontMd
+		line-height: 20px
+
+		a
+			color: $akcent-color
+			text-decoration: underline
+
+	&__tel
+		display: block
+
+		max-width: 30%
+
+		text-align: center
+
+	&__tel-number
+		display: block
+
+		margin-bottom: 5px
+
+		font-size: $fontXBig - 2
+		line-height: $fontXBig - 2
+		font-weight: bold
+		color: $akcent-color
+
+		&:hover
+			text-decoration: underline
+
+

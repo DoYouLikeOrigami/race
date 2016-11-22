@@ -1,0 +1,25 @@
+.nav-actions
+    &__item
+        color: #6d0000
+        font-size: $fontXSm
+        font-weight: 700
+        text-decoration: underline
+        text-transform: uppercase
+        display: block
+        vertical-align: middle
+        margin-left: 15px
+        padding: 3px 0
+
+        &--phone
+            text-transform: none
+            text-align: center
+            text-decoration: none
+
+            @media #{$mobile}
+                display: none
+
+
+        @media #{$mobile}
+            padding: 8px 0
+            font-size: $fontMd
+

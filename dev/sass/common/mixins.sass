@@ -1,0 +1,118 @@
+
+@mixin wrap
+	display: block
+	position: relative
+
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+@mixin page_section
+	padding-top: 150px
+
+	@media #{$tablet}
+		padding-top: 120px
+
+	@media #{$mobile}E
+		padding-top: 80px
+
+@mixin flex
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+@mixin flex_column
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: flex-start
+
+@mixin section_header
+	display: block
+	position: relative
+
+	margin: 0 0 60px
+
+	font-size: $fontXBig
+	line-height: 40px
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: $font-color
+	font-weight: bold
+	text-align: center
+	font-family: $default-font
+
+	@media #{$mobile}
+		font-size: $fontBig
+		letter-spacing: 1px
+		margin-bottom: 40px
+
+@mixin page_header
+	display: block
+	margin: 0
+
+	text-align: left
+	font-size: $fontLg
+	line-height: $fontLg + 10
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: $font-color
+	font-weight: 700
+	font-family: $headers-font
+
+	small
+		display: block
+		margin-top: 40px
+
+		font-size: $fontXBig
+		line-height: 40px
+		color: $font-color
+		font-weight: 700
+		font-family: $default-font
+
+	@media #{$tablet}
+		font-size: $fontLg
+		letter-spacing: 0
+
+	@media #{$mobile}
+		font-size: $fontXBig
+		margin-bottom: 40px
+
+@mixin attention-header
+	display: block
+
+	padding: 60px 0
+	background: $akcent-color
+
+	color: $font-secondary-color
+
+	font-size: $fontBig
+	font-weight: bold
+	text-transform: uppercase
+	letter-spacing: 2px
+	text-align: center
+
+@mixin clearfix
+	&::before,
+	&::after
+		display: table
+		content: ""
+		line-height: 0
+	&::after
+		clear: both
+
+@mixin before_darken
+	content: ""
+
+	display: block
+	position: absolute
+
+	left: 0
+	top: 0
+
+	width: 100%
+	height: 100%
+
+	background: rgba(0, 0, 0, .702)
+	z-index: 0

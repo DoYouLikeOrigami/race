@@ -8,13 +8,13 @@ var gulp = require('gulp'),
 var
   paths = {
     style: {
-      startFile: './app/dev/sass/style.sass',
-      watch: ['./app/dev/sass/**/*.sass', './app/dev/sass/**/*.scss'],
+      startFile: './dev/style.sass',
+      watch: ['./dev/sass/**/*.sass', './dev/blocks/**/*.sass', './dev/style.sass'],
       convertFolder: './app/static/css'
     },
     pug: {
-      pages: './app/dev/pug/_pages/*.pug',
-      watch: ['./app/dev/pug/**/*.pug'],
+      pages: './dev/pages/*.pug',
+      watch: ['./dev/pages/**/*.pug', './dev/blocks/**/*.pug', './dev/layouts/**/*.pug', './dev/mixins.pug'],
       convertFolder: './app/modules/core/templates'
     }
   };

@@ -1,0 +1,46 @@
+.main-nav
+	display: block
+	position: fixed
+
+	top: 0
+	left: 0
+
+	width: 100%
+
+	background: $akcent-bg
+
+	z-index: 999
+
+	&__list
+		display: block
+		text-align: center
+
+		@media #{$mobile}
+			display: none
+
+	&__item
+		display: inline-block
+		margin-right: 15px
+
+		&:last-of-type
+			margin-right: 0
+
+	&__link
+		display: block
+		padding: 20px 5px
+
+		font-size: $fontSm - 1px
+		text-transform: uppercase
+		letter-spacing: 2px
+		color: $font-secondary-color
+
+		transition: $effect-time
+
+		&--active
+			color: $font-secondary-active-color
+
+		&:hover
+			color: $font-secondary-active-color
+
+		@media #{$tablet}
+			font-size: $fontXSm

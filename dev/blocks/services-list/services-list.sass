@@ -1,0 +1,58 @@
+.services-list
+	display: block
+	position: relative
+
+	padding: 120px 0
+
+	background: #222
+
+	&--alt
+		background: #f0f0f0
+		padding: 80px 0
+
+		.services-list
+			&__header
+				color: $font-color
+				font-size: $fontXBig
+
+			&__item
+				flex-basis: 50%
+				padding: 15px 0
+				text-align: center
+
+			&__link
+				font-size: $fontMd
+				color: $font-color
+				text-transform: none
+
+	&__wrap
+		@include wrap
+
+	&__header
+		@include section_header
+		color: $akcent-color
+		font-family: $headers-font
+		font-size: $fontLg
+
+	&__list
+		@include flex
+		flex-wrap: wrap
+		justify-content: space-around
+
+		width: 75%
+		margin: 0 auto
+
+	&__item
+		padding: 20px 25px
+
+	&__link
+		font-size: $fontXMd
+		line-height: 40px
+		vertical-align: middle
+		color: $font-secondary-color
+		text-transform: uppercase
+		transition: $effect-time
+		font-family: $headers-font
+
+		&:hover
+			color: $akcent-color
