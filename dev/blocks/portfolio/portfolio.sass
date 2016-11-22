@@ -1,0 +1,70 @@
+.portfolio
+	display: block
+	position: relative
+	height: 100vh
+
+	&__top,
+	&__thumbs
+		display: block
+		width: 100%
+
+	&__top
+		height: 80%
+
+	&__thumbs
+		height: 20%
+		box-sizing: border-box
+		padding: 10px 0
+
+	&__text
+		color: #fff
+		justify-content: center
+
+		p
+			display: block
+			font-size: $fontXMd
+			text-transform: uppercase
+			line-height: 30px
+			text-shadow: 0px 0px 4px #000
+			margin-top: 20px
+
+	&__text-header
+		display: flex
+		justify-content: center
+		align-items: center
+
+		font-size: 120px
+		line-height: 80px
+		text-transform: uppercase
+
+		text-shadow: 0px 0px 12px #000
+		margin: 0
+
+		&--small
+			font-size: 80px
+			line-height: 70px
+
+		small
+			font-size: 32px
+			line-height: 42px
+			text-transform: uppercase
+			margin-left: 20px
+			text-shadow: 0px 0px 6px #000
+
+
+.swiper-slide
+	background-size: cover
+	background-position: center
+
+	display: flex
+	justify-content: center
+	align-items: center
+
+	&--thumbs
+		width: 25%
+		height: 100%
+		opacity: 0.4
+		cursor: pointer
+
+	&-active
+		opacity: 1

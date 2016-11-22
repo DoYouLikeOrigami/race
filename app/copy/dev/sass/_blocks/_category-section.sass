@@ -1,0 +1,92 @@
+.category-section
+	padding: 60px 0
+	text-align: center
+
+	@media #{$mobile}
+		padding-bottom: 30px
+
+	&--page-section
+		@include page_section
+
+		.category-section__header
+			@include page_header
+
+	&__wrap
+		@include wrap
+
+	&__header
+		@include section_header
+		margin-bottom: 80px
+
+		@media #{$tablet}
+			margin-bottom: 60px
+
+	&__list
+		padding: 0
+		margin-bottom: 40px
+
+		@media #{$tablet}
+			margin-bottom: 20px
+
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin: 0 15px
+
+		&:first-of-type
+			margin-left: 0
+
+		&:last-of-type
+			margin-right: 0
+
+		@media #{$tablet}
+			width: 49%
+			margin: 0
+			box-sizing: border-box
+			padding: 0 15px
+			margin-bottom: 20px
+
+		@media #{$mobile}
+			width: 100%
+
+	&__link
+		display: block
+		cursor: pointer
+
+	&__img
+		display: block
+		width: 315px
+		height: 220px
+		overflow: hidden
+
+		@media #{$tablet}
+			width: 100%
+			height: 200px
+
+		img
+			width: 100%
+
+	&__text
+		padding: 15px 20px 0
+		text-align: left
+
+		@media #{$mobile}
+			padding: 5px 15px
+
+	&__name
+		font-size: $fontBig
+		margin: 0 0 10px
+		font-weight: normal
+
+		@media #{$mobile}
+			margin-bottom: 5px
+			font-size: $fontXMd
+
+	&__price
+		font-size: $fontMd
+		font-style: italic
+		font-weight: normal
+
+		@media #{$mobile}
+			font-size: $fontSm
+

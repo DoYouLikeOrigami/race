@@ -1,0 +1,84 @@
+.info-section
+	display: block
+	position: relative
+
+	padding: 180px 0
+	background: url(../img/info-section/bg.jpg) center
+	background-size: cover
+
+	@media #{$tablet}
+		padding: 50px 0
+
+	@media #{$mobile}
+		padding: 40px 20px
+
+	&--social
+		background: $akcent-color
+		padding: 40px 0
+
+		@media #{$tablet}
+			padding: 20px 0
+
+	&--cta
+		height: 100vh
+		box-sizing: border-box
+
+		.info-section__wrap
+			top: 50%
+			transform: translateY(-50%)
+
+	&::before
+		@include before_darken
+		background: rgba(0, 0, 0, .45)
+
+	&__wrap
+		@include wrap
+		z-index: 1
+
+	&__cta
+		font-size: 75px
+		color: $font-secondary-color
+		text-align: center
+		font-weight: 300
+
+		@media #{$tablet}
+			font-size: $fontXLg
+
+		@media #{$mobile}
+			font-size: $fontLg
+
+		p
+			margin-bottom: 40px
+
+	&__text
+		display: block
+
+		max-width: 480px
+		margin: 0 auto
+
+		font-size: $fontBig
+		color: $secondary-color
+		font-style: italic
+		text-align: center
+
+		@media #{$tablet}
+			font-size: $fontXMd
+
+		@media #{$mobile}
+			font-size: $fontMd
+			letter-spacing: 1px
+
+		&::before
+			content: '"'
+			display: block
+			color: $akcent-color
+			margin-bottom: 15px
+			font-size: $fontXLg
+			line-height: $fontMd
+
+			@media #{$tablet}
+				line-height: 0
+				font-size: $fontLg
+
+			@media #{$mobile}
+				display: none

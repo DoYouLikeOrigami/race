@@ -1,0 +1,42 @@
+.btn
+	display: inline-block
+	padding: 20px 30px
+	box-sizing: border-box
+	text-align: center
+
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-size: $fontXSm
+	background: #ccc
+
+	transition: $effect-time
+
+	&:active
+		transform: translateY(3px)
+
+	&--main
+		color: $secondary-color
+		background: $akcent-color
+		border: none
+		font-weight: 700
+
+		&:hover
+			background: lighten($akcent-color, 5%)
+
+	&--special
+		color: $secondary-color
+		background: $akcent-color
+		border: none
+		font-weight: 700
+
+		&:hover
+			background: lighten($akcent-color, 5%)
+
+	&--small
+		padding: 5px 15px
+		font-weight: normal
+		font-size: $fontMicro
+
+	//&--popup
+	//&--alt
+	//&--secondary

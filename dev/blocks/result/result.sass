@@ -1,0 +1,106 @@
+.result
+	padding: 60px 0
+	background: $akcent-bg
+
+	&:nth-of-type(2n)
+		.result
+			&__wrap
+				flex-direction: row-reverse
+
+			&__left
+				margin: 0 0 0 5%
+
+			&__header
+				text-align: right
+
+			&__descr
+				text-align: right
+
+	&:nth-of-type(1)
+		padding-top: 80px
+
+	&:last-of-type
+		padding-bottom: 80px
+
+	&__wrap
+		@include wrap
+		@include flex
+
+		justify-content: center
+
+	&__left
+		width: 32%
+		margin-right: 5%
+
+	&__right
+		width: 50%
+
+	&__header
+		display: block
+
+		font-size: $fontXBig
+		color: $akcent-color
+		font-family: $headers-font
+		font-weight: 400
+
+		margin: 0 0 20px
+
+	&__work
+		display: block
+
+		border-radius: 50%
+		overflow: hidden
+
+		img
+			width: 100%
+			display: block
+
+	&__descr
+		margin-bottom: 40px
+
+		header
+			display: block
+
+			font-size: $fontBigMd
+			line-height: $fontBigMd
+			color: $font-alt-color
+
+			margin-bottom: 20px
+
+		p
+			display: block
+
+			font-size: $fontSm
+			line-height: $fontBigMd
+			color: $font-alt-color
+
+			margin-bottom: 10px
+
+			&:last-of-type
+				margin-bottom: 0
+
+	&__slides
+		@include flex
+
+	&__slides-item
+		display: block
+		box-sizing: border-box
+
+		width: 30%
+
+		border: 2px solid $akcent-bg
+
+		border-radius: 50%
+		overflow: hidden
+
+		transition: $effect-time
+
+		&:hover
+			border-color: $akcent-color
+
+		&--active
+			border-color: $akcent-color
+
+		img
+			width: 100%
+			display: block

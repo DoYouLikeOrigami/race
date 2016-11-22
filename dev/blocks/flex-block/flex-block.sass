@@ -1,0 +1,32 @@
+.flex-block
+	padding: 60px 0
+
+	&__wrap
+		@include wrap
+		max-width: 960px
+
+	&__header
+		@include section_header
+
+	&__list
+		@include flex
+
+		justify-content: space-around;
+		flex-wrap: wrap
+
+	&__item
+		background: #f0f0f0;
+
+	&__img
+		display: block
+		width: 200px
+
+		box-sizing: border-box
+
+		overflow: hidden
+
+		border: 1px solid $font-color
+
+		img
+			display: block
+			width: 100%

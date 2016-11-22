@@ -1,0 +1,197 @@
+.goods-card
+	padding-top: 150px
+	margin-bottom: 30px
+
+	@media #{$tablet}
+		padding-top: 120px
+
+	@media #{$mobile}
+		padding-top: 80px
+
+	&__wrap
+		@include wrap
+		@include flex
+		align-items: flex-start
+		max-width: 960px
+
+		@media #{$tablet}
+			flex-direction: column
+			align-items: center
+
+	&__slider
+		@include flex
+		align-items: flex-start
+		justify-content: flex-end
+		width: 65%
+
+		@media #{$tablet}
+			width: 70%
+			margin-bottom: 40px
+
+		@media #{$mobile}
+			flex-direction: column-reverse
+			width: 100%
+			margin-bottom: 20px
+
+	&__slides
+		display: block
+		width: 45px
+
+		@media #{$mobile}
+			width: 100%
+			text-align: center
+			margin-top: 30px
+
+	&__slides-item
+		display: block
+		margin-bottom: 20px
+
+		@media #{$mobile}
+			display: inline-block
+			margin: 0 20px 0 0
+			width: 55px
+
+			&:last-of-type
+				margin-right: 0
+
+		&--active
+			.goods-card
+				&__slides-link
+					border-color: $akcent-color
+
+	&__slides-link
+		display: block
+		box-sizing: border-box
+
+		height: 45px
+		border: 2px solid $secondary-color
+
+		text-align: center
+
+		transition: $effect-time
+		overflow: hidden
+		cursor: pointer
+
+		&--active
+			border-color: $akcent-color
+
+		@media #{$mobile}
+			height: 55px
+
+		img
+			display: inline-block
+			height: 100%
+
+	&__slide-current
+		display: block
+		margin-left: 25px
+		transition: $effect-time
+
+		@media #{$mobile}
+			margin-left: 0
+
+		&--opacity
+			opacity: 0
+
+		img
+			display: block
+			width: 100%
+			transition: $effect-time
+
+	&__description
+		display: block
+		box-sizing: border-box
+
+		width: 35%
+		padding: 0 30px
+
+		@media #{$tablet}
+			width: 70%
+
+		@media #{$mobile}
+			width: 100%
+			max-width: 400px
+			padding: 0 15px
+
+	&__descr-name
+		font-size: $fontXBig
+		font-weight: 300
+		letter-spacing: 1px
+		color: $special-color
+		margin-bottom: 30px
+
+		@media #{$tablet}
+			font-size: $fontBig
+			margin-bottom: 10px
+
+		@media #{$mobile}
+			margin-bottom: 5px
+
+	&__descr-price
+		color: $font-secondary-color
+		font-weight: 300
+		font-size: $fontMd
+		margin-bottom: 40px
+
+		@media #{$tablet}
+			margin-bottom: 20px
+
+		@media #{$mobile}
+			margin-bottom: 15px
+
+	&__descr-text
+		font-size: $fontSm
+		line-height: $fontSm + 4px
+		color: $font-par-color
+		margin-bottom: 30px
+
+		@media #{$tablet}
+			margin-bottom: 20px
+
+	&__form-label
+		display: block
+		color: $font-secondary-color
+		font-size: $fontXSm
+		margin-bottom: 20px
+
+		@media #{$tablet}
+			margin-bottom: 15px
+
+			&:last-of-type
+				margin-bottom: 20px
+
+		@media #{$mobile}
+			margin-bottom: 10px
+
+		input, select
+			margin-top: 5px
+
+	&__form-input
+		display: block
+		box-sizing: border-box
+
+		width: 100%
+		padding: 5px 10px
+
+		font-size: $fontSm
+		color: $font-color
+
+	&__form-submit
+		display: block
+		width: 100%
+
+		padding: 15px 0
+
+		color: $secondary-color
+		letter-spacing: 1px
+		font-size: $fontXSm
+		text-transform: uppercase
+		text-align: center
+
+		border: none
+		background: $akcent-color
+
+		transition: $effect-time
+
+		&:hover
+			background-color: lighten($akcent-color, 10%)

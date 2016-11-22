@@ -1,0 +1,44 @@
+.stock
+    display: flex
+    justify-content: space-around
+    padding: 80px 0
+
+    &__item
+        width: 40%
+
+    &__title
+        font-size: $fontBig
+    &__sub-title
+        font-size: $fontMd
+
+    &__modal
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        display: none
+        align-items: center
+        justify-content: center
+        z-index: 998
+
+        &--show
+            display: flex
+
+        &-overlay
+            position: fixed
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: #000
+            opacity: .5
+            z-index: 999
+
+        &-wrap
+            z-index: 1000
+            max-width: 50%
+
+        &-content
+            background: #fff
+            padding: 20px

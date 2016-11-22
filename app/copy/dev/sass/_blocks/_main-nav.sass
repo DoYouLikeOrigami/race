@@ -1,0 +1,54 @@
+.main-nav
+	&--moved
+		.main-nav__link
+			padding: 17px 5px 14px
+
+	&__list
+		@media #{$mobile}
+			display: none
+
+		&--popup
+			@media #{$mobile}
+				display: block
+				margin-bottom: 20px
+
+			.main-nav__item
+				display: block
+				text-align: center
+				margin: 0
+
+			.main-nav__link
+				font-size: $fontXSm
+
+				&--active
+					border-bottom: none
+
+	&__item
+		display: inline-block
+		margin-right: 15px
+
+		&:last-of-type
+			margin-right: 0
+
+	&__link
+		display: block
+		padding: 20px 5px 17px
+
+		font-size: $fontXSm
+		text-transform: uppercase
+		letter-spacing: 1px
+		color: $font-secondary-color
+
+		transition: $effect-time
+
+		border-bottom: 3px solid transparent
+
+		&--active
+			color: $akcent-color
+			border-color: $akcent-color
+
+		&:hover
+			color: $akcent-color
+
+		@media #{$tablet}
+			font-size: $fontMicro

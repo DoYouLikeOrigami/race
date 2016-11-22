@@ -1,0 +1,35 @@
+include _blocks/_mixins
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+		link(rel="shortcut icon", href="./static/favicon.ico", type="image/x-icon")
+
+		//SEO
+		meta(name="description", content="Создание веб сайта за 3000 рублей. Конструктор Landing Page от веб студии. Настройка контекстной рекламы и продвижение сайта.")
+		meta(name="author", content="jokerinteractive.ru")
+
+		link(rel="stylesheet", href="./static/css/style.min.css")
+		link(rel="stylesheet", href="./static/css/sweetalert2.min.css")
+		link(rel="slylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&subset=cyrillic")
+
+		title
+			block title
+
+	body
+		.container
+			include _blocks/_header
+			block main-content
+			include _blocks/_footer
+			include _blocks/_popups
+
+		script(src="./static/js/jump.min.js")
+		script(src="./static/js/sweetalert2.min.js")
+		script(src="./static/js/main.js")
+		script(src="./static/js/piwik.js")
+		script(src="./static/js/metrika.js")
+		noscript
+			img(src="//stat.z-gu.ru/piwik.php?idsite=27", style="position:absolute;left:-9999px;", alt="")
+		noscript
+			img(src="https://mc.yandex.ru/watch/40273854", style="position:absolute;left:-9999px;", alt="" )

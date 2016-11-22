@@ -1,0 +1,113 @@
+.main-footer
+	background: $special-color
+	color: $secondary-color
+	font-size: $fontSm
+
+	&__wrap
+		@include wrap
+
+		&--top
+			@include flex
+			align-items: flex-start
+			justify-content: flex-start
+
+			@media #{$mobile}
+				flex-wrap: wrap
+
+		&--bottom
+			@include clearfix
+
+	&__top
+		padding: 80px 0
+		background: $footer-top-bg
+
+		@media #{$mobile}
+			padding: 60px 0 40px
+
+	&__section
+		display: block
+		box-sizing: border-box
+
+		width: 270px
+		margin-right: 30px
+
+		&:last-of-type
+			margin-right: 0
+
+	&__logo
+		display: block
+
+		font-size: $fontBig
+		line-height: 41px
+		letter-spacing: 1px
+		color: $akcent-color
+
+		margin-bottom: 40px
+
+		@media #{$tablet}
+			font-size: $fontXMd
+			line-height: $fontXMd
+			letter-spacing: 0
+
+		small
+			display: block
+			font-size: $fontMd
+			line-height: $fontMd
+			letter-spacing: 0
+
+			@media #{$tablet}
+				font-size: $fontMicro
+				line-height: $fontMicro
+
+	&__header
+		@include section_header
+
+		display: block
+
+		font-size: $fontSm
+		color: $font-footer-secondary-color
+		border-color: $font-footer-color
+
+		padding: 0 0 18px
+		margin-bottom: 40px
+
+		&::after
+			width: 40px
+			height: 3px
+			bottom: -1px
+
+	&__text
+		margin: 0 0 20px
+		color: $font-footer-color
+		font-size: $fontXSm
+		line-height: 1.643
+
+	&__contact-list
+		max-width: 440px
+
+		@media #{$tablet}
+
+		a
+			color: $secondary-color
+
+	&__bottom
+		font-size: $fontSm
+		padding: 40px 0
+		background-color: $footer-bottom-bg
+
+		@media #{$tablet}
+			font-size: $fontXSm
+
+	&__bottom-left,
+	&__bottom-right
+		display: block
+		width: 50%
+
+	&__bottom-left
+		float: left
+		text-align: left
+		color: $font-footer-secondary-color
+
+	&__bottom-right
+		float: right
+		text-align: right

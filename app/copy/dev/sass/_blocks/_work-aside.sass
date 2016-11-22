@@ -1,0 +1,54 @@
+.work-aside
+	display: block
+	position: fixed
+
+	width: 33%
+	height: 100%
+
+	right: 0
+	top: 0
+
+	background: $border-color
+	overflow: scroll
+
+	@media #{$mobile}
+		display: none
+
+	&__img
+		display: block
+
+		height: 300px
+
+		text-align: center
+
+		overflow: hidden
+
+		img
+			display: inline-block
+
+			height: 100%
+
+	&__descr
+		padding: 30px 20px
+
+	&__header
+		font-size: $fontBig
+		margin-bottom: 40px
+		font-weight: 700
+
+		@media #{$tablet}
+			font-size: $fontXMd
+			margin-bottom: 30px
+
+	&__descr-item
+		font-size: $fontMd
+		margin-bottom: 30px
+
+		@media #{$tablet}
+			font-size: $fontSm
+			margin-bottom: 25px
+
+		b
+			display: block
+			margin-bottom: 15px
+			font-weight: 700

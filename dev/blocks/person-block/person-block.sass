@@ -1,0 +1,67 @@
+.person-block
+	padding: 60px 0
+	background-color: $seconadry-bg
+
+	&__wrap
+		@include wrap
+		@include flex
+
+		align-items: flex-start
+
+	&__left,
+	&__right
+		width: 45%
+
+	&__header
+		display: block
+
+		color: $font-color
+		font-size: $fontXBig - 3
+		line-height: $fontXBig + 10
+		font-family: $headers-font
+
+		margin-bottom: 20px
+
+	&__desc
+		color: $font-par-color
+		font-size: $fontSm
+		line-height: 20px
+
+		margin-bottom: 20px
+
+		ul
+			margin: 20px 0
+			padding-left: 15px
+			list-style-type: circle
+
+			li
+				margin-bottom: 5px
+
+	&__gallery
+		@include flex
+
+	&__gallery-img
+		display: block
+		box-sizing: border-box
+
+		width: 120px
+		height: 120px
+
+		border: 2px solid $font-color
+
+		overflow: hidden
+		transition: $effect-time
+
+		&:hover
+			border-color: $akcent-color
+
+		img
+			display: block
+			width: 100%
+
+	&__img
+		display: block
+
+		img
+			display: block
+			width: 100%

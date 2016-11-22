@@ -1,0 +1,42 @@
+.goods-descr
+	&__wrap
+		@include wrap
+		@include flex
+		align-items: flex-start
+		padding: 50px 0
+		max-width: 980px
+
+		@media #{$mobile}
+			flex-wrap: wrap
+			padding: 30px 0
+
+	&__column
+		display: block
+		box-sizing: border-box
+
+		width: 50%
+		padding: 0 40px
+
+		@media #{$mobile}
+			width: 100%
+			padding: 0 20px
+			margin-bottom: 30px
+
+			&:last-of-type
+				margin-bottom: 0
+
+		&:nth-of-type(2)
+			border-left: 1px solid #E5E5E5
+
+			@media #{$mobile}
+				border-left: none
+
+	&__header
+		font-size: $fontMd
+		font-weight: 300
+		color: $special-color
+		margin-bottom: 15px
+
+	&__par
+		color: $font-par-color
+		font-size: $fontSm - 1px

@@ -1,0 +1,46 @@
+.popup
+	display: block
+	position: fixed
+
+	width: 100%
+	height: 100%
+
+	left: 0
+	top: 0
+
+	background: rgba(0, 0, 0, .3)
+
+	z-index: -9999
+	opacity: 0
+
+	transition: .8
+
+	&--active
+		z-index: 9999
+		opacity: 1
+
+		.popup__body
+			opacity: 1
+
+	&--menu
+		background: none
+
+		.popup__body
+			background: rgba(0, 0, 0, .8)
+			top: 5%
+			transform: translateX(-50%)
+
+	&__body
+		display: block
+		position: absolute
+
+		left: 50%
+		top: 50%
+
+		transform: translate(-50%, -50%)
+		transition: .8
+
+		opacity: 0
+
+		background: #fff
+		padding: 25px 30px

@@ -1,0 +1,84 @@
+.works
+
+.works__wrap
+	@include wrap
+
+.works__title
+	@include section_header
+
+.works__item
+	display: flex
+	justify-content: space-between
+
+.works__description
+	width: 40%
+	display: flex
+	flex-wrap: wrap
+
+	.btn
+		align-self: baseline
+
+.works__photos
+	width: 50%
+	background: url(../img/works/works-bg.png) no-repeat 0 125px
+	position: relative
+	padding-left: 47px
+	min-height: 410px
+
+	.works__desc-title
+		margin-left: -47px
+
+.works__photo
+	background: url(../img/works/works-sprites.png) no-repeat 0 0
+	position: absolute
+	width: 180px
+	height: 192px
+	border-top-left-radius: 45%
+	border-bottom-right-radius: 45%
+	&:hover
+		background-image: url(../img/works/works-sprites-hover.png)
+	&:active
+		background-image: url(../img/works/works-sprites-active.png)
+	&:nth-child(2)
+		background-position: 1px -46px
+		left: 47px
+		top: 80px
+	&:nth-child(3)
+		background-position: -106px -187px
+		left: 153px
+		top: 220px
+	&:nth-child(4)
+		background-position: -230px 4px
+		left: 288px
+		top: 37px
+	&:nth-child(5)
+		background-position: -332px -139px
+		left: 389px
+		top: 181px
+
+.works__desc
+	flex-basis: 50%
+	margin-bottom: 15px
+
+.works__desc-title
+	@include section_header
+	font-size: 20px
+	text-align: left
+	margin-bottom: 10px
+	padding: 0
+
+.works__desc-title2
+	margin-bottom: 0
+
+.works__price
+	color: $special-color
+	font-weight: bold
+
+.works__list
+	li::before
+		content: "•"
+		margin-right: 8px
+		color: $special-color
+		font-size: 18px
+		position: relative
+		top: 2px

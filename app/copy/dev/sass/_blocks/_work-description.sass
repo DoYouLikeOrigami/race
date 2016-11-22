@@ -1,0 +1,55 @@
+.work-description
+	display: block
+	position: relative
+
+	width: 67%
+
+	left: 0
+	top: 0
+
+	padding-bottom: 60px
+
+	@media #{$mobile}
+		padding: 40px 0
+
+	@media #{$mobile}
+		width: 100%
+
+	&__img
+		display: block
+
+		overflow: hidden
+
+		margin-bottom: 30px
+
+		&--main
+			text-align: center
+			margin-bottom: 0
+
+			height: 300px
+
+			@media #{$mobile}
+				display: none
+
+			img
+				display: inline-block
+				width: auto
+				height: 100%
+
+		img
+			display: block
+			width: 100%
+
+	&__header
+		@include section_header
+		font-size: $fontXMd
+		margin: 0 0 40px 30px
+
+	&__text
+		margin-bottom: 30px
+		font-size: $fontMd
+		padding: 0 30px
+
+	&__btns
+		@include flex
+		justify-content: space-around
