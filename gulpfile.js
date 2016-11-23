@@ -34,13 +34,14 @@ gulp.task('sass', function() {
   gulp.src(paths.style.startFile)
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.style.convertFolder))
-    .pipe(cssnano())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(gulp.dest(paths.style.convertFolder));
 });
+
+//.pipe(cssnano())
+//.pipe(rename({
+//  suffix: '.min'
+//}))
+//.pipe(gulp.dest(paths.style.convertFolder))
 
 gulp.task('watch', ['sass', 'pug'], function() {
   gulp.watch(paths.style.watch, ['sass']);

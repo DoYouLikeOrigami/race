@@ -3,11 +3,17 @@ section.main-screen
 		.main-screen__img
 			img(src="/static/img/main-screen/img.jpg" alt="")
 		h1.main-screen__header
-			| Изготавливаем нагрудные знаки, медали, монеты и награды&nbsp;
-			em по&nbsp;индивидуальным эскизам
+			| Изготовление значков, медалей и&nbsp;монет
 			br
-			small Бесплатно доставим в любые регионы&nbsp;России
-		.main-screen__actions
-			input.main-screen__input(type="text" placeholder="Введите ваш номер телефона")
-			a.btn.btn--main(href="#") Оставьте заявку на расчет стоимости и бесплатный макет
+			em с&nbsp;доставкой по&nbsp;всей России
+			small Собственное производство с&nbsp;гарантией сроков
+	.main-screen__actions
+		header
+			| Оставьте заявку и получите разработку макета&nbsp;
+			em бесплатно
+		form.form.form--column.form--small
+			input.form__input(type="text" placeholder="Ваше имя")
+			input.form__input(type="tel" placeholder="Ваш номер телефона")
+			input.form__input(type="mail" placeholder="Ваш email")
+			input.btn.btn--main(type="submit" placeholder="Получить макет")
 

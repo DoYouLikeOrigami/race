@@ -1,0 +1,107 @@
+.popup
+	display: none
+	position: fixed
+	box-sizing: border-box
+
+	left: 50%
+	top: 50%
+
+	transform: translate(-50%, -50%)
+
+	max-width: 70%
+	max-height: 100vh
+
+	padding: 10px 15px
+
+	background: $akcent-bg
+	box-shadow: 0px 0px 8px #000
+
+	z-index: 999
+
+	&--active
+		display: block
+
+	&__close
+		display: block
+		position: absolute
+
+		right: 15px
+		top: 10px
+
+		width: 40px
+		height: 40px
+
+		font-size: $fontXMd
+		line-height: 40px
+		vertical-align: middle
+		text-align: center
+
+		background-color: $akcent-bg
+
+		span
+			color: $font-alt-color
+
+		&:hover
+			span
+				display: inline-block
+				transition: $effect-time ease-in
+				transform: rotate(360deg)
+				color: $akcent-color
+
+	&__img
+		display: block
+		max-width: 100%
+		max-height: 90vh
+
+	&__body
+		@include flex
+		justify-content: center
+		padding: 25px
+
+		header
+			display: block
+			width: 60%
+
+			margin-right: 5%
+
+			font-size: $fontXBig
+			line-height: 40px
+			text-transform: uppercase
+			font-family: $headers-font
+			color: $font-alt-color
+
+			em
+				font-style: normal
+				color: $special-color
+
+			span
+				white-space: nowrap
+
+	&__header
+		display: block
+
+		font-size: $fontXMd
+		line-height: 40px
+		color: $font-alt-color
+		font-family: $headers-font
+
+		margin: 20px 0
+
+	&__list
+		li
+			display: block
+			margin-bottom: 10px
+
+			a
+				color: $font-alt-color
+				font-size: $fontXSm
+				line-height: 20px
+				font-family: $headers-font
+				transition: $effect-time
+
+				&:hover
+					color: $akcent-color
+
+	&__actions
+		text-align: center
+		padding: 20px 0

@@ -1,5 +1,5 @@
 .person-block
-	padding: 60px 0
+	padding: 80px 0
 	background-color: $seconadry-bg
 
 	&__wrap
@@ -8,9 +8,11 @@
 
 		align-items: flex-start
 
-	&__left,
-	&__right
+	&__left
 		width: 45%
+
+	&__right
+		width: 50%
 
 	&__header
 		display: block
@@ -24,21 +26,22 @@
 
 	&__desc
 		color: $font-par-color
-		font-size: $fontSm
+		font-size: 20px
 		line-height: 20px
 
 		margin-bottom: 20px
 
 		ul
 			margin: 20px 0
-			padding-left: 15px
-			list-style-type: circle
+			padding-left: 20px
 
 			li
-				margin-bottom: 5px
+				margin-bottom: 10px
+				list-style-type: circle
 
 	&__gallery
 		@include flex
+		justify-content: space-around
 
 	&__gallery-img
 		display: block

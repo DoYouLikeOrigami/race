@@ -8,12 +8,12 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="author" content="">
-		<link rel="stylesheet" href="/static/css/style.min.css">
+		<link rel="stylesheet" href="/static/css/style.css">
 		<link rel="slylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic">
 		<link rel="stylesheet" href="/static/css/swiper.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif&amp;amp;subset=cyrillic">
-		<title>Крутой сайт за 3000 рублей
+		<title>Геральдический Завод
 		</title>
 	</head>
 	<body>
@@ -31,35 +31,73 @@
 				<div class="main-header__wrap">
 					<div class="main-header__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Санкт-петербургский<br>Геральдический<br>Завод</span></div>
 					<div class="main-header__address">Санкт-Петербург,<br>пр. Елизарова 34, БЦ "KROL"<br><a href="mailto:zakaz@geraldzavod.ru">zakaz@geraldzavod.ru</a></div>
-					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706">8 (812) 244-27-06</a><a class="main-header__tel-number" href="tel:+78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special" href="#">Заказать обратный звонок</a></div>
+					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706">8 (812) 244-27-06</a><a class="main-header__tel-number" href="tel:+78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
 				</div>
 			</header>
 			<section class="main-screen">
 				<div class="main-screen__wrap">
 					<div class="main-screen__img"><img src="/static/img/main-screen/img.jpg" alt=""></div>
-					<h1 class="main-screen__header">Изготавливаем нагрудные знаки, медали, монеты и награды&nbsp;<em>по&nbsp;индивидуальным эскизам</em><br><small>Бесплатно доставим в любые регионы&nbsp;России</small></h1>
-					<div class="main-screen__actions">
-						<input class="main-screen__input" type="text" placeholder="Введите ваш номер телефона"><a class="btn btn--main" href="#">Оставьте заявку на расчет стоимости и бесплатный макет</a>
-					</div>
+					<h1 class="main-screen__header">Изготовление значков, медалей и&nbsp;монет<br><em>с&nbsp;доставкой по&nbsp;всей России</em><small>Собственное производство с&nbsp;гарантией сроков</small></h1>
+				</div>
+				<div class="main-screen__actions">
+					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
+					<form class="form form--column form--small">
+						<input class="form__input" type="text" placeholder="Ваше имя">
+						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
+						<input class="form__input" type="mail" placeholder="Ваш email">
+						<input class="btn btn--main" type="submit" placeholder="Получить макет">
+					</form>
 				</div>
 			</section>
 			<section class="services-list">
 				<div class="services-list__wrap">
 					<h2 class="services-list__header">Выберите желаемое изделие</h2>
 					<ul class="services-list__list">
-						<li class="services-list__item"><a class="services-list__link" href="#">Нагрудные знаки</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Медали на колодке</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Значки, фрачники</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Спортивные медали</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Изделия из Драгоценных металлов</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Монеты</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Брелки</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="#">Подарочные футляры</a></li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Нагрудные знаки"></a>
+							<div class="services-list__link">
+								<p>Нагрудные знаки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Медали на колодке"></a>
+							<div class="services-list__link">
+								<p>Медали на колодке</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Значки, фрачники"></a>
+							<div class="services-list__link">
+								<p>Значки, фрачники</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Спортивные медали"></a>
+							<div class="services-list__link">
+								<p>Спортивные медали</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Монеты"></a>
+							<div class="services-list__link">
+								<p>Монеты</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Брелки"></a>
+							<div class="services-list__link">
+								<p>Брелки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Подарочные футляры"></a>
+							<div class="services-list__link">
+								<p>Подарочные футляры</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
+						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Изделия из Драгоценных металлов"></a>
+							<div class="services-list__link">
+								<p>Изделия из Драгоценных металлов</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</section>
 			<section class="portfolio">
-				<div class="swiper-container portfolio__top">
+				<div class="swiper-container portfolio__top portfolio__top--js-own">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/1.jpg)">
 							<div class="portfolio__text">
@@ -108,7 +146,7 @@
 					<div class="swiper-button-next swiper-button-white"></div>
 					<div class="swiper-button-prev swiper-button-white"></div>
 				</div>
-				<div class="swiper-container portfolio__thumbs">
+				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-own">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/1.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/2.jpg)"></div>
@@ -117,37 +155,67 @@
 					</div>
 				</div>
 			</section>
-			<div class="call-to-action">
-				<div class="call-to-action__wrap">
-					<div class="call-to-action__header">Ваш&nbsp;заказ будет эксклюзивным. Мы&nbsp;прописываем в&nbsp;договоре, что&nbsp;не&nbsp;продаем продукцию третьим&nbsp;лицам.</div><a class="btn btn--main btn--js-tech" href="#">Ознакомьтесь с договором</a>
+			<section class="portfolio">
+				<div class="swiper-container portfolio__top portfolio__top--js-china">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-1.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header portfolio__text-header--small">Производство в Китае<small>Без потери<br>качества</small></h3>
+							</div>
+						</div>
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-2.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header portfolio__text-header--small">2300<small>квадратных метров<br>производства</small></h3>
+							</div>
+						</div>
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-3.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header portfolio__text-header--small">Контроль<br>качества<small>Производится<br>6 сотрудниками</small></h3>
+							</div>
+						</div>
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-5.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header">Владелец<small>и наш друг<br>Мао</small></h3>
+							</div>
+						</div>
+					</div>
+					<!-- Add Arrows-->
+					<div class="swiper-button-next swiper-button-white"></div>
+					<div class="swiper-button-prev swiper-button-white"></div>
 				</div>
-			</div>
+				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-china">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-1.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-2.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-3.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-5.jpg)"></div>
+					</div>
+				</div>
+			</section>
 			<section class="person-block">
 				<div class="person-block__wrap">
 					<div class="person-block__left">
-						<header class="person-block__header">Над Вашим эскизом будет работать профессиональный художник</header>
-						<div class="person-block__desc">Виктор Жеравин - победитель в 3 дизайнерских конкурсах:
-							<ul>
-								<li>Дизайнерский конкурс</li>
-								<li>Дизайнерский конкурс</li>
-								<li>Дизайнерский конкурс</li>
-							</ul>
-							По вашему техническому заданию он подготовит эксклюзивный эскиз.
-							Ознакомьтесь с примерами его эскизов ниже.
-						</div>
-						<div class="person-block__gallery"><a class="person-block__gallery-img" href="#"><img src="/static/img/person-block/img-1-sm.jpg" alt=""></a><a class="person-block__gallery-img" href="#"><img src="/static/img/person-block/img-2-sm.jpg" alt=""></a><a class="person-block__gallery-img" href="#"><img src="/static/img/person-block/img-3-sm.jpg" alt=""></a></div>
+						<div class="person-block__img"><img src="/static/img/person-block/artist.jpg" alt="профессиональный художник Виктор Жеравин"></div>
 					</div>
 					<div class="person-block__right">
-						<div class="person-block__img"><img src="/static/img/person-block/artist.jpg" alt="профессиональный художник Виктор Жеравин"></div>
+						<header class="person-block__header">Над Вашим эскизом будет работать профессиональный художник</header>
+						<div class="person-block__desc">Виктор Жеравин:
+							<ul>
+								<li>Художник со стажем 15 лет</li>
+								<li>Разработал более 1000 эскизов нагрудных знаков и медалей</li>
+								<li>Победил в 21 дизайнерском конкурсе</li>
+							</ul>Ознакомьтесь с примерами его эскизов
+						</div>
+						<div class="person-block__gallery"><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-1.jpg"><img src="/static/img/person-block/img-1-sm.jpg" alt=""></a><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-2.jpg"><img src="/static/img/person-block/img-2-sm.jpg" alt=""></a><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-3.jpg"><img src="/static/img/person-block/img-3-sm.jpg" alt=""></a></div>
 					</div>
 				</div>
 			</section>
 			<div class="call-to-action">
 				<div class="call-to-action__wrap">
-					<div class="call-to-action__header">Введите свою&nbsp;почту и&nbsp;мы&nbsp;вышлем&nbsp;вам техническое задание на&nbsp;производство</div>
-					<div class="form form--cta">
+					<header class="call-to-action__header">Посмотрите все&nbsp;работы нашего&nbsp;художника</header>
+					<div class="form form--cta" action="" method="">
 						<input class="form__input" type="email" placeholder="Введите Ваш email">
-						<input class="btn btn--main" type="submit" value="Получите техническое задание на производство">
+						<input class="btn btn--main" type="submit" value="Получите все эскизы на почту">
 					</div>
 				</div>
 			</div>
@@ -201,36 +269,30 @@
 			</section>
 			<section class="flex-block">
 				<div class="flex-block__wrap">
-					<h2 class="flex-block__header">Прочитайте отзывы о работе с нами</h2>
-					<div class="flex-block__list">
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/flex-block/img-1.jpg" alt="Отзыв"></div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/flex-block/img-2.jpg" alt="Отзыв"></div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/flex-block/img-3.jpg" alt="Отзыв"></div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/flex-block/img-4.jpg" alt="Отзыв"></div>
+					<h2 class="flex-block__header">Отзывы о работе с нами</h2>
+					<div class="flex-block__list"><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-1.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-2.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-3.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-4.jpg" alt="Отзыв"></a></div>
+				</div>
+			</section>
+			<section class="descr-block">
+				<div class="descr-block__wrap">
+					<div class="descr-block__content">
+						<h2 class="descr-block__header">За 2&nbsp;года мы&nbsp;приняли участие в&nbsp;более чем 150&nbsp;государственных тендерах и исполнили 32&nbsp;госконтракта</h2>
+						<ul class="descr-block__list">
+							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3390301679016000019" target="_blank">Изготовление медалей «70&nbsp;лет Калининграду»</a></li>
+							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=3290401600816000018" target="_blank">Изготовление и&nbsp;поставка нагрудного знака «Почетный гражданин МО&nbsp;«Котлас»</a></li>
+							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=2027413693416000029" target="_blank">Изготовление медалей для&nbsp;администрации города&nbsp;Уфа</a></li>
+							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000098" target="_blank">Изготовление ордена «Дружба&nbsp;народов»</a></li>
+							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2770401203715000033" target="_blank">Изготовление сувенирных монет «Знаки Зодиака»</a></li>
+						</ul>
+						<div class="descr-block__actions"><a class="descr-block__btn js-show-commerce-popup" href="#">Получите наше коммерческое предложение</a><a class="descr-block__btn descr-block__btn--secondary js-show-gos-popup" href="#">Посмотрите другие выполненные заказы</a></div>
 					</div>
 				</div>
 			</section>
-			<section class="services-list services-list--alt">
-				<div class="services-list__wrap">
-					<h2 class="services-list__header">За 2&nbsp;года мы&nbsp;приняли участие в&nbsp;более чем 150&nbsp;государственных тендерах и исполнили 32&nbsp;госконтракта.</h2>
-					<ul class="services-list__list">
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3390301679016000019" target="_blank">Изготовление медалей «70&nbsp;лет Калининграду»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=3290401600816000018" target="_blank">Изготовление и&nbsp;поставка нагрудного знака «Почетный гражданин МО&nbsp;«Котлас»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=2027413693416000029" target="_blank">Изготовление медалей для&nbsp;администрации города&nbsp;Уфа</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000098" target="_blank">Изготовление ордена «Дружба&nbsp;народов»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2770401203715000033" target="_blank">Изготовление сувенирных монет «Знаки Зодиака»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1666000830315000012" target="_blank">Изготовление медалей для&nbsp;УО&nbsp;РАН</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3543900001315000023" target="_blank">Поставка наградных комплектов: медалей «За&nbsp;вклад в&nbsp;развитие Убинского&nbsp;района»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000041" target="_blank">Изготовление медалей для&nbsp;администрации города&nbsp;Уфа</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0102200001514000020" target="_blank">Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Минспорта Республики&nbsp;Бурятия</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0347200004214000071" target="_blank">Изготовление нагрудных знаков для&nbsp;пожарно-спасательного центра г.&nbsp;Магадан</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0156200004914000031" target="_blank">Изготовление нагрудных знаков «Ветеран труда Пермского&nbsp;края»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0148200005014000064" target="_blank">Изготовление наградного комплекта «Сергий&nbsp;Радонежский»</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0122200001014000334" target="_blank">Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Правительства Хабаровского&nbsp;края</a></li>
-						<li class="services-list__item"><a class="services-list__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0129200003714000064" target="_blank">Изготовление нагрудных знаков Волгоградской областной&nbsp;Думы</a></li>
-					</ul>
+			<div class="call-to-action">
+				<div class="call-to-action__wrap">
+					<div class="call-to-action__header">Даем&nbsp;гарантию, что ваши&nbsp;изделия будут&nbsp;сделаны ограниченным тиражом и&nbsp;не&nbsp;будут проданы третьим&nbsp;лицам. Мы&nbsp;прописываем&nbsp;это в&nbsp;договоре.</div><a class="btn btn--main js-show-contract-popup" href="#">Получите шаблон договора</a>
 				</div>
-			</section>
+			</div>
 			<section class="contacts-section" id="contacts">
 				<div class="contacts-section__wrap">
 					<header class="contacts-section__header">Свяжитесь с нами по любым вопросам</header>
@@ -240,11 +302,67 @@
 					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=UOBw4PZgf8proO2JUJ8fRbW6rSj7DKKr&amp;amp;width=100%25&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor&amp;amp;scroll=true"></script>
 					<div class="contacts-section__bottom">
 						<div class="contacts-section__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Санкт-петербургский<br>Геральдический<br>Завод</span></div>
-						<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706">8 (812) 244-27-06</a><a class="contacts-section__tel-number" href="tel:78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special" href="#">Заказать обратный звонок</a></div>
+						<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706">8 (812) 244-27-06</a><a class="contacts-section__tel-number" href="tel:78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
 					</div>
 				</div>
 			</section>
+			<div class="popup popup--js-img"><a class="popup__close" href="#"><span>&#10006;</span></a><img class="popup__img" src=""></div>
+			<div class="popup popup--js-order"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<div class="popup__body">
+					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
+					<form class="form form--column form--small">
+						<input class="form__input" type="text" placeholder="Ваше имя">
+						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
+						<input class="form__input" type="mail" placeholder="Ваш email">
+						<input class="btn btn--main" type="submit" placeholder="Получить макет">
+					</form>
+				</div>
+			</div>
+			<div class="popup popup--js-call"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<div class="popup__body">
+					<header>Введите номер телефона и течение дня мы Вам перезвоним</header>
+					<form class="form form--column">
+						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
+						<input class="btn btn--main" type="submit" placeholder="Заказать звонок">
+					</form>
+				</div>
+			</div>
+			<div class="popup popup--js-contract"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<div class="popup__body">
+					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;пришлем Вам шаблон договора</header>
+					<form class="form form--column">
+						<input class="form__input" type="mail" placeholder="Ваш email">
+						<input class="btn btn--main" type="submit" placeholder="Получить шаблон договора">
+					</form>
+				</div>
+			</div>
+			<div class="popup popup--js-commerce"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<div class="popup__body">
+					<header>Введите свои контактные данные и мы пришлем Вам наше коммерческое предложение</header>
+					<form class="form form--column form--small">
+						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
+						<input class="form__input" type="mail" placeholder="Ваш email">
+						<input class="btn btn--main" type="submit" placeholder="Получить коммерческое предложение">
+					</form>
+				</div>
+			</div>
+			<div class="popup popup--js-gos"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<header class="popup__header">Другие выполненные госзаказы</header>
+				<ul class="popup__list">
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1666000830315000012" target="_blank">Изготовление медалей для&nbsp;УО&nbsp;РАН</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3543900001315000023" target="_blank">Поставка наградных комплектов: медалей «За&nbsp;вклад в&nbsp;развитие Убинского&nbsp;района»</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000041" target="_blank">Изготовление медалей для&nbsp;администрации города&nbsp;Уфа</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0102200001514000020" target="_blank">Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Минспорта Республики&nbsp;Бурятия</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0347200004214000071" target="_blank">Изготовление нагрудных знаков для&nbsp;пожарно-спасательного центра г.&nbsp;Магадан</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0156200004914000031" target="_blank">Изготовление нагрудных знаков «Ветеран труда Пермского&nbsp;края»</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0148200005014000064" target="_blank">Изготовление наградного комплекта «Сергий&nbsp;Радонежский»</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0122200001014000334" target="_blank">Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Правительства Хабаровского&nbsp;края</a></li>
+					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0129200003714000064" target="_blank">Изготовление нагрудных знаков Волгоградской областной&nbsp;Думы</a></li>
+				</ul>
+				<div class="popup__actions"><a class="btn btn--special btn--small js-show-commerce-popup" href="#">Получите наше коммерческое предложение</a></div>
+			</div>
 			<!--include ../blocks/footer/footer.pug-->
+			<div class="overlay"></div>
 			<script src="/static/js/libs.js"></script>
 			<script src="/static/js/swiper.min.js"></script>
 			<script src="/static/js/main.js"></script>
