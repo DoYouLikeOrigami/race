@@ -4,26 +4,7 @@
 
 	padding: 120px 0
 
-	background: #222
-
-	&--alt
-		background: #f0f0f0
-		padding: 80px 0
-
-		.services-list
-			&__header
-				color: $font-color
-				font-size: $fontXBig
-
-			&__item
-				flex-basis: 50%
-				padding: 15px 0
-				text-align: center
-
-			&__link
-				font-size: $fontMd
-				color: $font-color
-				text-transform: none
+	background: $akcent-bg
 
 	&__wrap
 		@include wrap
@@ -33,6 +14,7 @@
 		color: $akcent-color
 		font-family: $headers-font
 		font-size: $fontLg
+		letter-spacing: 3px
 
 	&__list
 		@include flex
@@ -43,16 +25,52 @@
 		margin: 0 auto
 
 	&__item
-		padding: 20px 25px
+		display: block
+		position: relative
+
+		box-sizing: border-box
+
+		padding: 20px 15px
+		width: 32%
+
+		&--big
+			width: 48%
+
+		&:hover
+			.services-list__link
+				color: $akcent-color
+
+	&__img
+		display: block
+		box-sizing: border-box
+
+		width: 130px
+		border: 2px solid $akcent-bg
+		border-radius: 50%
+
+		margin: 0 auto 10px
+
+		transition: $effect-time
+		overflow: hidden
+
+		&:hover
+			border-color: $akcent-color
+
+		img
+			display: block
+			width: 100%
 
 	&__link
 		font-size: $fontXMd
-		line-height: 40px
+		line-height: 30px
 		vertical-align: middle
 		color: $font-secondary-color
 		text-transform: uppercase
 		transition: $effect-time
 		font-family: $headers-font
+		text-align: center
 
-		&:hover
-			color: $akcent-color
+
+
+		p
+			margin-bottom: 10px

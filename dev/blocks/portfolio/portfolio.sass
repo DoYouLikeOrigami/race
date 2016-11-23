@@ -19,6 +19,7 @@
 	&__text
 		color: #fff
 		justify-content: center
+		z-index: 2
 
 		p
 			display: block
@@ -59,6 +60,9 @@
 	display: flex
 	justify-content: center
 	align-items: center
+
+	&::before
+		@include before_darken
 
 	&--thumbs
 		width: 25%

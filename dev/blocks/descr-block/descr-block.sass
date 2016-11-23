@@ -1,0 +1,87 @@
+.descr-block
+	display: block
+	position: relative
+	background: url(/static/img/descr-block/two.jpg)
+	background-size: cover
+
+	&::before
+		@include before_darken
+		background: rgba(0, 0, 0, .4)
+
+	&__wrap
+		@include wrap
+		height: 100vh
+		min-height: 600px
+
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&__content
+		display: block
+		width: 60%
+		z-index: 2
+
+	&__header
+		display: block
+
+		font-size: $fontBig
+		line-height: 40px
+		font-family: $headers-font
+		color: #f9d498
+
+		margin-bottom: 40px
+
+	&__list
+		margin-bottom: 40px
+
+	&__item
+		display: block
+		margin-bottom: 10px
+
+	&__link
+		color: #f9d498
+		opacity: .8
+		font-size: $fontXSm
+		line-height: 20px
+		font-family: $headers-font
+
+		&:hover
+			opacity: 1
+
+	&__actions
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__btn
+		display: block
+		box-sizing: border-box
+
+		flex-basis: 48%
+
+		font-size: $fontSm
+		line-height: 20px
+		text-transform: uppercase
+		text-align: center
+
+		padding: 5px 15px
+
+		border: 1px solid #f9d498
+		background-color: #f9d498
+		color: #444
+
+		transition: $effect-time
+
+		&:hover
+			background-color: darken(#f9d498, 20%)
+			border-color: darken(#f9d498, 20%)
+
+		&--secondary
+			background-color: transparent
+			color: #f9d498
+
+			&:hover
+				background-color: #f9d498
+				color: #444
+				border-color: #f9d498

@@ -1,0 +1,86 @@
+.popup.popup--js-img
+	a.popup__close(href="#")
+		span &#10006;
+	img.popup__img(src="")
+
+.popup.popup--js-order
+	a.popup__close(href="#")
+		span &#10006;
+	.popup__body
+		header
+			| Оставьте заявку и получите разработку макета&nbsp;
+			em бесплатно
+		form.form.form--column.form--small
+			input.form__input(type="text" placeholder="Ваше имя")
+			input.form__input(type="tel" placeholder="Ваш номер телефона")
+			input.form__input(type="mail" placeholder="Ваш email")
+			input.btn.btn--main(type="submit" placeholder="Получить макет")
+
+.popup.popup--js-call
+	a.popup__close(href="#")
+		span &#10006;
+	.popup__body
+		header
+			| Введите номер телефона и течение дня мы Вам перезвоним
+		form.form.form--column
+			input.form__input(type="tel" placeholder="Ваш номер телефона")
+			input.btn.btn--main(type="submit" placeholder="Заказать звонок")
+
+.popup.popup--js-contract
+	a.popup__close(href="#")
+		span &#10006;
+	.popup__body
+		header
+			| Введите свой&nbsp;
+			span E-mail&nbsp;
+			| и мы&nbsp;пришлем Вам шаблон договора
+		form.form.form--column
+			input.form__input(type="mail" placeholder="Ваш email")
+			input.btn.btn--main(type="submit" placeholder="Получить шаблон договора")
+
+.popup.popup--js-commerce
+	a.popup__close(href="#")
+		span &#10006;
+	.popup__body
+		header
+			| Введите свои контактные данные и мы пришлем Вам наше коммерческое предложение
+		form.form.form--column.form--small
+			input.form__input(type="tel" placeholder="Ваш номер телефона")
+			input.form__input(type="mail" placeholder="Ваш email")
+			input.btn.btn--main(type="submit" placeholder="Получить коммерческое предложение")
+
+.popup.popup--js-gos
+	a.popup__close(href="#")
+		span &#10006;
+	header.popup__header
+		| Другие выполненные госзаказы
+	ul.popup__list
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1666000830315000012" target="_blank")
+						| Изготовление медалей для&nbsp;УО&nbsp;РАН
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3543900001315000023" target="_blank")
+						| Поставка наградных комплектов: медалей «За&nbsp;вклад в&nbsp;развитие Убинского&nbsp;района»
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000041" target="_blank")
+						| Изготовление медалей для&nbsp;администрации города&nbsp;Уфа
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0102200001514000020" target="_blank")
+					| Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Минспорта Республики&nbsp;Бурятия
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0347200004214000071" target="_blank")
+						| Изготовление нагрудных знаков для&nbsp;пожарно-спасательного центра г.&nbsp;Магадан
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0156200004914000031" target="_blank")
+					| Изготовление нагрудных знаков «Ветеран труда Пермского&nbsp;края»
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0148200005014000064" target="_blank")
+					| Изготовление наградного комплекта «Сергий&nbsp;Радонежский»
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0122200001014000334" target="_blank")
+					| Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Правительства Хабаровского&nbsp;края
+		li
+			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0129200003714000064" target="_blank")
+					| Изготовление нагрудных знаков Волгоградской областной&nbsp;Думы
+	.popup__actions
+		a.btn.btn--special.btn--small.js-show-commerce-popup(href="#") Получите наше коммерческое предложение
