@@ -6,6 +6,15 @@
 
 	background: $akcent-bg
 
+	@media #{$laptop}
+		padding: 80px 0
+
+	@media #{$tablet}
+		padding: 60px 0
+
+	@media #{$mobileSm}
+		padding: 40px 0
+
 	&__wrap
 		@include wrap
 
@@ -24,6 +33,10 @@
 		width: 75%
 		margin: 0 auto
 
+		@media #{$laptop}
+			width: 100%
+			max-width: 900px
+
 	&__item
 		display: block
 		position: relative
@@ -32,9 +45,23 @@
 
 		padding: 20px 15px
 		width: 32%
+		flex-basis: 32%
+
+		@media #{$mobile}
+			width: 48%
+			flex-basis: 48%
+
+		@media #{$mobileSm}
+			width: 100%
+			flex-basis: 100%
 
 		&--big
 			width: 48%
+			flex-basis: 48%
+
+			@media #{$mobile}
+				width: 100%
+				flex-basis: 100%
 
 		&:hover
 			.services-list__link
@@ -56,6 +83,12 @@
 		&:hover
 			border-color: $akcent-color
 
+		@media #{$tablet}
+			width: 115px
+
+		@media #{$mobileSm}
+			width: 100px
+
 		img
 			display: block
 			width: 100%
@@ -63,14 +96,21 @@
 	&__link
 		font-size: $fontXMd
 		line-height: 30px
-		vertical-align: middle
-		color: $font-secondary-color
 		text-transform: uppercase
-		transition: $effect-time
+		color: $font-secondary-color
 		font-family: $headers-font
+
+		vertical-align: middle
 		text-align: center
 
+		transition: $effect-time
 
+		@media #{$laptop}
+			font-size: $fontMd
+			line-height: $fontBigMd
+
+		@media #{$mobile}
+			font-size: $fontSm
 
 		p
 			margin-bottom: 10px

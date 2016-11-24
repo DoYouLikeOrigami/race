@@ -1,6 +1,11 @@
-section.portfolio
+section.portfolio#portfolio
 	.swiper-container.portfolio__top.portfolio__top--js-own
 		.swiper-wrapper
+			.swiper-slide(style="background-image:url(/static/img/portfolio/4.jpg)")
+				.portfolio__text
+					h3.portfolio__text-header.portfolio__text-header--small
+						| Наше производство
+
 			.swiper-slide(style="background-image:url(/static/img/portfolio/1.jpg)")
 				.portfolio__text
 					h3.portfolio__text-header
@@ -49,17 +54,6 @@ section.portfolio
 						br
 						| и снижает стоимость конечного продукта
 
-			.swiper-slide(style="background-image:url(/static/img/portfolio/4.jpg)")
-				.portfolio__text
-					h3.portfolio__text-header
-						| До 8000
-						small
-							| заготовок
-							br
-							| за смену
-					p
-						| Производит наш вырубной пресс усилием 25 тонн
-
 
 		// Add Arrows
 		.swiper-button-next.swiper-button-white
@@ -67,7 +61,7 @@ section.portfolio
 
 	.swiper-container.portfolio__thumbs.portfolio__thumbs--js-own
 		.swiper-wrapper
+			.swiper-slide.swiper-slide--thumbs(style="background-image:url(/static/img/portfolio/4.jpg)")
 			.swiper-slide.swiper-slide--thumbs(style="background-image:url(/static/img/portfolio/1.jpg)")
 			.swiper-slide.swiper-slide--thumbs(style="background-image:url(/static/img/portfolio/2.jpg)")
 			.swiper-slide.swiper-slide--thumbs(style="background-image:url(/static/img/portfolio/3.jpg)")
-			.swiper-slide.swiper-slide--thumbs(style="background-image:url(/static/img/portfolio/4.jpg)")

@@ -14,6 +14,10 @@
 	&:active
 		transform: translateY(3px)
 
+	@media #{$mobileSm}
+		padding: 15px 20px
+		font-size: $fontMicro
+
 	&--main
 		color: $secondary-color
 		background: $akcent-color
@@ -37,6 +41,14 @@
 		font-weight: normal
 		font-size: $fontMicro
 		line-height: 20px
+
+		@media #{$laptop}
+			padding: 3px 5px
+			font-size: $fontMicro - 2
+
+	&--mobile-hidden
+		@media #{$mobile}
+			display: none
 
 	//&--popup
 	//&--alt

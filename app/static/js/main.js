@@ -1,95 +1,78 @@
 window.onload = function() {
-	// Main screen slider
-	(function() {
-		var sliderNode = document.querySelector('.main-screen__slider');
-		if (! sliderNode) return false;
-
-		var nextBtn = '.main-screen__slider-btn--next';
-		var prevBtn = '.main-screen__slider-btn--prev';
-		var slider = new Swiper(sliderNode, {
-			nextButton: nextBtn,
-			prevButton: prevBtn,
-			buttonDisabledClass: 'main-screen__slider-btn--disable',
-			slidesPerView: 1,
-			centeredSlides: true
-		});
-	})();
-
-	// Reviews section
-	(function() {
-		var tabClass = 'reviews-section__tab';
-		var tabActiveClass = 'reviews-section__tab--active';
-		var tabSelector = '.' + tabClass;
-
-		var reviewsSection = document.querySelector('.reviews-section');
-		if (!reviewsSection) return false
-
-		var slider = new Swiper('.reviews-section__slides', {
-			pagination: '.reviews-section__tabs',
-			paginationClickable: true,
-			paginationBulletRender: function (index, className) {
-				return `<span class="${tabClass}"></span>`;
-			},
-			onSlideChangeStart: function() {
-				var tabs = document.querySelectorAll(tabSelector);
-				Array.prototype.forEach.call(tabs, function(tab) {
-					tab.classList.remove(tabActiveClass);
-				});
-
-				tabs[slider.activeIndex].classList.add(tabActiveClass);
-			},
-			autoplay: 2000
-		});
-
-		var tabs = document.querySelectorAll(tabSelector);
-		var firstTab = tabs[0];
-		firstTab.classList.add(tabActiveClass);
-
-		Array.prototype.forEach.call(tabs, function(tab, index) {
-			tab.addEventListener('mousedown', function() {
-				slider.slideTo(index);
-			});
-		});
-	})();
-
-	// Stock modal
-	(function() {
-		var stocks = document.querySelectorAll('.stock__item');
-
-		Array.prototype.forEach.call(stocks, function(stock) {
-			stock.addEventListener('click', function(e) {
-				if (e.target.classList.contains('btn')) {
-					showModal(stock);
-				}
-			});
-		});
-
-		function showModal(stock) {
-			var modal = stock.querySelector('.stock__modal');
-			var overlay = stock.querySelector('.stock__modal-overlay');
-			modal.classList.add('stock__modal--show');
-
-			overlay.addEventListener('click', function(e) {
-				modal.classList.remove('stock__modal--show');
-			});
-		}
-	})();
 
 	// call-to-action ajax
 	(function() {
-		var btn = document.querySelector('.call-to-action .btn');
-		var input = document.querySelector('.call-to-action__input input');
+		var forms = document.querySelectorAll('.form');
 
-		btn.addEventListener('click', function() {
+		Array.prototype.forEach.call(forms, function(form, index) {
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
 
-			var json = {phone: input.value};
-			send(json);
+				var inputs = form.querySelectorAll('.form__input'),
+						method = form.method,
+						action = form.action,
+						name,
+						phone,
+						email,
+						json;
+
+				if (!method || !action) {
+					console.log('error: no method or action');
+					return;
+				}
+
+				Array.prototype.forEach.call(inputs, function(input, index) {
+					if (input.name === "name") {
+						name = input.value;
+					}
+
+					if (input.name === "phone") {
+						phone = input.value;
+					}
+
+					if (input.name === "email") {
+						email = input.value;
+					}
+				});
+
+				if (!phone || !email) {
+					console.log('error: no phone or email');
+					showErrPopup();
+					return;
+				}
+
+				json = {
+					phone: phone
+					name: name,
+					email: email};
+
+				send(json, method, action);
+			});
 		});
 
-		function send(json) {
+		function showErrPopup(text) {
+			var errPopup = document.querySelector('.popup--js-error'),
+					closeBtn = errPopup.querySelector('.js--close-popup'),
+					overlay = document.querySelector('.overlay');
+
+			if (text) {
+				errPopup.querySelector('.popup__error-text').innerHTML = text;
+			}
+
+			errPopup.classList.add('popup--active');
+			overlay.classList.add('overlay--active');
+
+			closeBtn.addEventListener('click', function(e) {
+				e.preventDefault();
+				errPopup.classList.remove('popup--active');
+				overlay.classList.remove('overlay--active');
+			});
+		}
+
+		function send(json, method, action) {
 			var xhr = new XMLHttpRequest();
 			console.log(xhr);
-			xhr.open("POST", "/url");
+			xhr.open(action, method);
 			console.log(xhr);
 			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			xhr.send(JSON.stringify(json));
@@ -103,14 +86,6 @@ window.onload = function() {
 					successHandler(xhr.responseText);
 				}
 			}
-		}
-
-		function errorHandler(status, statusText) {
-			swal('Что-то пошло не так!', 'Попробуйте нам позвонить!', 'error');
-		}
-
-		function successHandler(responseText) {
-			swal('Мы получили ваш запрос!',  'Перезвоним в течение 15 минут!', 'success');
 		}
 	})();
 

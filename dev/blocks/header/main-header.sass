@@ -2,7 +2,13 @@
 	display: block
 
 	padding: 15px 0
-	margin-top: 60px
+	margin-top: 55px
+
+	@media #{$laptop}
+		padding: 10px 0
+
+	@media #{$mobile}
+		margin-top: 0
 
 	&__wrap
 		@include wrap
@@ -17,14 +23,38 @@
 		display: flex
 		align-items: center
 
+		@media #{$tablet}
+			max-width: 45%
+
+		@media #{$mobile}
+			max-width: 35%
+
 		img
 			display: block
 			max-width: 110px
 			margin-right: 20px
 
+			@media #{$laptop}
+				max-width: 95px
+
+			@media #{$tablet}
+				margin-right: 15px
+
+			@media #{$mobile}
+				margin-right: 0
+
+			@media #{$mobileSm}
+				max-width: 80px
+
 		span
 			font-size: $fontMd
 			line-height: 20px
+
+			@media #{$tablet}
+				font-size: $fontSm
+
+			@media #{$mobile}
+				display: none
 
 	&__address
 		display: block
@@ -32,6 +62,9 @@
 
 		font-size: $fontMd
 		line-height: 20px
+
+		@media #{$tablet}
+			display: none
 
 		a
 			color: $akcent-color
@@ -43,6 +76,12 @@
 		max-width: 30%
 
 		text-align: center
+
+		@media #{$tablet}
+			max-width: 45%
+
+		@media #{$mobile}
+			max-width: 60%
 
 	&__tel-number
 		display: block
@@ -57,4 +96,16 @@
 		&:hover
 			text-decoration: underline
 
+		@media #{$laptop}
+			font-size: $fontBigMd
+			line-height: $fontBigMd
 
+		@media #{$mobile}
+			font-size: $fontBig
+			line-height: $fontBig
+
+			&:last-of-type
+				margin-bottom: 0
+
+		@media #{$mobileSm}
+			font-size: $fontBigMd

@@ -107,9 +107,15 @@
 		display: flex
 		justify-content: center
 
+		@media #{$tablet}
+			flex-wrap: wrap
+
 		.form
 			&__input
 				margin-right: 30px
+
+				@media #{$mobile}
+					margin: 0 0 30px
 
 	&__label
 		display: inline-block
@@ -146,6 +152,10 @@
 		&:hover,
 		&:focus
 			border-color: $akcent-color
+
+		&--name
+			@media #{$tablet}
+				display: none
 
 	&__textarea
 		display: block

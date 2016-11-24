@@ -18,6 +18,12 @@
 
 	z-index: 999
 
+	@media #{$tablet}
+		max-width: 90%
+
+	@media #{$mobile}
+		max-width: 100%
+
 	&--active
 		display: block
 
@@ -53,10 +59,16 @@
 		max-width: 100%
 		max-height: 90vh
 
+		@media #{$mobile}
+			width: 100%
+
 	&__body
 		@include flex
 		justify-content: center
 		padding: 25px
+
+		@media #{$mobile}
+			flex-direction: column
 
 		header
 			display: block
@@ -69,6 +81,15 @@
 			text-transform: uppercase
 			font-family: $headers-font
 			color: $font-alt-color
+
+			@media #{$mobile}
+				margin: 0 0 20px
+
+				width: 100%
+				flex-basis: 100%
+
+				font-size: $fontBig
+				line-height: 30px
 
 			em
 				font-style: normal

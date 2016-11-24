@@ -1,4 +1,4 @@
-section.main-screen
+section.main-screen#main-screen
 	.main-screen__wrap
 		.main-screen__img
 			img(src="/static/img/main-screen/img.jpg" alt="")
@@ -11,9 +11,9 @@ section.main-screen
 		header
 			| Оставьте заявку и получите разработку макета&nbsp;
 			em бесплатно
-		form.form.form--column.form--small
-			input.form__input(type="text" placeholder="Ваше имя")
-			input.form__input(type="tel" placeholder="Ваш номер телефона")
-			input.form__input(type="mail" placeholder="Ваш email")
+		form.form.form--column.form--small(action="/get-maket" method="post")
+			input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
+			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+			input.form__input(type="mail" name="email" placeholder="Ваш email")
 			input.btn.btn--main(type="submit" placeholder="Получить макет")
 
