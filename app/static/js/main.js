@@ -42,7 +42,7 @@ window.onload = function() {
 				}
 
 				json = {
-					phone: phone
+					phone: phone,
 					name: name,
 					email: email};
 
