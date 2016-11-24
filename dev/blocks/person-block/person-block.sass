@@ -2,17 +2,30 @@
 	padding: 80px 0
 	background-color: $seconadry-bg
 
+	@media #{$laptop}
+		padding: 60px 0
+
 	&__wrap
 		@include wrap
 		@include flex
 
 		align-items: flex-start
 
+		@media #{$tablet}
+			justify-content: center
+
 	&__left
 		width: 45%
 
+		@media #{$tablet}
+			display: none
+
 	&__right
 		width: 50%
+
+		@media #{$tablet}
+			width: 100%
+			max-width: 600px
 
 	&__header
 		display: block
@@ -24,16 +37,32 @@
 
 		margin-bottom: 20px
 
+		@media #{$laptop}
+			font-size: $fontBig
+			line-height: 30px
+			margin-bottom: 15px
+
+		@media #{$mobileSm}
+			font-size: $fontXMd
+
 	&__desc
 		color: $font-par-color
-		font-size: 20px
+		font-size: $fontBigMd
 		line-height: 20px
 
 		margin-bottom: 20px
 
+		@media #{$laptop}
+			font-size: $fontMd
+			margin-bottom: 15px
+
 		ul
 			margin: 20px 0
 			padding-left: 20px
+
+			@media #{$laptop}
+				margin: 15px 0
+				padding-left: 15px
 
 			li
 				margin-bottom: 10px
@@ -57,6 +86,14 @@
 
 		&:hover
 			border-color: $akcent-color
+
+		@media #{$laptop}
+			width: 100px
+			height: 100px
+
+		@media #{$mobileSm}
+			width: 80px
+			height: 80px
 
 		img
 			display: block

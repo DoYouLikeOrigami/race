@@ -1,6 +1,6 @@
 .call-to-action
 	.call-to-action__wrap
 		.call-to-action__header Введите свою&nbsp;почту и&nbsp;мы&nbsp;вышлем&nbsp;вам техническое задание на&nbsp;производство
-		.form.form--cta
-			input.form__input(type="email", placeholder="Введите Ваш email")
+		.form.form--cta(action="/get-tz" method="post")
+			input.form__input(type="email" name="email" placeholder="Введите Ваш email")
 			input.btn.btn--main(type="submit" value="Получите техническое задание на производство")

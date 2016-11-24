@@ -10,11 +10,22 @@
 		header
 			| Оставьте заявку и получите разработку макета&nbsp;
 			em бесплатно
-		form.form.form--column.form--small
-			input.form__input(type="text" placeholder="Ваше имя")
-			input.form__input(type="tel" placeholder="Ваш номер телефона")
-			input.form__input(type="mail" placeholder="Ваш email")
+		form.form.form--column.form--small(action="/get-maket" method="post")
+			input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
+			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+			input.form__input(type="email" name="email" placeholder="Ваш email")
 			input.btn.btn--main(type="submit" placeholder="Получить макет")
+
+.popup.popup--js-error
+	a.popup__close(href="#")
+		span &#10006;
+	.popup__body
+		header
+			em Ошибка:
+		header.popup__error-text
+			| Пожалуйста, введите вашу почту или телефон!
+			a.js--close-popup.btn.btn--main(href="#") Понял
+
 
 .popup.popup--js-call
 	a.popup__close(href="#")
@@ -22,8 +33,8 @@
 	.popup__body
 		header
 			| Введите номер телефона и течение дня мы Вам перезвоним
-		form.form.form--column
-			input.form__input(type="tel" placeholder="Ваш номер телефона")
+		form.form.form--column(action="/callback" method="post")
+			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 			input.btn.btn--main(type="submit" placeholder="Заказать звонок")
 
 .popup.popup--js-contract
@@ -33,9 +44,9 @@
 		header
 			| Введите свой&nbsp;
 			span E-mail&nbsp;
-			| и мы&nbsp;пришлем Вам шаблон договора
-		form.form.form--column
-			input.form__input(type="mail" placeholder="Ваш email")
+			| и мы&nbsp;отправим Вам шаблон договора
+		form.form.form--column(action="/get-contract" method="post")
+			input.form__input(type="email" name="email" placeholder="Ваш email")
 			input.btn.btn--main(type="submit" placeholder="Получить шаблон договора")
 
 .popup.popup--js-commerce
@@ -43,10 +54,10 @@
 		span &#10006;
 	.popup__body
 		header
-			| Введите свои контактные данные и мы пришлем Вам наше коммерческое предложение
-		form.form.form--column.form--small
-			input.form__input(type="tel" placeholder="Ваш номер телефона")
-			input.form__input(type="mail" placeholder="Ваш email")
+			| Введите контактные данные и мы отправим Вам коммерческое предложение
+		form.form.form--column.form--small(action="/get-commerce" method="post")
+			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+			input.form__input(type="email" name="email" placeholder="Ваш email")
 			input.btn.btn--main(type="submit" placeholder="Получить коммерческое предложение")
 
 .popup.popup--js-gos

@@ -2,6 +2,10 @@
 	padding: 60px 0
 	background: $akcent-bg
 
+	@media #{$mobile}
+		padding: 40px 0
+		margin-bottom: -1px
+
 	&:nth-of-type(2n+1)
 		.result
 			&__wrap
@@ -16,11 +20,19 @@
 			&__descr
 				text-align: right
 
-	&:nth-of-type(1)
-		padding-top: 80px
+		@media #{$tablet}
+			.result
+				&__wrap
+					flex-direction: column
 
-	&:last-of-type
-		padding-bottom: 80px
+				&__left
+					margin: 0 0 30px
+
+				&__header
+					text-align: left
+
+				&__descr
+					text-align: left
 
 	&__wrap
 		@include wrap
@@ -28,28 +40,46 @@
 
 		justify-content: center
 
+		@media #{$tablet}
+			flex-direction: column
+
 	&__left
 		width: 32%
 		margin-right: 5%
 
+		@media #{$tablet}
+			width: 90%
+			flex-basis: 90%
+			margin: 0 0 30px
+
 	&__right
 		width: 50%
 
+		@media #{$tablet}
+			width: 90%
+			flex-basis: 90%
+			margin: 0 0 30px
+
 	&__header
-		display: block
+		@include section_header
 
 		font-size: $fontXBig
 		color: $akcent-color
 		font-family: $headers-font
 		font-weight: 400
 
-		margin: 0 0 20px
-
 	&__work
 		display: block
 
 		border-radius: 50%
 		overflow: hidden
+
+		@media #{$tablet}
+			max-width: 300px
+			margin: 0 auto
+
+		@media #{$mobile}
+			max-width: 200px
 
 		img
 			width: 100%
@@ -61,11 +91,16 @@
 		header
 			display: block
 
-			font-size: $fontBigMd
-			line-height: $fontBigMd
-			color: $font-alt-color
+			font-size: $fontXBig
+			line-height: $fontXBig
+			font-family: $headers-font
+			color: $akcent-color
 
 			margin-bottom: 20px
+
+			@media #{$mobile}
+				font-size: $fontBig
+				margin-bottom: 15px
 
 		p
 			display: block
@@ -82,6 +117,9 @@
 	&__slides
 		@include flex
 
+		@media #{$tablet}
+			justify-content: center
+
 	&__slides-item
 		display: block
 		box-sizing: border-box
@@ -94,6 +132,13 @@
 		overflow: hidden
 
 		transition: $effect-time
+
+		@media #{$tablet}
+			max-width: 150px
+			margin-right: 5%
+
+		@media #{$mobile}
+			max-width: 100px
 
 		&:hover
 			border-color: $akcent-color

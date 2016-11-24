@@ -20,36 +20,36 @@
 		<div class="container">
 			<div class="main-nav">
 				<ul class="main-nav__list">
-					<li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#">Изделия</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#">Опыт</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#">Качество</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#">Клиенты</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#main-screen">Главная</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#services">Изделия</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#portfolio">Опыт</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#result">Качество</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#flex">Клиенты</a></li>
 				</ul>
 			</div>
 			<header class="main-header">
 				<div class="main-header__wrap">
 					<div class="main-header__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Санкт-петербургский<br>Геральдический<br>Завод</span></div>
 					<div class="main-header__address">Санкт-Петербург,<br>пр. Елизарова 34, БЦ "KROL"<br><a href="mailto:zakaz@geraldzavod.ru">zakaz@geraldzavod.ru</a></div>
-					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706">8 (812) 244-27-06</a><a class="main-header__tel-number" href="tel:+78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
+					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706">8 (812) 244-27-06</a><a class="main-header__tel-number" href="tel:+78007075164">8 (800) 707-51-64</a><a class="btn btn--mobile-hidden btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
 				</div>
 			</header>
-			<section class="main-screen">
+			<section class="main-screen" id="main-screen">
 				<div class="main-screen__wrap">
 					<div class="main-screen__img"><img src="/static/img/main-screen/img.jpg" alt=""></div>
 					<h1 class="main-screen__header">Изготовление значков, медалей и&nbsp;монет<br><em>с&nbsp;доставкой по&nbsp;всей России</em><small>Собственное производство с&nbsp;гарантией сроков</small></h1>
 				</div>
 				<div class="main-screen__actions">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small">
-						<input class="form__input" type="text" placeholder="Ваше имя">
-						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
-						<input class="form__input" type="mail" placeholder="Ваш email">
+					<form class="form form--column form--small" action="/get-maket" method="post">
+						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
+						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+						<input class="form__input" type="mail" name="email" placeholder="Ваш email">
 						<input class="btn btn--main" type="submit" placeholder="Получить макет">
 					</form>
 				</div>
 			</section>
-			<section class="services-list">
+			<section class="services-list" id="services">
 				<div class="services-list__wrap">
 					<h2 class="services-list__header">Выберите желаемое изделие</h2>
 					<ul class="services-list__list">
@@ -96,9 +96,14 @@
 					</ul>
 				</div>
 			</section>
-			<section class="portfolio">
+			<section class="portfolio" id="portfolio">
 				<div class="swiper-container portfolio__top portfolio__top--js-own">
 					<div class="swiper-wrapper">
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/4.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header portfolio__text-header--small">Наше производство</h3>
+							</div>
+						</div>
 						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/1.jpg)">
 							<div class="portfolio__text">
 								<h3 class="portfolio__text-header">30 000<small>изделий<br>в месяц</small></h3>
@@ -135,12 +140,6 @@
 								<p>Уменьшает ручной труд<br>и снижает стоимость конечного продукта</p>
 							</div>
 						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/4.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header">До 8000<small>заготовок<br>за смену</small></h3>
-								<p>Производит наш вырубной пресс усилием 25 тонн</p>
-							</div>
-						</div>
 					</div>
 					<!-- Add Arrows-->
 					<div class="swiper-button-next swiper-button-white"></div>
@@ -148,10 +147,10 @@
 				</div>
 				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-own">
 					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/4.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/1.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/2.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/3.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/4.jpg)"></div>
 					</div>
 				</div>
 			</section>
@@ -165,7 +164,7 @@
 						</div>
 						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-2.jpg)">
 							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">2300<small>квадратных метров<br>производства</small></h3>
+								<h3 class="portfolio__text-header">2300<small>квадратных метров<br>производства</small></h3>
 							</div>
 						</div>
 						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-3.jpg)">
@@ -213,25 +212,25 @@
 			<div class="call-to-action">
 				<div class="call-to-action__wrap">
 					<header class="call-to-action__header">Посмотрите все&nbsp;работы нашего&nbsp;художника</header>
-					<div class="form form--cta" action="" method="">
-						<input class="form__input" type="email" placeholder="Введите Ваш email">
+					<form class="form form--cta" action="/get-art" method="post">
+						<input class="form__input" type="email" name="email" placeholder="Введите Ваш email">
 						<input class="btn btn--main" type="submit" value="Получите все эскизы на почту">
-					</div>
+					</form>
 				</div>
 			</div>
-			<section class="result">
+			<section class="result" id="result">
+				<h2 class="result__header">Наши работы</h2>
 				<div class="result__wrap">
 					<div class="result__left">
 						<div class="result__work"><img src="/static/img/result/work.jpg"></div>
 					</div>
 					<div class="result__right">
-						<h2 class="result__header">Изготовленные нагрудные знаки</h2>
 						<div class="result__descr">
-							<header>Значки к зимней олимпиаде в Сочи 2014</header>
+							<header>Значки к зимней олимпиаде в Сочи&nbsp;2014</header>
 							<p class="result__descr-material">Материал: Нейзильбер и латунь</p>
 							<p class="result__descr-number">Тираж 2014 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Значки к зимней олимпиаде в Сочи 2014" data-material="Нейзильбер и латунь" data-number="2014 шт"><img src="/static/img/result/work.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «55 лет ЭС г. Салават»" data-material="Серебро 925 и латунь с позолотой" data-number="80 шт"><img src="/static/img/result/work-12.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «Аксалта»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="100 шт"><img src="/static/img/result/work-13.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Значки к зимней олимпиаде в Сочи&amp;nbsp;2014" data-material="Нейзильбер и латунь" data-number="2014 шт"><img src="/static/img/result/work.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «55&amp;nbsp;лет ЭС&amp;nbsp;г.&amp;nbsp;Салават»" data-material="Серебро 925 и латунь с позолотой" data-number="80 шт"><img src="/static/img/result/work-12.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «Аксалта»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="100 шт"><img src="/static/img/result/work-13.jpg"></a></div>
 					</div>
 				</div>
 			</section>
@@ -241,13 +240,12 @@
 						<div class="result__work"><img src="/static/img/result/work-21.jpg"></div>
 					</div>
 					<div class="result__right">
-						<h2 class="result__header">Изготовленные медали</h2>
 						<div class="result__descr">
-							<header>Медаль «Куликово поле»</header>
+							<header>Медаль «Куликово&nbsp;поле»</header>
 							<p class="result__descr-material">Материал: Цинк с покрытием медью</p>
 							<p class="result__descr-number">Тираж 120 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Медаль «Куликово поле»" data-material="Цинк с покрытием медью" data-number="120 шт"><img src="/static/img/result/work-21.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «50 лет академии ФСО»" data-material="Латунь" data-number="3500 шт"><img src="/static/img/result/work-22.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «70 лет Калининграду»" data-material="Латунь" data-number="7700 шт"><img src="/static/img/result/work-23.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Медаль «Куликово&amp;nbsp;поле»" data-material="Цинк с покрытием медью" data-number="120 шт"><img src="/static/img/result/work-21.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «50&amp;nbsp;лет академии ФСО»" data-material="Латунь" data-number="3500 шт"><img src="/static/img/result/work-22.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «70&amp;nbsp;лет Калининграду»" data-material="Латунь" data-number="7700 шт"><img src="/static/img/result/work-23.jpg"></a></div>
 					</div>
 				</div>
 			</section>
@@ -257,17 +255,16 @@
 						<div class="result__work"><img src="/static/img/result/work-31.jpg"></div>
 					</div>
 					<div class="result__right">
-						<h2 class="result__header">Изготовленные фрачники</h2>
 						<div class="result__descr">
-							<header>Фрачник «РССУ 50 лет»</header>
+							<header>Фрачник «РССУ&nbsp;50&nbsp;лет»</header>
 							<p class="result__descr-material">Материал: Латунь</p>
 							<p class="result__descr-number">Тираж 500 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Фрачник «РССУ 50 лет»" data-material="Латунь" data-number="500 шт"><img src="/static/img/result/work-31.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «РССУ 50 лет»" data-material="Серебро 925 с позолотой" data-number="500 шт"><img src="/static/img/result/work-32.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «Инженерно-технический факультет ВИТУ»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="20 шт"><img src="/static/img/result/work-33.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Латунь" data-number="500 шт"><img src="/static/img/result/work-31.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Серебро 925 с позолотой" data-number="500 шт"><img src="/static/img/result/work-32.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «Инженерно-технический факультет ВИТУ»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="20 шт"><img src="/static/img/result/work-33.jpg"></a></div>
 					</div>
 				</div>
 			</section>
-			<section class="flex-block">
+			<section class="flex-block" id="flex">
 				<div class="flex-block__wrap">
 					<h2 class="flex-block__header">Отзывы о работе с нами</h2>
 					<div class="flex-block__list"><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-1.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-2.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-3.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-4.jpg" alt="Отзыв"></a></div>
@@ -310,38 +307,44 @@
 			<div class="popup popup--js-order"><a class="popup__close" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small">
-						<input class="form__input" type="text" placeholder="Ваше имя">
-						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
-						<input class="form__input" type="mail" placeholder="Ваш email">
+					<form class="form form--column form--small" action="/get-maket" method="post">
+						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
+						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+						<input class="form__input" type="email" name="email" placeholder="Ваш email">
 						<input class="btn btn--main" type="submit" placeholder="Получить макет">
 					</form>
+				</div>
+			</div>
+			<div class="popup popup--js-error"><a class="popup__close" href="#"><span>&#10006;</span></a>
+				<div class="popup__body">
+					<header><em>Ошибка:</em></header>
+					<header class="popup__error-text">Пожалуйста, введите вашу почту или телефон!<a class="js--close-popup btn btn--main" href="#">Понял</a></header>
 				</div>
 			</div>
 			<div class="popup popup--js-call"><a class="popup__close" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите номер телефона и течение дня мы Вам перезвоним</header>
-					<form class="form form--column">
-						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
+					<form class="form form--column" action="/callback" method="post">
+						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 						<input class="btn btn--main" type="submit" placeholder="Заказать звонок">
 					</form>
 				</div>
 			</div>
 			<div class="popup popup--js-contract"><a class="popup__close" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
-					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;пришлем Вам шаблон договора</header>
-					<form class="form form--column">
-						<input class="form__input" type="mail" placeholder="Ваш email">
+					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;отправим Вам шаблон договора</header>
+					<form class="form form--column" action="/get-contract" method="post">
+						<input class="form__input" type="email" name="email" placeholder="Ваш email">
 						<input class="btn btn--main" type="submit" placeholder="Получить шаблон договора">
 					</form>
 				</div>
 			</div>
 			<div class="popup popup--js-commerce"><a class="popup__close" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
-					<header>Введите свои контактные данные и мы пришлем Вам наше коммерческое предложение</header>
-					<form class="form form--column form--small">
-						<input class="form__input" type="tel" placeholder="Ваш номер телефона">
-						<input class="form__input" type="mail" placeholder="Ваш email">
+					<header>Введите контактные данные и мы отправим Вам коммерческое предложение</header>
+					<form class="form form--column form--small" action="/get-commerce" method="post">
+						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+						<input class="form__input" type="email" name="email" placeholder="Ваш email">
 						<input class="btn btn--main" type="submit" placeholder="Получить коммерческое предложение">
 					</form>
 				</div>

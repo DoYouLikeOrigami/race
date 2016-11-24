@@ -11,15 +11,22 @@
 	&__wrap
 		@include wrap
 		height: 100vh
-		min-height: 600px
+		min-height: 450px
 
 		display: flex
 		align-items: center
 		justify-content: flex-end
 
+		@media #{$mobile}
+			min-height: 420px
+
+		@media #{$mobileSm}
+			min-height: 580px
+
 	&__content
 		display: block
-		width: 60%
+		width: 720px
+		max-width: 100%
 		z-index: 2
 
 	&__header
@@ -32,8 +39,23 @@
 
 		margin-bottom: 40px
 
+		@media #{$mobile}
+			font-size: $fontMd
+			line-height: 30px
+			margin-bottom: 30px
+
+		@media #{$mobileSm}
+			margin-bottom: 20px
+			line-height: 20px
+
 	&__list
 		margin-bottom: 40px
+
+		@media #{$mobile}
+			margin-bottom: 30px
+
+		@media #{$mobileSm}
+			margin-bottom: 20px
 
 	&__item
 		display: block
@@ -54,6 +76,10 @@
 		justify-content: space-between
 		align-items: center
 
+		@media #{$mobileSm}
+			flex-wrap: wrap
+			justify-content: center
+
 	&__btn
 		display: block
 		box-sizing: border-box
@@ -72,6 +98,13 @@
 		color: #444
 
 		transition: $effect-time
+
+		@media #{$mobile}
+			font-size: $fontXSm
+
+		@media #{$mobileSm}
+			flex-basis: 90%
+			margin-bottom: 20px
 
 		&:hover
 			background-color: darken(#f9d498, 20%)

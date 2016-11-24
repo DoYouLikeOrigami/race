@@ -43,10 +43,21 @@
 	text-align: center
 	font-family: $default-font
 
+	@media #{$laptop}
+		margin-bottom: 40px
+
+	@media #{$tablet}
+		font-size: $fontXBig + 2
+
 	@media #{$mobile}
 		font-size: $fontBig
 		letter-spacing: 1px
 		margin-bottom: 40px
+
+	@media #{$mobileSm}
+		font-size: $fontXMd
+		line-height: $fontXBig
+		margin-bottom: 30px
 
 @mixin page_header
 	display: block
@@ -61,6 +72,14 @@
 	font-weight: 700
 	font-family: $headers-font
 
+	@media #{$tablet}
+		font-size: $fontLg - 4
+		line-height: $fontLg + 5
+
+	@media #{$mobile}
+		font-size: $fontBig
+		line-height: $fontBig + 10
+
 	small
 		display: block
 		margin-top: 40px
@@ -71,13 +90,19 @@
 		font-weight: 700
 		font-family: $default-font
 
-	@media #{$tablet}
-		font-size: $fontLg
-		letter-spacing: 0
+		@media #{$laptop}
+			margin-top: 20px
+			font-size: $fontXBig - 2
 
-	@media #{$mobile}
-		font-size: $fontXBig
-		margin-bottom: 40px
+		@media #{$tablet}
+			font-size: $fontBig
+
+		@media #{$mobile}
+			font-size: $fontBigMd
+			line-height: $fontBigMd + 10
+
+		@media #{$mobileSm}
+			margin-top: 10px
 
 @mixin attention-header
 	display: block
