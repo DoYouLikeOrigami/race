@@ -11,9 +11,9 @@ window.onload = function() {
 				var inputs = form.querySelectorAll('.form__input'),
 						method = form.method,
 						action = form.action,
-						name,
-						phone,
-						email,
+						name = "",
+						phone = "",
+						email = "",
 						json;
 
 				if (!method || !action) {
@@ -42,7 +42,7 @@ window.onload = function() {
 				}
 
 				json = {
-					phone: phone
+					phone: phone,
 					name: name,
 					email: email};
 
