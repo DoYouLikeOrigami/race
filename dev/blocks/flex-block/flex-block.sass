@@ -7,11 +7,10 @@
 	&--team
 		background: $seconadry-bg
 		.flex-block
-			&__list
-				align-items: flex-start
 
 			&__item
 				border: none
+				text-align: left
 
 			&__img
 				margin-bottom: 40px
@@ -56,22 +55,18 @@
 					line-height: 15px
 					margin-bottom: 15px
 
-
 	&__wrap
 		@include wrap
-		max-width: 960px
 
 	&__header
 		@include section_header
 
 	&__list
-		@include flex
-
-		justify-content: space-around;
-		flex-wrap: wrap
+		display: block
+		text-align: center
 
 	&__item
-		display: block
+		display: inline-block
 		width: 200px
 
 		box-sizing: border-box
@@ -80,19 +75,26 @@
 
 		border: 1px solid $font-color
 
+		margin-right: 20px
+
+		vertical-align: top
+
+		&:last-of-type
+			margin-right: 0
+
 		@media #{$laptop}
 			width: 180px
 
 		@media #{$tablet}
 			width: 120px
 
+			margin-right: 12px
+
 		@media #{$mobile}
 			width: 23%
-			flex-basis: 23%
 
 		@media #{$mobileSm}
 			width: 45%
-			flex-basis: 45%
 			margin-bottom: 20px
 
 		img

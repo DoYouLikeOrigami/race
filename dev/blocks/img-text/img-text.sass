@@ -23,20 +23,16 @@
 
 	&__wrap
 		@include wrap
-		@include flex
-		justify-content: center
-
-		@media #{$mobile}
-			flex-wrap: wrap
+		text-align: center
 
 	&__img
-		display: block
+		display: inline-block
 		position: relative
 		max-width: 45%
+		vertical-align: middle
 
 		@media #{$mobile}
 			max-width: 90%
-			flex-basis: 90%
 
 		img
 			display: block
@@ -51,13 +47,16 @@
 				height: auto
 
 	&__text
-		display: block
+		display: inline-block
 		width: 45%
+
 		margin-right: 5%
 
+		vertical-align: middle
+		text-align: left
+
 		@media #{$mobile}
-			max-width: 90%
-			flex-basis: 90%
+			width: 100%
 			margin: 0 0 30px
 
 	&__header

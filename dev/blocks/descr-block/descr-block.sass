@@ -13,9 +13,7 @@
 		height: 100vh
 		min-height: 450px
 
-		display: flex
-		align-items: center
-		justify-content: flex-end
+		text-align: right
 
 		@media #{$mobile}
 			min-height: 420px
@@ -24,7 +22,10 @@
 			min-height: 580px
 
 	&__content
-		display: block
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+
 		width: 720px
 		max-width: 100%
 		z-index: 2
