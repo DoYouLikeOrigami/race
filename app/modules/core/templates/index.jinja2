@@ -40,21 +40,23 @@
 					<h1 class="main-screen__header">Изготовление значков, медалей и&nbsp;монет<br><em>с&nbsp;доставкой по&nbsp;всей России</em><small>Собственное производство с&nbsp;гарантией сроков</small></h1>
 				</div>
 				<div class="main-screen__actions">
-					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
-						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
-						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-						<input class="form__input" type="mail" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" value="Получить макет">
-					</form>
+					<header>Получите разработку макета&nbsp;<em>бесплатно</em><img src="/static/img/main-screen/maket.jpg"></header>
+					<div class="main-screen__actions-right">
+						<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
+							<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
+							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+							<input class="form__input" type="mail" name="email" placeholder="Ваш email">
+							<input class="btn btn--main" type="submit" value="Получить макет">
+						</form>
+					</div>
 				</div>
 			</section>
 			<section class="img-text img-text--map">
 				<div class="img-text__wrap">
 					<div class="img-text__text">
-						<h3 class="img-text__header">Работаем со всеми регионами РФ. Доставка до двери – бесплатно.<small>На карте отмечены регионы, с которыми мы уже работали</small></h3>
+						<h3 class="img-text__header">Работаем со всеми регионами РФ. Доставка по России до дверей – бесплатно.</h3>
 					</div>
-					<div class="img-text__img"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=ogzHxVBZBGlzLEBzyprg1Qg9M3iUAA1k&amp;amp;width=600&amp;amp;height=400&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
+					<div class="img-text__img"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=ogzHxVBZBGlzLEBzyprg1Qg9M3iUAA1k&amp;amp;width=500&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
 				</div>
 			</section>
 			<section class="services-list" id="services">
@@ -276,6 +278,10 @@
 							<p class="flex-block__descr">Владислав Аксенов</p>
 							<p class="flex-block__descr">Директор</p>
 						</div>
+						<div class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/team-section/five.jpg" alt="Помощник директора">
+							<p class="flex-block__descr">Светлана Банчужная</p>
+							<p class="flex-block__descr">Помощник директора</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -311,21 +317,25 @@
 			<div class="popup popup--js-order"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
-						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
-						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" value="Получить макет">
-					</form>
+					<div class="popup__right">
+						<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
+							<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
+							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+							<input class="form__input" type="email" name="email" placeholder="Ваш email">
+							<input class="btn btn--main" type="submit" value="Получить макет">
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="popup popup--js-art"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header><small>Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера</small></header>
-					<form class="form form--column" action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!">
-						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" value="Получите эскизы">
-					</form>
+					<div class="popup__right">
+						<form class="form form--column" action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!">
+							<input class="form__input" type="email" name="email" placeholder="Ваш email">
+							<input class="btn btn--main" type="submit" value="Получить эскизы">
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="popup popup--js-error"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
@@ -343,29 +353,35 @@
 			<div class="popup popup--js-call"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите номер телефона и течение дня мы Вам перезвоним</header>
-					<form class="form form--column" action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!">
-						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-						<input class="btn btn--main" type="submit" value="Заказать звонок">
-					</form>
+					<div class="popup__right">
+						<form class="form form--column" action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!">
+							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+							<input class="btn btn--main" type="submit" value="Заказать звонок">
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="popup popup--js-contract"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;отправим Вам шаблон договора</header>
-					<form class="form form--column" action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!">
-						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" value="Получить договор">
-					</form>
+					<div class="popup__right">
+						<form class="form form--column" action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!">
+							<input class="form__input" type="email" name="email" placeholder="Ваш email">
+							<input class="btn btn--main" type="submit" value="Получить договор">
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="popup popup--js-commerce"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите контактные данные и мы отправим Вам коммерческое предложение</header>
-					<form class="form form--column form--small" action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!">
-						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" value="Получить коммерческое предложение">
-					</form>
+					<div class="popup__right">
+						<form class="form form--column form--small" action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!">
+							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
+							<input class="form__input" type="email" name="email" placeholder="Ваш email">
+							<input class="btn btn--main" type="submit" value="Получить коммерческое">
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="popup popup--js-gos"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>

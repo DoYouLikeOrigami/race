@@ -10,11 +10,12 @@
 		header
 			| Оставьте заявку и получите разработку макета&nbsp;
 			em бесплатно
-		form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
-			input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
-			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" value="Получить макет")
+		.popup__right
+			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
+				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+				input.form__input(type="email" name="email" placeholder="Ваш email")
+				input.btn.btn--main(type="submit" value="Получить макет")
 
 .popup.popup--js-art
 	a.popup__close.js--close-popup(href="#")
@@ -22,9 +23,10 @@
 	.popup__body
 		header
 			small Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера
-		form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!")
-			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" value="Получите эскизы")
+		.popup__right
+			form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!")
+				input.form__input(type="email" name="email" placeholder="Ваш email")
+				input.btn.btn--main(type="submit" value="Получить эскизы")
 
 .popup.popup--js-error
 	a.popup__close.js--close-popup(href="#")
@@ -53,9 +55,10 @@
 	.popup__body
 		header
 			| Введите номер телефона и течение дня мы Вам перезвоним
-		form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!")
-			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-			input.btn.btn--main(type="submit" value="Заказать звонок")
+		.popup__right
+			form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!")
+				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+				input.btn.btn--main(type="submit" value="Заказать звонок")
 
 .popup.popup--js-contract
 	a.popup__close.js--close-popup(href="#")
@@ -65,9 +68,10 @@
 			| Введите свой&nbsp;
 			span E-mail&nbsp;
 			| и мы&nbsp;отправим Вам шаблон договора
-		form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!")
-			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" value="Получить договор")
+		.popup__right
+			form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!")
+				input.form__input(type="email" name="email" placeholder="Ваш email")
+				input.btn.btn--main(type="submit" value="Получить договор")
 
 .popup.popup--js-commerce
 	a.popup__close.js--close-popup(href="#")
@@ -75,10 +79,11 @@
 	.popup__body
 		header
 			| Введите контактные данные и мы отправим Вам коммерческое предложение
-		form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!")
-			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" value="Получить коммерческое предложение")
+		.popup__right
+			form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!")
+				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+				input.form__input(type="email" name="email" placeholder="Ваш email")
+				input.btn.btn--main(type="submit" value="Получить коммерческое")
 
 .popup.popup--js-gos
 	a.popup__close.js--close-popup(href="#")

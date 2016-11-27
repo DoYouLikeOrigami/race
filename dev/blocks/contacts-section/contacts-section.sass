@@ -5,40 +5,44 @@
 		@include wrap
 
 	&__flex
-		@include flex
-		justify-content: flex-start
-		align-items: flex-start
+		display: block
 		margin-bottom: 40px
 
 		@media #{$mobile}
-			flex-wrap: wrap
 			margin-bottom: 20px
 
 	&__left
-		flex-basis: 35%
+		width: 35%
+		display: inline-block
+
+		vertical-align: top
+
 		margin-right: 5%
 
 		@media #{$laptop}
-			flex-basis: 45%
+			width: 45%
 
 		@media #{$tablet}
-			flex-basis: 50%
+			width: 50%
 
 		@media #{$mobile}
-			flex-basis: 100%
+			width: 100%
 			margin: 0 0 20px
 
 	&__right
-		flex-basis: 30%
+		width: 30%
+		display: inline-block
+
+		vertical-align: top
 
 		@media #{$laptop}
-			flex-basis: 35%
+			width: 35%
 
 		@media #{$tablet}
-			flex-basis: 45%
+			width: 45%
 
 		@media #{$mobile}
-			flex-basis: 100%
+			width: 100%
 
 
 	&__header

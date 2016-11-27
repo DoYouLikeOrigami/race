@@ -8,28 +8,25 @@
 
 	&__wrap
 		@include wrap
-		@include flex
-
-		justify-content: center
-
-		@media #{$tablet}
-			flex-direction: column
+		text-align: center
 
 	&__left
 		width: 32%
 		margin-right: 5%
 
+		display: inline-block
+
 		@media #{$tablet}
 			width: 90%
-			flex-basis: 90%
 			margin: 0 0 30px
 
 	&__right
 		width: 50%
+		display: inline-block
+		text-align: left
 
 		@media #{$tablet}
 			width: 90%
-			flex-basis: 90%
 			margin: 0 0 30px
 
 	&__header

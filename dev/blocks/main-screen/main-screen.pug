@@ -9,11 +9,13 @@ section.main-screen#main-screen
 			small Собственное производство с&nbsp;гарантией сроков
 	.main-screen__actions
 		header
-			| Оставьте заявку и получите разработку макета&nbsp;
+			| Получите разработку макета&nbsp;
 			em бесплатно
-		form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
-			input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
-			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-			input.form__input(type="mail" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" value="Получить макет")
+			img(src="/static/img/main-screen/maket.jpg")
+		.main-screen__actions-right
+			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
+				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
+				input.form__input(type="mail" name="email" placeholder="Ваш email")
+				input.btn.btn--main(type="submit" value="Получить макет")
 

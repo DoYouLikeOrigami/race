@@ -64,24 +64,26 @@
 			width: 100%
 
 	&__body
-		@include flex
-		justify-content: center
-		padding: 25px
+		display: inline-block
+		text-align: center
+		padding: 25px 0
 
 		@media #{$mobile}
 			flex-direction: column
 
 		header
-			display: block
-			width: 60%
+			display: inline-block
+			vertical-align: middle
+			width: 52%
 
-			margin-right: 5%
+			margin-right: 3%
 
 			font-size: $fontXBig
 			line-height: 40px
 			text-transform: uppercase
 			font-family: $headers-font
 			color: $font-alt-color
+			text-align: left
 
 			small
 				font-size: $fontBig
@@ -92,7 +94,6 @@
 				margin: 0 0 20px
 
 				width: 100%
-				flex-basis: 100%
 
 				font-size: $fontBig
 				line-height: 30px
@@ -105,13 +106,17 @@
 				white-space: nowrap
 
 		&--column
-			flex-direction: column
-			align-items: stretch
-
 			header
 				margin: 0 0 30px
 				width: 100%
 
+			.popup__right
+				width: 100%
+
+		.popup__right
+			display: inline-block
+			width: 270px
+			vertical-align: middle
 
 	&__header
 		display: block

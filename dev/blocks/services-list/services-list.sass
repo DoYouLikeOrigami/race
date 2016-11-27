@@ -17,6 +17,7 @@
 
 	&__wrap
 		@include wrap
+		text-align: center
 
 	&__header
 		@include section_header
@@ -26,9 +27,8 @@
 		letter-spacing: 3px
 
 	&__list
-		@include flex
-		flex-wrap: wrap
-		justify-content: space-around
+		display: inline-block
+		text-align: center
 
 		width: 75%
 		margin: 0 auto
@@ -38,30 +38,36 @@
 			max-width: 900px
 
 	&__item
-		display: block
+		display: inline-block
 		position: relative
 
 		box-sizing: border-box
 
 		padding: 20px 15px
 		width: 32%
-		flex-basis: 32%
+		margin-right: 1%
+
+		&:nth-of-type(3n)
+			margin-right: 0
 
 		@media #{$mobile}
 			width: 48%
-			flex-basis: 48%
+
+			&:nth-of-type(2n)
+				margin-right: 0
+
+			&:nth-of-type(2n)
+				margin-right: 1%
 
 		@media #{$mobileSm}
 			width: 100%
-			flex-basis: 100%
+			margin-right: 0
 
 		&--big
 			width: 48%
-			flex-basis: 48%
 
 			@media #{$mobile}
 				width: 100%
-				flex-basis: 100%
 
 		&:hover
 			.services-list__link
