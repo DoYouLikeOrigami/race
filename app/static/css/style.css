@@ -1805,6 +1805,7 @@ body.swal2-in {
       max-width: 90%; } }
   @media screen and (max-width: 600px) {
     .popup {
+      width: 100%;
       max-width: 100%; } }
   .popup--active {
     display: block; }
@@ -2060,6 +2061,9 @@ body.swal2-in {
     background: url("/static/img/call-to-action/contract.jpg") no-repeat right center;
     background-size: auto 100%;
     background-color: #e5e2dd; }
+    @media screen and (max-width: 600px) {
+      .call-to-action--contract {
+        background: #e5e2dd; } }
   .call-to-action__header {
     font-size: 30px;
     line-height: 40px;
@@ -2905,6 +2909,12 @@ body.swal2-in {
   height: 70px;
   margin-top: -35px;
   background-size: contain; }
+  @media screen and (max-width: 600px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 35px;
+      height: 50px;
+      margin-top: -25px; } }
 
 .descr-block {
   display: block;
