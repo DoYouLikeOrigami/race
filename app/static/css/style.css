@@ -455,14 +455,14 @@ li {
       padding: 15px 20px;
       font-size: 12px; } }
   .btn--main {
-    color: #fff;
+    color: #0f0f11;
     background: #D6AD4E;
     border: none;
     font-weight: 700; }
     .btn--main:hover {
       background: #dbb763; }
   .btn--special {
-    color: #fff;
+    color: #0f0f11;
     background: #D6AD4E;
     border: none;
     font-weight: 700; }
@@ -522,27 +522,20 @@ li {
     @media screen and (max-width: 600px) {
       .form--inline {
         margin-top: 50px; } }
-    .form--inline .form__label {
-      display: inline-block;
-      font-size: 16px;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin: 0 40px 0 0; }
-      @media screen and (max-width: 768px) {
-        .form--inline .form__label {
-          margin-bottom: 30px; } }
-      @media screen and (max-width: 600px) {
-        .form--inline .form__label {
-          display: block;
-          margin-right: 0;
-          text-align: center; } }
     .form--inline .form__input {
       display: inline-block;
       margin-left: 40px; }
       @media screen and (max-width: 600px) {
         .form--inline .form__input {
           margin: 30px 0 0; } }
+      .form--inline .form__input::-webkit-input-placeholder {
+        font-size: 18px; }
+      .form--inline .form__input::-moz-placeholder {
+        font-size: 18px; }
+      .form--inline .form__input:-ms-input-placeholder {
+        font-size: 18px; }
+      .form--inline .form__input::placeholder {
+        font-size: 18px; }
   .form--column {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -554,8 +547,11 @@ li {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-    .form--column .form__input {
-      margin-bottom: 20px; }
+    .form--column .form__input,
+    .form--column .form__textarea {
+      margin-bottom: 20px;
+      width: 100%;
+      min-width: 270px; }
   .form--footer:hover .form__input,
   .form--footer:hover .form__submit {
     border-color: #D6AD4E; }
@@ -625,6 +621,17 @@ li {
         margin: 0 0 20px; } }
     .form__label:nth-of-type(2n) {
       margin-right: 0; }
+  .form__header {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: "Playfair Display SC", serif; }
+    @media screen and (max-width: 768px) {
+      .form__header {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px; } }
   .form__input, .form__textarea {
     display: block;
     box-sizing: border-box;
@@ -1551,10 +1558,10 @@ body.swal2-in {
   .main-header__tel-number {
     display: block;
     margin-bottom: 5px;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 25px;
+    line-height: 25px;
     font-weight: bold;
-    color: #D6AD4E; }
+    color: #0f0f11; }
     .main-header__tel-number:hover {
       text-decoration: underline; }
     @media screen and (max-width: 1024px) {
@@ -1593,16 +1600,15 @@ body.swal2-in {
   .main-nav__link {
     display: block;
     padding: 20px 5px;
-    font-size: 15px;
-    text-transform: uppercase;
+    font-size: 18px;
     letter-spacing: 2px;
-    color: #AAA;
+    color: #fff;
     -webkit-transition: 0.4s;
     transition: 0.4s; }
     .main-nav__link--active {
-      color: #fff; }
+      color: #D6AD4E; }
     .main-nav__link:hover {
-      color: #fff; }
+      color: #D6AD4E; }
     @media screen and (max-width: 768px) {
       .main-nav__link {
         font-size: 14px; } }
@@ -1668,10 +1674,9 @@ body.swal2-in {
     display: block;
     margin: 0;
     text-align: left;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 50px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #505050;
     font-weight: 700;
     font-family: "Playfair Display SC", serif;
@@ -1686,12 +1691,13 @@ body.swal2-in {
         line-height: 35px; } }
     .main-screen__header small {
       display: block;
-      margin-top: 40px;
+      margin-top: 20px;
       font-size: 30px;
       line-height: 40px;
       color: #505050;
       font-weight: 700;
-      font-family: "PT Serif", serif; }
+      font-family: "PT Serif", serif;
+      letter-spacing: 1px; }
       @media screen and (max-width: 1024px) {
         .main-screen__header small {
           margin-top: 20px;
@@ -1863,6 +1869,10 @@ body.swal2-in {
       text-transform: uppercase;
       font-family: "Playfair Display SC", serif;
       color: #f0f0f0; }
+      .popup__body header small {
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: none; }
       @media screen and (max-width: 600px) {
         .popup__body header {
           margin: 0 0 20px;
@@ -1876,6 +1886,17 @@ body.swal2-in {
         color: #EE0032; }
       .popup__body header span {
         white-space: nowrap; }
+    .popup__body--column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; }
+      .popup__body--column header {
+        margin: 0 0 30px;
+        width: 100%; }
   .popup__header {
     display: block;
     font-size: 22px;
@@ -2035,6 +2056,10 @@ body.swal2-in {
   @media screen and (max-width: 1024px) {
     .call-to-action {
       padding: 60px 0; } }
+  .call-to-action--contract {
+    background: url("/static/img/call-to-action/contract.jpg") no-repeat right center;
+    background-size: auto 100%;
+    background-color: #e5e2dd; }
   .call-to-action__header {
     font-size: 30px;
     line-height: 40px;
@@ -2058,29 +2083,6 @@ body.swal2-in {
     .result {
       padding: 40px 0;
       margin-bottom: -1px; } }
-  .result:nth-of-type(2n+1) .result__wrap {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse; }
-  .result:nth-of-type(2n+1) .result__left {
-    margin: 0 0 0 5%; }
-  .result:nth-of-type(2n+1) .result__header {
-    text-align: right; }
-  .result:nth-of-type(2n+1) .result__descr {
-    text-align: right; }
-  @media screen and (max-width: 768px) {
-    .result:nth-of-type(2n+1) .result__wrap {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-    .result:nth-of-type(2n+1) .result__left {
-      margin: 0 0 30px; }
-    .result:nth-of-type(2n+1) .result__header {
-      text-align: left; }
-    .result:nth-of-type(2n+1) .result__descr {
-      text-align: left; } }
   .result__wrap {
     display: block;
     position: relative;
@@ -2130,10 +2132,9 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #505050;
     font-weight: bold;
     text-align: center;
@@ -2180,6 +2181,7 @@ body.swal2-in {
       line-height: 30px;
       font-family: "Playfair Display SC", serif;
       color: #D6AD4E;
+      letter-spacing: 1px;
       margin-bottom: 20px; }
       @media screen and (max-width: 600px) {
         .result__descr header {
@@ -2187,7 +2189,7 @@ body.swal2-in {
           margin-bottom: 15px; } }
     .result__descr p {
       display: block;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
       color: #f0f0f0;
       margin-bottom: 10px; }
@@ -2244,22 +2246,80 @@ body.swal2-in {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto; }
+  .contacts-section__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 40px; }
+    @media screen and (max-width: 600px) {
+      .contacts-section__flex {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-bottom: 20px; } }
+  .contacts-section__left {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+    margin-right: 5%; }
+    @media screen and (max-width: 1024px) {
+      .contacts-section__left {
+        -ms-flex-preferred-size: 45%;
+            flex-basis: 45%; } }
+    @media screen and (max-width: 768px) {
+      .contacts-section__left {
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; } }
+    @media screen and (max-width: 600px) {
+      .contacts-section__left {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        margin: 0 0 20px; } }
+  .contacts-section__right {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%; }
+    @media screen and (max-width: 1024px) {
+      .contacts-section__right {
+        -ms-flex-preferred-size: 35%;
+            flex-basis: 35%; } }
+    @media screen and (max-width: 768px) {
+      .contacts-section__right {
+        -ms-flex-preferred-size: 45%;
+            flex-basis: 45%; } }
+    @media screen and (max-width: 600px) {
+      .contacts-section__right {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
   .contacts-section__header {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #505050;
     font-weight: bold;
     text-align: center;
     font-family: "PT Serif", serif;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 38px;
+    line-height: 38px;
     font-family: "Playfair Display SC", serif;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    text-align: left; }
     @media screen and (max-width: 1024px) {
       .contacts-section__header {
         margin-bottom: 40px; } }
@@ -2276,18 +2336,10 @@ body.swal2-in {
         font-size: 22px;
         line-height: 30px;
         margin-bottom: 30px; } }
-    @media screen and (max-width: 600px) {
-      .contacts-section__header {
-        font-size: 20px; } }
-  .contacts-section__top {
-    display: block;
-    margin-bottom: 30px;
-    text-align: center; }
   .contacts-section__address {
-    display: inline-block;
+    display: block;
     font-size: 20px;
-    line-height: 26px;
-    text-align: left; }
+    line-height: 26px; }
     @media screen and (max-width: 600px) {
       .contacts-section__address {
         font-size: 18px;
@@ -2295,90 +2347,47 @@ body.swal2-in {
     .contacts-section__address a {
       color: #D6AD4E;
       text-decoration: underline; }
-  .contacts-section__bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 15px 0; }
   .contacts-section__logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-bottom: 40px; }
     @media screen and (max-width: 768px) {
       .contacts-section__logo {
-        max-width: 45%; } }
-    @media screen and (max-width: 600px) {
-      .contacts-section__logo {
-        max-width: 35%; } }
+        margin-bottom: 20px; } }
     .contacts-section__logo img {
       display: block;
       max-width: 110px;
       margin-right: 18px; }
-      @media screen and (max-width: 1024px) {
-        .contacts-section__logo img {
-          max-width: 95px; } }
-      @media screen and (max-width: 768px) {
-        .contacts-section__logo img {
-          margin-right: 15px; } }
-      @media screen and (max-width: 600px) {
-        .contacts-section__logo img {
-          margin-right: 0; } }
-      @media screen and (max-width: 380px) {
-        .contacts-section__logo img {
-          max-width: 80px; } }
     .contacts-section__logo span {
       font-size: 18px; }
-      @media screen and (max-width: 768px) {
-        .contacts-section__logo span {
-          font-size: 16px; } }
       @media screen and (max-width: 600px) {
         .contacts-section__logo span {
-          display: none; } }
+          font-size: 16px; } }
   .contacts-section__tel {
     display: block;
-    max-width: 30%;
-    text-align: center; }
+    margin-bottom: 40px; }
     @media screen and (max-width: 768px) {
       .contacts-section__tel {
-        max-width: 45%; } }
-    @media screen and (max-width: 600px) {
-      .contacts-section__tel {
-        max-width: 60%; } }
+        margin-bottom: 20px; } }
   .contacts-section__tel-number {
     display: block;
-    margin-bottom: 5px;
-    font-size: 28px;
-    line-height: 28px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 30px;
     font-weight: bold;
-    color: #D6AD4E; }
+    color: #505050; }
     .contacts-section__tel-number:hover {
       text-decoration: underline; }
-    @media screen and (max-width: 1024px) {
-      .contacts-section__tel-number {
-        font-size: 20px;
-        line-height: 20px; } }
     @media screen and (max-width: 600px) {
       .contacts-section__tel-number {
         font-size: 25px;
         line-height: 25px; }
         .contacts-section__tel-number:last-of-type {
           margin-bottom: 0; } }
-    @media screen and (max-width: 380px) {
-      .contacts-section__tel-number {
-        font-size: 20px; } }
 
 .services-list {
   display: block;
@@ -2404,10 +2413,9 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #505050;
     font-weight: bold;
     text-align: center;
@@ -2507,9 +2515,8 @@ body.swal2-in {
       display: block;
       width: 100%; }
   .services-list__link {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 30px;
-    text-transform: uppercase;
     color: #AAA;
     font-family: "Playfair Display SC", serif;
     vertical-align: middle;
@@ -2524,13 +2531,59 @@ body.swal2-in {
       .services-list__link {
         font-size: 16px; } }
     .services-list__link p {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      letter-spacing: 1px; }
 
 .flex-block {
   padding: 60px 0; }
   @media screen and (max-width: 600px) {
     .flex-block {
       padding: 40px 0; } }
+  .flex-block--team {
+    background: #F5F5F5; }
+    .flex-block--team .flex-block__list {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .flex-block--team .flex-block__item {
+      border: none; }
+    .flex-block--team .flex-block__img {
+      margin-bottom: 40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden; }
+      @media screen and (max-width: 1024px) {
+        .flex-block--team .flex-block__img {
+          width: 180px;
+          height: 180px; } }
+      @media screen and (max-width: 768px) {
+        .flex-block--team .flex-block__img {
+          width: 120px;
+          height: 120px;
+          margin-bottom: 15px; } }
+      @media screen and (max-width: 600px) {
+        .flex-block--team .flex-block__img {
+          width: 70px;
+          height: 70px; } }
+      @media screen and (max-width: 380px) {
+        .flex-block--team .flex-block__img {
+          width: 90px;
+          height: 90px; } }
+      .flex-block--team .flex-block__img img {
+        display: block;
+        width: 100%; }
+    .flex-block--team .flex-block__descr {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      color: #505050;
+      font-family: "Playfair Display SC", serif; }
+      @media screen and (max-width: 768px) {
+        .flex-block--team .flex-block__descr {
+          font-size: 14px;
+          line-height: 15px;
+          margin-bottom: 15px; } }
   .flex-block__wrap {
     display: block;
     position: relative;
@@ -2542,10 +2595,9 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #505050;
     font-weight: bold;
     text-align: center;
@@ -2680,11 +2732,11 @@ body.swal2-in {
         font-size: 18px;
         margin-bottom: 15px; } }
     .person-block__desc ul {
-      margin: 20px 0;
+      margin: 20px 0 40px;
       padding-left: 20px; }
       @media screen and (max-width: 1024px) {
         .person-block__desc ul {
-          margin: 15px 0;
+          margin: 15px 0 30px;
           padding-left: 15px; } }
       .person-block__desc ul li {
         margin-bottom: 10px;
@@ -2703,13 +2755,15 @@ body.swal2-in {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .person-block__gallery-img {
     display: block;
     box-sizing: border-box;
     width: 120px;
     height: 120px;
+    margin-right: 40px;
     border: 2px solid #505050;
     overflow: hidden;
     -webkit-transition: 0.4s;
@@ -2719,11 +2773,13 @@ body.swal2-in {
     @media screen and (max-width: 1024px) {
       .person-block__gallery-img {
         width: 100px;
-        height: 100px; } }
+        height: 100px;
+        margin-right: 30px; } }
     @media screen and (max-width: 380px) {
       .person-block__gallery-img {
         width: 80px;
-        height: 80px; } }
+        height: 80px;
+        margin-right: 20px; } }
     .person-block__gallery-img img {
       display: block;
       width: 100%; }
@@ -2843,6 +2899,13 @@ body.swal2-in {
   .swiper-slide-active {
     opacity: 1; }
 
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 70px;
+  margin-top: -35px;
+  background-size: contain; }
+
 .descr-block {
   display: block;
   position: relative;
@@ -2889,7 +2952,7 @@ body.swal2-in {
     z-index: 2; }
   .descr-block__header {
     display: block;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 40px;
     font-family: "Playfair Display SC", serif;
     color: #f9d498;
@@ -2903,6 +2966,12 @@ body.swal2-in {
       .descr-block__header {
         margin-bottom: 20px;
         line-height: 20px; } }
+  .descr-block__descr {
+    font-size: 20px;
+    color: #f9d498;
+    line-height: 20px;
+    font-family: "Playfair Display SC", serif;
+    margin-bottom: 20px; }
   .descr-block__list {
     margin-bottom: 40px; }
     @media screen and (max-width: 600px) {
@@ -2917,7 +2986,7 @@ body.swal2-in {
   .descr-block__link {
     color: #f9d498;
     opacity: .8;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     font-family: "Playfair Display SC", serif; }
     .descr-block__link:hover {
@@ -2972,6 +3041,105 @@ body.swal2-in {
         background-color: #f9d498;
         color: #444;
         border-color: #f9d498; }
+
+.img-text {
+  padding: 60px 0;
+  background: #F5F5F5; }
+  @media screen and (max-width: 600px) {
+    .img-text {
+      padding: 30px 0; } }
+  .img-text--map .img-text__header {
+    font-size: 40px;
+    line-height: 50px; }
+    @media screen and (max-width: 1024px) {
+      .img-text--map .img-text__header {
+        font-size: 30px;
+        line-height: 45px; } }
+    @media screen and (max-width: 600px) {
+      .img-text--map .img-text__header {
+        font-size: 25px;
+        line-height: 35px; } }
+  .img-text--map .img-text__img img {
+    border: none; }
+  .img-text__wrap {
+    display: block;
+    position: relative;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media screen and (max-width: 600px) {
+      .img-text__wrap {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+  .img-text__img {
+    display: block;
+    position: relative;
+    max-width: 45%; }
+    @media screen and (max-width: 600px) {
+      .img-text__img {
+        max-width: 90%;
+        -ms-flex-preferred-size: 90%;
+            flex-basis: 90%; } }
+    .img-text__img img {
+      display: block;
+      margin: 0 auto;
+      height: 300px;
+      border: 2px solid #0f0f11; }
+      @media screen and (max-width: 1024px) {
+        .img-text__img img {
+          width: 100%;
+          height: auto; } }
+  .img-text__text {
+    display: block;
+    width: 45%;
+    margin-right: 5%; }
+    @media screen and (max-width: 600px) {
+      .img-text__text {
+        max-width: 90%;
+        -ms-flex-preferred-size: 90%;
+            flex-basis: 90%;
+        margin: 0 0 30px; } }
+  .img-text__header {
+    display: block;
+    margin: 0;
+    font-size: 30px;
+    line-height: 35px;
+    font-family: "Playfair Display SC", serif;
+    color: #505050; }
+    @media screen and (max-width: 768px) {
+      .img-text__header {
+        font-size: 25px;
+        line-height: 35px; } }
+    @media screen and (max-width: 600px) {
+      .img-text__header {
+        font-size: 18px;
+        line-height: 26px; } }
+    .img-text__header small {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .img-text__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
 
 .wrap {
   display: block;

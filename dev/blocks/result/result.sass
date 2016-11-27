@@ -6,34 +6,6 @@
 		padding: 40px 0
 		margin-bottom: -1px
 
-	&:nth-of-type(2n+1)
-		.result
-			&__wrap
-				flex-direction: row-reverse
-
-			&__left
-				margin: 0 0 0 5%
-
-			&__header
-				text-align: right
-
-			&__descr
-				text-align: right
-
-		@media #{$tablet}
-			.result
-				&__wrap
-					flex-direction: column
-
-				&__left
-					margin: 0 0 30px
-
-				&__header
-					text-align: left
-
-				&__descr
-					text-align: left
-
 	&__wrap
 		@include wrap
 		@include flex
@@ -95,6 +67,7 @@
 			line-height: $fontXBig
 			font-family: $headers-font
 			color: $akcent-color
+			letter-spacing: 1px
 
 			margin-bottom: 20px
 
@@ -105,7 +78,7 @@
 		p
 			display: block
 
-			font-size: $fontSm
+			font-size: $fontMd
 			line-height: $fontBigMd
 			color: $font-alt-color
 

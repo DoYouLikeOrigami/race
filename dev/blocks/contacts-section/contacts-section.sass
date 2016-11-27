@@ -4,28 +4,56 @@
 	&__wrap
 		@include wrap
 
-	&__header
-		@include section_header
-		font-size: $fontLg
-		line-height: $fontLg
-		font-family: $headers-font
-		letter-spacing: 1px
+	&__flex
+		@include flex
+		justify-content: flex-start
+		align-items: flex-start
+		margin-bottom: 40px
 
 		@media #{$mobile}
-			font-size: $fontBigMd
+			flex-wrap: wrap
+			margin-bottom: 20px
 
-	&__top
-		display: block
-		margin-bottom: 30px
-		text-align: center
+	&__left
+		flex-basis: 35%
+		margin-right: 5%
+
+		@media #{$laptop}
+			flex-basis: 45%
+
+		@media #{$tablet}
+			flex-basis: 50%
+
+		@media #{$mobile}
+			flex-basis: 100%
+			margin: 0 0 20px
+
+	&__right
+		flex-basis: 30%
+
+		@media #{$laptop}
+			flex-basis: 35%
+
+		@media #{$tablet}
+			flex-basis: 45%
+
+		@media #{$mobile}
+			flex-basis: 100%
+
+
+	&__header
+		@include section_header
+		font-size: $fontLg - 2
+		line-height: $fontLg - 2
+		font-family: $headers-font
+		letter-spacing: 1px
+		text-align: left
 
 	&__address
-		display: inline-block
+		display: block
 
 		font-size: $fontBigMd
 		line-height: $fontBigMd + 6
-
-		text-align: left
 
 		@media #{$mobile}
 			font-size: $fontMd
@@ -35,75 +63,44 @@
 			color: $akcent-color
 			text-decoration: underline
 
-	&__bottom
-		@include flex
-		padding: 15px 0
-
 	&__logo
 		display: flex
 		align-items: center
+		margin-bottom: 40px
 
 		@media #{$tablet}
-			max-width: 45%
-
-		@media #{$mobile}
-			max-width: 35%
+			margin-bottom: 20px
 
 		img
 			display: block
 			max-width: 110px
 			margin-right: 18px
 
-			@media #{$laptop}
-				max-width: 95px
-
-			@media #{$tablet}
-				margin-right: 15px
-
-			@media #{$mobile}
-				margin-right: 0
-
-			@media #{$mobileSm}
-				max-width: 80px
-
 		span
 			font-size: $fontMd
 
-			@media #{$tablet}
-				font-size: $fontSm
-
 			@media #{$mobile}
-				display: none
+				font-size: $fontSm
 
 	&__tel
 		display: block
-
-		max-width: 30%
-
-		text-align: center
+		margin-bottom: 40px
 
 		@media #{$tablet}
-			max-width: 45%
-
-		@media #{$mobile}
-			max-width: 60%
+			margin-bottom: 20px
 
 	&__tel-number
 		display: block
 
-		margin-bottom: 5px
+		margin-bottom: 10px
 
-		font-size: $fontXBig - 2
-		line-height: $fontXBig - 2
+		font-size: $fontXBig
+		line-height: $fontXBig
 		font-weight: bold
-		color: $akcent-color
+		color: $font-color
 
 		&:hover
 			text-decoration: underline
-
-		@media #{$laptop}
-			font-size: $fontBigMd
-			line-height: $fontBigMd
 
 		@media #{$mobile}
 			font-size: $fontBig
@@ -111,6 +108,3 @@
 
 			&:last-of-type
 				margin-bottom: 0
-
-		@media #{$mobileSm}
-			font-size: $fontBigMd

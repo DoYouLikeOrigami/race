@@ -1,67 +1,87 @@
 .popup.popup--js-img
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	img.popup__img(src="")
 
 .popup.popup--js-order
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
 			| Оставьте заявку и получите разработку макета&nbsp;
 			em бесплатно
-		form.form.form--column.form--small(action="/get-maket" method="post")
+		form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
 			input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
 			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" placeholder="Получить макет")
+			input.btn.btn--main(type="submit" value="Получить макет")
 
-.popup.popup--js-error
-	a.popup__close(href="#")
+.popup.popup--js-art
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
+			small Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера
+		form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!")
+			input.form__input(type="email" name="email" placeholder="Ваш email")
+			input.btn.btn--main(type="submit" value="Получите эскизы")
+
+.popup.popup--js-error
+	a.popup__close.js--close-popup(href="#")
+		span &#10006;
+	.popup__body.popup__body--column
+		header
 			em Ошибка:
-		header.popup__error-text
+		header.popup--js-text
 			| Пожалуйста, введите вашу почту или телефон!
-			a.js--close-popup.btn.btn--main(href="#") Понял
+		a.js--close-popup.btn.btn--main(href="#") Понял
+
+.popup.popup--js-success
+	a.popup__close.js--close-popup(href="#")
+		span &#10006;
+	.popup__body.popup__body--column
+		header
+			em Успех!
+		header.popup--js-text
+			| Мы скоро свяжемся с Вами!
+		a.js--close-popup.btn.btn--main(href="#") Понял
 
 
 .popup.popup--js-call
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
 			| Введите номер телефона и течение дня мы Вам перезвоним
-		form.form.form--column(action="/callback" method="post")
+		form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!")
 			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-			input.btn.btn--main(type="submit" placeholder="Заказать звонок")
+			input.btn.btn--main(type="submit" value="Заказать звонок")
 
 .popup.popup--js-contract
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
 			| Введите свой&nbsp;
 			span E-mail&nbsp;
 			| и мы&nbsp;отправим Вам шаблон договора
-		form.form.form--column(action="/get-contract" method="post")
+		form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!")
 			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" placeholder="Получить шаблон договора")
+			input.btn.btn--main(type="submit" value="Получить договор")
 
 .popup.popup--js-commerce
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
 			| Введите контактные данные и мы отправим Вам коммерческое предложение
-		form.form.form--column.form--small(action="/get-commerce" method="post")
+		form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!")
 			input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 			input.form__input(type="email" name="email" placeholder="Ваш email")
-			input.btn.btn--main(type="submit" placeholder="Получить коммерческое предложение")
+			input.btn.btn--main(type="submit" value="Получить коммерческое предложение")
 
 .popup.popup--js-gos
-	a.popup__close(href="#")
+	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	header.popup__header
 		| Другие выполненные госзаказы

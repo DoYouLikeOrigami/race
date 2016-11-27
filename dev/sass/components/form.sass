@@ -9,24 +9,6 @@
 			margin-top: 50px
 
 		.form
-			&__label
-				display: inline-block
-
-				font-size: $fontSm
-				text-transform: uppercase
-				font-weight: 700
-				letter-spacing: 1px
-
-				margin: 0 40px 0 0
-
-				@media #{$tablet}
-					margin-bottom: 30px
-
-				@media #{$mobile}
-					display: block
-					margin-right: 0
-					text-align: center
-
 			&__input
 				display: inline-block
 
@@ -35,13 +17,19 @@
 				@media #{$mobile}
 					margin: 30px 0 0
 
+				&::placeholder
+					font-size: $fontMd
+
 	&--column
 		display: flex
 		flex-direction: column
 		align-items: stretch
 
-		.form__input
+		.form__input,
+		.form__textarea
 			margin-bottom: 20px
+			width: 100%
+			min-width: 270px
 
 	&--footer
 		&:hover
@@ -126,6 +114,22 @@
 
 		&:nth-of-type(2n)
 			margin-right: 0
+
+	&__header
+		display: block
+
+		margin-bottom: 40px
+
+		font-size: $fontXBig
+		line-height: 40px
+
+		font-family: $headers-font
+
+		@media #{$tablet}
+			font-size: $fontBig
+			line-height: 30px
+
+			margin-bottom: 20px
 
 	&__input,
 	&__textarea
