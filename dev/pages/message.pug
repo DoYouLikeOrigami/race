@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+
+	body
+		div(style="width: 500px; margin: 0 auto; font-family: serif;")
+			header(style="display: block; margin: 0; font-size: 25px; line-height: 25px; text-align: center; padding: 20px; background-color: #0f0f11; color: #D6AD4E;")
+				| {{ subject }}
+			div
+				| {% if text %}
+				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
+					| {{ text }}
+				| {% endif %}
+				| {% if phone %}
+				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
+					| Телефон клиента: {{ phone }}
+				| {% endif %}
+				| {% if name %}
+				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
+					| Имя клиента: {{ name }}
+				| {% endif %}
+				| {% if email %}
+				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
+					| Email клиента: {{ email }}
+				| {% endif %}
+				small(style="display: block; margin: 0 20px 10px; font-size: 18px; color: #808080;")
+					| Время отправки:
+					| {{ time }}
+				hr
+				div(style="display: block; padding: 20px;")
+					div(style="font-size: 18px; line-height: 20px; color: #808080;")
+						| Сайт с любовью сделан студией Jokerinteractive&nbsp;
+						a(href="http://xn--80arbbtbnkgfccv3a.xn--p1ai/" target="_blank" style="color: #EE0032; text-decoration: none; font-style: italic;") Хочукрутойсайт.рф
+

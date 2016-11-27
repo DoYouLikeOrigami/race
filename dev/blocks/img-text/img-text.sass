@@ -1,0 +1,90 @@
+.img-text
+	padding: 60px 0
+	background: $seconadry-bg
+
+	@media #{$mobile}
+		padding: 30px 0
+
+	&--map
+		.img-text__header
+			font-size: 40px
+			line-height: 50px
+
+			@media #{$laptop}
+				font-size: $fontXBig
+				line-height: 45px
+
+			@media #{$mobile}
+				font-size: $fontBig
+				line-height: 35px
+
+		.img-text__img img
+			border: none
+
+	&__wrap
+		@include wrap
+		@include flex
+		justify-content: center
+
+		@media #{$mobile}
+			flex-wrap: wrap
+
+	&__img
+		display: block
+		position: relative
+		max-width: 45%
+
+		@media #{$mobile}
+			max-width: 90%
+			flex-basis: 90%
+
+		img
+			display: block
+			margin: 0 auto
+
+			height: 300px
+
+			border: 2px solid $akcent-bg
+
+			@media #{$laptop}
+				width: 100%
+				height: auto
+
+	&__text
+		display: block
+		width: 45%
+		margin-right: 5%
+
+		@media #{$mobile}
+			max-width: 90%
+			flex-basis: 90%
+			margin: 0 0 30px
+
+	&__header
+		display: block
+		margin: 0
+
+		font-size: $fontXBig
+		line-height: 35px
+		font-family: $headers-font
+		color: $font-color
+
+		@media #{$tablet}
+			font-size: $fontBig
+			line-height: 35px
+
+		@media #{$mobile}
+			font-size: $fontMd
+			line-height: 26px
+
+		small
+			display: block
+			margin-top: 30px
+
+			font-size: $fontXMd
+			line-height: 30px
+
+			@media #{$tablet}
+				font-size: $fontMd
+				line-height: 25px
+				margin-top: 25px

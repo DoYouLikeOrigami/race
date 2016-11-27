@@ -24,10 +24,10 @@ def asynchronous_sending(message, app):
 def send_email(subject=None, email=None, name=None, phone=None, text=None):
     sender = 'Робот с сайта <' + current_app.config['MAIL_USERNAME'] + '>'
     time = datetime.now().ctime()
-    recipients = ['anton@jokerinteractive.ru', 'origami@jokerinteractive.ru']
+    recipients = ['origami@jokerinteractive.ru', 'ppp019@yandex.ru']
     message = Message(subject=subject, sender=sender, recipients=recipients,
                       charset='utf-8')
-    message.html = render_template('email/message.jinja2', email=email,
+    message.html = render_template('message.jinja2', email=email,
                                    name=name, phone=phone, time=time,
                                    subject=subject, text=text)
     _ctx = current_app.app_context()

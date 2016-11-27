@@ -13,7 +13,7 @@
 	@media #{$tablet}
 		padding-top: 120px
 
-	@media #{$mobile}E
+	@media #{$mobile}
 		padding-top: 80px
 
 @mixin flex
@@ -34,10 +34,9 @@
 
 	margin: 0 0 60px
 
-	font-size: $fontXBig
+	font-size: $fontLg
 	line-height: 40px
 	letter-spacing: 1px
-	text-transform: uppercase
 	color: $font-color
 	font-weight: bold
 	text-align: center
@@ -64,10 +63,9 @@
 	margin: 0
 
 	text-align: left
-	font-size: $fontLg
+	font-size: $fontLg + 10
 	line-height: $fontLg + 10
 	letter-spacing: 1px
-	text-transform: uppercase
 	color: $font-color
 	font-weight: 700
 	font-family: $headers-font
@@ -82,13 +80,14 @@
 
 	small
 		display: block
-		margin-top: 40px
+		margin-top: 20px
 
 		font-size: $fontXBig
 		line-height: 40px
 		color: $font-color
 		font-weight: 700
 		font-family: $default-font
+		letter-spacing: 1px
 
 		@media #{$laptop}
 			margin-top: 20px

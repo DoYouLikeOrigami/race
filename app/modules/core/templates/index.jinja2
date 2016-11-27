@@ -8,9 +8,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="author" content="">
+		<link rel="stylesheet" href="/static/css/swiper.min.css">
 		<link rel="stylesheet" href="/static/css/style.css">
 		<link rel="slylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic">
-		<link rel="stylesheet" href="/static/css/swiper.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif&amp;amp;subset=cyrillic">
 		<title>Геральдический Завод
@@ -41,12 +41,20 @@
 				</div>
 				<div class="main-screen__actions">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small" action="/get-maket" method="post">
+					<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
 						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
 						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 						<input class="form__input" type="mail" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" placeholder="Получить макет">
+						<input class="btn btn--main" type="submit" value="Получить макет">
 					</form>
+				</div>
+			</section>
+			<section class="img-text img-text--map">
+				<div class="img-text__wrap">
+					<div class="img-text__text">
+						<h3 class="img-text__header">Работаем со всеми регионами РФ. Доставка до двери – бесплатно.<small>На карте отмечены регионы, с которыми мы уже работали</small></h3>
+					</div>
+					<div class="img-text__img"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=ogzHxVBZBGlzLEBzyprg1Qg9M3iUAA1k&amp;amp;width=600&amp;amp;height=400&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
 				</div>
 			</section>
 			<section class="services-list" id="services">
@@ -58,37 +66,32 @@
 								<p>Нагрудные знаки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Медали на колодке"></a>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/2.jpg" alt="Медали на колодке"></a>
 							<div class="services-list__link">
 								<p>Медали на колодке</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Значки, фрачники"></a>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/3.jpg" alt="Значки, фрачники"></a>
 							<div class="services-list__link">
 								<p>Значки, фрачники</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Спортивные медали"></a>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/4.jpg" alt="Спортивные медали"></a>
 							<div class="services-list__link">
 								<p>Спортивные медали</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Монеты"></a>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/5.jpg" alt="Монеты"></a>
 							<div class="services-list__link">
 								<p>Монеты</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Брелки"></a>
+						<li class="services-list__item"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/6.jpg" alt="Сувенирные медали"></a>
 							<div class="services-list__link">
-								<p>Брелки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
+								<p>Сувенирные медали</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
 						</li>
-						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Подарочные футляры"></a>
-							<div class="services-list__link">
-								<p>Подарочные футляры</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
-							</div>
-						</li>
-						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/1.jpg" alt="Изделия из Драгоценных металлов"></a>
+						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-img-popup" href="#"><img src="/static/img/services-list/8.jpg" alt="Изделия из Драгоценных металлов"></a>
 							<div class="services-list__link">
 								<p>Изделия из Драгоценных металлов</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать</a>
 							</div>
@@ -99,7 +102,7 @@
 			<section class="portfolio" id="portfolio">
 				<div class="swiper-container portfolio__top portfolio__top--js-own">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/4.jpg)">
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/about.jpg)">
 							<div class="portfolio__text">
 								<h3 class="portfolio__text-header portfolio__text-header--small">Наше производство</h3>
 							</div>
@@ -115,6 +118,12 @@
 								<p>Отливаем изделие любой формы<br>из серебра, золота, латуни или мельхиора</p>
 							</div>
 						</div>
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/3.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header portfolio__text-header--small">Автоматизированная<br>полировка</h3>
+								<p>Уменьшает ручной труд<br>и снижает стоимость конечного продукта</p>
+							</div>
+						</div>
 						<!--.swiper-slide(style="background-image:url(http://lorempixel.com/1200/1200/nature/1)")
 						.portfolio__text
 							h3.portfolio__text-header
@@ -123,21 +132,16 @@
 								| Все штампы дорабатываются вручную в соответствии с традициями монетного двора, что обеспечивает максимальное качество и детализацию изделия
 						
 						-->
-						<!--.swiper-slide(style="background-image:url(http://lorempixel.com/1200/1200/nature/1)")
-						.portfolio__text
-							h3.portfolio__text-header
-								| До 4000
-								small
-									| изделий
-									br
-									| в день
-							p Штампует наш чеканочный пресс усилием 400 тонн
-						
-						-->
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/3.jpg)">
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/400.jpg)">
 							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Автоматизированная<br>полировка</h3>
-								<p>Уменьшает ручной труд<br>и снижает стоимость конечного продукта</p>
+								<h3 class="portfolio__text-header portfolio__text-header--small">Пресс с усилием<br>в 400 тонн</h3>
+								<p>Обеспечивает максимальную четкость рельефа</p>
+							</div>
+						</div>
+						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/press.jpg)">
+							<div class="portfolio__text">
+								<h3 class="portfolio__text-header">До 8000<small>заготовок<br>за смену</small></h3>
+								<p>Производит вырубной пресс</p>
 							</div>
 						</div>
 					</div>
@@ -147,47 +151,12 @@
 				</div>
 				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-own">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/4.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/about.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/1.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/2.jpg)"></div>
 						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/3.jpg)"></div>
-					</div>
-				</div>
-			</section>
-			<section class="portfolio">
-				<div class="swiper-container portfolio__top portfolio__top--js-china">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-1.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Производство в Китае<small>Без потери<br>качества</small></h3>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-2.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header">2300<small>квадратных метров<br>производства</small></h3>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-3.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Контроль<br>качества<small>Производится<br>6 сотрудниками</small></h3>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/china-5.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header">Владелец<small>и наш друг<br>Мао</small></h3>
-							</div>
-						</div>
-					</div>
-					<!-- Add Arrows-->
-					<div class="swiper-button-next swiper-button-white"></div>
-					<div class="swiper-button-prev swiper-button-white"></div>
-				</div>
-				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-china">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-1.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-2.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-3.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/china-5.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/400.jpg)"></div>
+						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/press.jpg)"></div>
 					</div>
 				</div>
 			</section>
@@ -200,7 +169,7 @@
 						<header class="person-block__header">Над Вашим эскизом будет работать профессиональный художник</header>
 						<div class="person-block__desc">Виктор Жеравин:
 							<ul>
-								<li>Художник со стажем 15 лет</li>
+								<li>Дизайнерский стаж 15 лет</li>
 								<li>Разработал более 1000 эскизов нагрудных знаков и медалей</li>
 								<li>Победил в 21 дизайнерском конкурсе</li>
 							</ul>Ознакомьтесь с примерами его эскизов
@@ -211,41 +180,37 @@
 			</section>
 			<div class="call-to-action">
 				<div class="call-to-action__wrap">
-					<header class="call-to-action__header">Посмотрите все&nbsp;работы нашего&nbsp;художника</header>
-					<form class="form form--cta" action="/get-art" method="post">
-						<input class="form__input" type="email" name="email" placeholder="Введите Ваш email">
-						<input class="btn btn--main" type="submit" value="Получите все эскизы на почту">
-					</form>
+					<header class="call-to-action__header">Посмотрите все&nbsp;работы нашего&nbsp;художника</header><a class="btn btn--main js-show-art-popup" href="#">Скачать все работы нашего художника</a>
 				</div>
 			</div>
 			<section class="result" id="result">
 				<h2 class="result__header">Наши работы</h2>
 				<div class="result__wrap">
 					<div class="result__left">
-						<div class="result__work"><img src="/static/img/result/work.jpg"></div>
+						<div class="result__work"><img src="/static/img/result/work-11.jpg"></div>
 					</div>
 					<div class="result__right">
 						<div class="result__descr">
-							<header>Значки к зимней олимпиаде в Сочи&nbsp;2014</header>
+							<header>Нагрудный&nbsp;знак «50&nbsp;лет академии&nbsp;ФСО»</header>
 							<p class="result__descr-material">Материал: Нейзильбер и латунь</p>
-							<p class="result__descr-number">Тираж 2014 шт</p>
+							<p class="result__descr-number">Тираж 2500 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Значки к зимней олимпиаде в Сочи&amp;nbsp;2014" data-material="Нейзильбер и латунь" data-number="2014 шт"><img src="/static/img/result/work.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «55&amp;nbsp;лет ЭС&amp;nbsp;г.&amp;nbsp;Салават»" data-material="Серебро 925 и латунь с позолотой" data-number="80 шт"><img src="/static/img/result/work-12.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «Аксалта»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="100 шт"><img src="/static/img/result/work-13.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Нагрудный&amp;nbsp;знак «50&amp;nbsp;лет академии&amp;nbsp;ФСО»" data-material="Нейзильбер и латунь" data-number="2500 шт"><img src="/static/img/result/work-11.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «55&amp;nbsp;лет ЭС&amp;nbsp;г.&amp;nbsp;Салават»" data-material="Серебро 925 и латунь с позолотой" data-number="80 шт"><img src="/static/img/result/work-12.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «Аксалта»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="100 шт"><img src="/static/img/result/work-13.jpg"></a></div>
 					</div>
 				</div>
 			</section>
 			<section class="result">
 				<div class="result__wrap">
 					<div class="result__left">
-						<div class="result__work"><img src="/static/img/result/work-21.jpg"></div>
+						<div class="result__work"><img src="/static/img/result/work-22.jpg"></div>
 					</div>
 					<div class="result__right">
 						<div class="result__descr">
-							<header>Медаль «Куликово&nbsp;поле»</header>
-							<p class="result__descr-material">Материал: Цинк с покрытием медью</p>
-							<p class="result__descr-number">Тираж 120 шт</p>
+							<header>Медаль «50&nbsp;лет академии ФСО»</header>
+							<p class="result__descr-material">Материал: Латунь</p>
+							<p class="result__descr-number">Тираж 3500 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Медаль «Куликово&amp;nbsp;поле»" data-material="Цинк с покрытием медью" data-number="120 шт"><img src="/static/img/result/work-21.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «50&amp;nbsp;лет академии ФСО»" data-material="Латунь" data-number="3500 шт"><img src="/static/img/result/work-22.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «70&amp;nbsp;лет Калининграду»" data-material="Латунь" data-number="7700 шт"><img src="/static/img/result/work-23.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Медаль «50&amp;nbsp;лет академии ФСО»" data-material="Латунь" data-number="3500 шт"><img src="/static/img/result/work-22.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «Куликово&amp;nbsp;поле»" data-material="Цинк с покрытием медью" data-number="120 шт"><img src="/static/img/result/work-21.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «70&amp;nbsp;лет Калининграду»" data-material="Латунь" data-number="7700 шт"><img src="/static/img/result/work-23.jpg"></a></div>
 					</div>
 				</div>
 			</section>
@@ -260,7 +225,7 @@
 							<p class="result__descr-material">Материал: Латунь</p>
 							<p class="result__descr-number">Тираж 500 шт</p>
 						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Латунь" data-number="500 шт"><img src="/static/img/result/work-31.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Серебро 925 с позолотой" data-number="500 шт"><img src="/static/img/result/work-32.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «Инженерно-технический факультет ВИТУ»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="20 шт"><img src="/static/img/result/work-33.jpg"></a></div>
+						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Латунь" data-number="500 шт"><img src="/static/img/result/work-31.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Серебро 925 с позолотой" data-number="500 шт"><img src="/static/img/result/work-32.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «Инженерно-технический факультет&amp;nbsp;ВИТУ»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="20 шт"><img src="/static/img/result/work-33.jpg"></a></div>
 					</div>
 				</div>
 			</section>
@@ -273,7 +238,8 @@
 			<section class="descr-block">
 				<div class="descr-block__wrap">
 					<div class="descr-block__content">
-						<h2 class="descr-block__header">За 2&nbsp;года мы&nbsp;приняли участие в&nbsp;более чем 150&nbsp;государственных тендерах и исполнили 32&nbsp;госконтракта</h2>
+						<h2 class="descr-block__header">Государственные закупки</h2>
+						<p class="descr-block__descr">Ссылки на исполненные контракты на официальном сайте госзакупок</p>
 						<ul class="descr-block__list">
 							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3390301679016000019" target="_blank">Изготовление медалей «70&nbsp;лет Калининграду»</a></li>
 							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=3290401600816000018" target="_blank">Изготовление и&nbsp;поставка нагрудного знака «Почетный гражданин МО&nbsp;«Котлас»</a></li>
@@ -285,71 +251,124 @@
 					</div>
 				</div>
 			</section>
-			<div class="call-to-action">
+			<div class="call-to-action call-to-action--contract">
 				<div class="call-to-action__wrap">
 					<div class="call-to-action__header">Даем&nbsp;гарантию, что ваши&nbsp;изделия будут&nbsp;сделаны ограниченным тиражом и&nbsp;не&nbsp;будут проданы третьим&nbsp;лицам. Мы&nbsp;прописываем&nbsp;это в&nbsp;договоре.</div><a class="btn btn--main js-show-contract-popup" href="#">Получите шаблон договора</a>
 				</div>
 			</div>
-			<section class="contacts-section" id="contacts">
-				<div class="contacts-section__wrap">
-					<header class="contacts-section__header">Свяжитесь с нами по любым вопросам</header>
-					<div class="contacts-section__top">
-						<div class="contacts-section__address">Санкт-Петербург,<br>пр. Елизарова 34, БЦ "KROL"<br><a href="mailto:zakaz@geraldzavod.ru">zakaz@geraldzavod.ru</a></div>
-					</div>
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=UOBw4PZgf8proO2JUJ8fRbW6rSj7DKKr&amp;amp;width=100%25&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor&amp;amp;scroll=true"></script>
-					<div class="contacts-section__bottom">
-						<div class="contacts-section__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Санкт-петербургский<br>Геральдический<br>Завод</span></div>
-						<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706">8 (812) 244-27-06</a><a class="contacts-section__tel-number" href="tel:78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
+			<section class="flex-block flex-block--team" id="flex">
+				<div class="flex-block__wrap">
+					<h2 class="flex-block__header">Наша команда</h2>
+					<div class="flex-block__list">
+						<div class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/team-section/one.jpg" alt="Менеджер по работе с клиентами">
+							<p class="flex-block__descr">Наталья Сергеева</p>
+							<p class="flex-block__descr">Менеджер по работе с клиентами</p>
+						</div>
+						<div class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/team-section/two.jpg" alt="Коммерческий директор">
+							<p class="flex-block__descr">Ирина Чихачева</p>
+							<p class="flex-block__descr">Коммерческий директор</p>
+						</div>
+						<div class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/team-section/three.jpg" alt="Начальник производства ">
+							<p class="flex-block__descr">Евгений Голубев</p>
+							<p class="flex-block__descr">Начальник производства</p>
+						</div>
+						<div class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/team-section/four.jpg" alt="Директор">
+							<p class="flex-block__descr">Владислав Аксенов</p>
+							<p class="flex-block__descr">Директор</p>
+						</div>
 					</div>
 				</div>
 			</section>
-			<div class="popup popup--js-img"><a class="popup__close" href="#"><span>&#10006;</span></a><img class="popup__img" src=""></div>
-			<div class="popup popup--js-order"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<section class="img-text">
+				<div class="img-text__wrap">
+					<div class="img-text__text">
+						<h3 class="img-text__header">Свидетельство о постановке на учет в государственной пробирной инспекции. Каждое наше изделие из драгоценного металла имеет государственное пробирное клеймо.</h3>
+					</div><a class="img-text__img js-show-img-popup" href="#"><img src="/static/img/img-text/img.jpg" alt="Свидетельство о постановке на учет"></a>
+				</div>
+			</section>
+			<section class="contacts-section" id="contacts">
+				<div class="contacts-section__wrap">
+					<header class="contacts-section__header">Свяжитесь с нами по любым вопросам</header>
+					<div class="contacts-section__flex">
+						<div class="contacts-section__left">
+							<div class="contacts-section__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Санкт-петербургский<br>Геральдический<br>Завод</span></div>
+							<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706">8 (812) 244-27-06</a><a class="contacts-section__tel-number" href="tel:78007075164">8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
+							<div class="contacts-section__address"><a href="mailto:zakaz@geraldzavod.ru">zakaz@geraldzavod.ru</a><br>Санкт-Петербург, пр. Елизарова 34, БЦ "KROL"</div>
+						</div>
+						<div class="contacts-section__right">
+							<form class="form form--column" method="post" action="/send-mail">
+								<header class="form__header">Напишите нам по любым вопросам.</header>
+								<input class="form__input" type="email" name="email" placeholder="Ваш email">
+								<textarea class="form__textarea" name="msg" placeholder="Ваше сообщение" rows="5"></textarea>
+								<input class="btn btn--main" value="Отправить" type="submit">
+							</form>
+						</div>
+					</div>
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=UOBw4PZgf8proO2JUJ8fRbW6rSj7DKKr&amp;amp;width=100%25&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor&amp;amp;scroll=true"></script>
+				</div>
+			</section>
+			<div class="popup popup--js-img"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a><img class="popup__img" src=""></div>
+			<div class="popup popup--js-order"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
-					<form class="form form--column form--small" action="/get-maket" method="post">
+					<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
 						<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
 						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" placeholder="Получить макет">
+						<input class="btn btn--main" type="submit" value="Получить макет">
 					</form>
 				</div>
 			</div>
-			<div class="popup popup--js-error"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<div class="popup popup--js-art"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
-					<header><em>Ошибка:</em></header>
-					<header class="popup__error-text">Пожалуйста, введите вашу почту или телефон!<a class="js--close-popup btn btn--main" href="#">Понял</a></header>
+					<header><small>Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера</small></header>
+					<form class="form form--column" action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!">
+						<input class="form__input" type="email" name="email" placeholder="Ваш email">
+						<input class="btn btn--main" type="submit" value="Получите эскизы">
+					</form>
 				</div>
 			</div>
-			<div class="popup popup--js-call"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<div class="popup popup--js-error"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
+				<div class="popup__body popup__body--column">
+					<header><em>Ошибка:</em></header>
+					<header class="popup--js-text">Пожалуйста, введите вашу почту или телефон!</header><a class="js--close-popup btn btn--main" href="#">Понял</a>
+				</div>
+			</div>
+			<div class="popup popup--js-success"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
+				<div class="popup__body popup__body--column">
+					<header><em>Успех!</em></header>
+					<header class="popup--js-text">Мы скоро свяжемся с Вами!</header><a class="js--close-popup btn btn--main" href="#">Понял</a>
+				</div>
+			</div>
+			<div class="popup popup--js-call"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите номер телефона и течение дня мы Вам перезвоним</header>
-					<form class="form form--column" action="/callback" method="post">
+					<form class="form form--column" action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!">
 						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-						<input class="btn btn--main" type="submit" placeholder="Заказать звонок">
+						<input class="btn btn--main" type="submit" value="Заказать звонок">
 					</form>
 				</div>
 			</div>
-			<div class="popup popup--js-contract"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<div class="popup popup--js-contract"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;отправим Вам шаблон договора</header>
-					<form class="form form--column" action="/get-contract" method="post">
+					<form class="form form--column" action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!">
 						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" placeholder="Получить шаблон договора">
+						<input class="btn btn--main" type="submit" value="Получить договор">
 					</form>
 				</div>
 			</div>
-			<div class="popup popup--js-commerce"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<div class="popup popup--js-commerce"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
 					<header>Введите контактные данные и мы отправим Вам коммерческое предложение</header>
-					<form class="form form--column form--small" action="/get-commerce" method="post">
+					<form class="form form--column form--small" action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!">
 						<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 						<input class="form__input" type="email" name="email" placeholder="Ваш email">
-						<input class="btn btn--main" type="submit" placeholder="Получить коммерческое предложение">
+						<input class="btn btn--main" type="submit" value="Получить коммерческое предложение">
 					</form>
 				</div>
 			</div>
-			<div class="popup popup--js-gos"><a class="popup__close" href="#"><span>&#10006;</span></a>
+			<div class="popup popup--js-gos"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<header class="popup__header">Другие выполненные госзаказы</header>
 				<ul class="popup__list">
 					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1666000830315000012" target="_blank">Изготовление медалей для&nbsp;УО&nbsp;РАН</a></li>
