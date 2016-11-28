@@ -56,7 +56,7 @@
 					<div class="img-text__text">
 						<h3 class="img-text__header">Работаем со всеми регионами РФ. Доставка по России до дверей – бесплатно.</h3>
 					</div>
-					<div class="img-text__img"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=ogzHxVBZBGlzLEBzyprg1Qg9M3iUAA1k&amp;amp;width=474&amp;amp;height=282&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
+					<div class="img-text__img"><img src="/static/img/img-text/map.jpg" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
 				</div>
 			</section>
 			<section class="services-list" id="services">
@@ -249,7 +249,7 @@
 							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000098" target="_blank">Изготовление ордена «Дружба&nbsp;народов»</a></li>
 							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2770401203715000033" target="_blank">Изготовление сувенирных монет «Знаки Зодиака»</a></li>
 						</ul>
-						<div class="descr-block__actions"><a class="descr-block__btn js-show-commerce-popup" href="#">Получите наше коммерческое предложение</a><a class="descr-block__btn descr-block__btn--secondary js-show-gos-popup" href="#">Посмотрите другие выполненные заказы</a></div>
+						<div class="descr-block__actions"><a class="descr-block__btn js-show-commerce-popup" href="#">Оставьте заявку на коммерческое предложение</a><a class="descr-block__btn descr-block__btn--secondary js-show-gos-popup" href="#">Посмотрите другие выполненные заказы</a></div>
 					</div>
 				</div>
 			</section>
@@ -318,7 +318,7 @@
 				<div class="popup__body">
 					<header>Оставьте заявку и получите разработку макета&nbsp;<em>бесплатно</em></header>
 					<div class="popup__right">
-						<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
+						<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер свяжется с Вами в течение 20 минут!">
 							<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
 							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 							<input class="form__input" type="email" name="email" placeholder="Ваш email">
@@ -331,7 +331,7 @@
 				<div class="popup__body">
 					<header><small>Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера</small></header>
 					<div class="popup__right">
-						<form class="form form--column" action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение дня!">
+						<form class="form form--column" action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение 20 минут!">
 							<input class="form__input" type="email" name="email" placeholder="Ваш email">
 							<input class="btn btn--main" type="submit" value="Получить эскизы">
 						</form>
@@ -352,7 +352,7 @@
 			</div>
 			<div class="popup popup--js-call"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
-					<header>Введите номер телефона и течение дня мы Вам перезвоним</header>
+					<header>Введите номер телефона и в течение 20 минут мы Вам перезвоним</header>
 					<div class="popup__right">
 						<form class="form form--column" action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!">
 							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
@@ -365,7 +365,7 @@
 				<div class="popup__body">
 					<header>Введите свой&nbsp;<span>E-mail&nbsp;</span>и мы&nbsp;отправим Вам шаблон договора</header>
 					<div class="popup__right">
-						<form class="form form--column" action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение дня!">
+						<form class="form form--column" action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение 20 минут!">
 							<input class="form__input" type="email" name="email" placeholder="Ваш email">
 							<input class="btn btn--main" type="submit" value="Получить договор">
 						</form>
@@ -374,12 +374,12 @@
 			</div>
 			<div class="popup popup--js-commerce"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a>
 				<div class="popup__body">
-					<header>Введите контактные данные и мы отправим Вам коммерческое предложение</header>
+					<header>Оставьте заявку на подготовку коммерческого предложения</header>
 					<div class="popup__right">
-						<form class="form form--column form--small" action="/get-commerce" method="post" data-succmsg="Коммерческое предложение придет к Вам в течение дня!">
+						<form class="form form--column form--small" action="/get-commerce" method="post" data-succmsg="Мы ответим Вам на заявку в течение 20 минут!">
 							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
 							<input class="form__input" type="email" name="email" placeholder="Ваш email">
-							<input class="btn btn--main" type="submit" value="Получить коммерческое">
+							<input class="btn btn--main" type="submit" value="Отправить заявку">
 						</form>
 					</div>
 				</div>
@@ -397,7 +397,7 @@
 					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0122200001014000334" target="_blank">Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Правительства Хабаровского&nbsp;края</a></li>
 					<li><a href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0129200003714000064" target="_blank">Изготовление нагрудных знаков Волгоградской областной&nbsp;Думы</a></li>
 				</ul>
-				<div class="popup__actions"><a class="btn btn--special btn--small js-show-commerce-popup" href="#">Получите наше коммерческое предложение</a></div>
+				<div class="popup__actions"><a class="btn btn--special btn--small js-show-commerce-popup" href="#">Оставить заявку на коммерческое предложение</a></div>
 			</div>
 			<!--include ../blocks/footer/footer.pug-->
 			<div class="overlay"></div>
