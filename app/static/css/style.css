@@ -357,6 +357,13 @@ th {
 body {
   font-family: "PT Serif", serif;
   color: #505050; }
+  body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #ececec; }
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  body::-webkit-scrollbar-thumb {
+    background-color: #0f0f11; }
 
 a {
   text-decoration: none;
@@ -1867,7 +1874,7 @@ body.swal2-in {
     text-align: center;
     background-color: #0f0f11; }
     .popup__close span {
-      color: #f0f0f0; }
+      color: #ececec; }
     .popup__close:hover span {
       display: inline-block;
       -webkit-transition: 0.4s ease-in;
@@ -1901,7 +1908,7 @@ body.swal2-in {
       line-height: 40px;
       text-transform: uppercase;
       font-family: "Playfair Display SC", serif;
-      color: #f0f0f0;
+      color: #ececec;
       text-align: left; }
       .popup__body header small {
         font-size: 25px;
@@ -1931,14 +1938,14 @@ body.swal2-in {
     display: block;
     font-size: 22px;
     line-height: 40px;
-    color: #f0f0f0;
+    color: #ececec;
     font-family: "Playfair Display SC", serif;
     margin: 20px 0; }
   .popup__list li {
     display: block;
     margin-bottom: 10px; }
     .popup__list li a {
-      color: #f0f0f0;
+      color: #ececec;
       font-size: 14px;
       line-height: 20px;
       font-family: "Playfair Display SC", serif;
@@ -2205,7 +2212,7 @@ body.swal2-in {
       display: block;
       font-size: 18px;
       line-height: 20px;
-      color: #f0f0f0;
+      color: #ececec;
       margin-bottom: 10px; }
       .result__descr p:last-of-type {
         margin-bottom: 0; }
