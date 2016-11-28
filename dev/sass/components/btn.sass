@@ -24,10 +24,11 @@
 		border: none
 		font-weight: 700
 
-		max-width: 270px
-
 		&:hover
 			background: lighten($akcent-color, 5%)
+
+		@media #{$mobileSm}
+			max-width: 270px
 
 	&--special
 		color: $akcent-bg

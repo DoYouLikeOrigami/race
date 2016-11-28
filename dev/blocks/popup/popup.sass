@@ -8,7 +8,7 @@
 
 	transform: translate(-50%, -50%)
 
-	max-width: 70%
+	max-width: 90%
 	max-height: 100vh
 
 	padding: 10px 15px
@@ -20,6 +20,7 @@
 
 	@media #{$tablet}
 		max-width: 90%
+		overflow: scroll
 
 	@media #{$mobile}
 		width: 100%
@@ -64,12 +65,18 @@
 			width: 100%
 
 	&__body
-		display: inline-block
+		display: block
+		box-sizing: border-box
+
+		width: 700px
+		max-width: 100%
+
 		text-align: center
-		padding: 25px 0
+
+		padding: 25px
 
 		@media #{$mobile}
-			flex-direction: column
+			padding: 25px 0
 
 		header
 			display: inline-block
@@ -90,7 +97,7 @@
 				line-height: 30px
 				text-transform: none
 
-			@media #{$mobile}
+			@media #{$tablet}
 				margin: 0 0 20px
 
 				width: 100%
