@@ -2521,10 +2521,11 @@ body.swal2-in {
       border: none;
       text-align: left;
       margin: 0 15px;
-      width: auto; }
+      width: 200px; }
       @media screen and (max-width: 768px) {
         .flex-block--team .flex-block__item {
-          margin: 0 10px; } }
+          margin: 0 10px;
+          width: 30%; } }
       @media screen and (max-width: 600px) {
         .flex-block--team .flex-block__item {
           width: 40%; } }
@@ -3042,7 +3043,8 @@ body.swal2-in {
     vertical-align: middle; }
     @media screen and (max-width: 600px) {
       .img-text__img {
-        max-width: 90%; } }
+        max-width: 400px;
+        width: 90%; } }
     .img-text__img img {
       display: block;
       margin: 0 auto;
