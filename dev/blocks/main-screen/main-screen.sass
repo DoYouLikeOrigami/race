@@ -4,12 +4,10 @@
 
 	&__wrap
 		@include wrap
-		@include flex
 
 		padding: 40px 0 0
 
-		align-items: center
-		flex-wrap: wrap
+		text-align: center
 
 		@media #{$laptop}
 			padding: 20px 20px 0
@@ -23,9 +21,14 @@
 	&__header
 		@include page_header
 		width: 60%
+		margin-left: 2%
+
+		display: inline-block
+		vertical-align: middle
 
 		@media #{$tablet}
 			width: 100%
+			margin-left: 0
 
 		em
 			font-style: normal
@@ -34,8 +37,14 @@
 	&__img
 		width: 33%
 
+		display: inline-block
+		vertical-align: middle
+
 		@media #{$tablet}
-			display: none
+			width: 50%
+
+		@media #{$mobile}
+			width: 95%
 
 		img
 			display: block
@@ -76,6 +85,7 @@
 			max-width: 50%
 
 			display: inline-block
+			position: relative
 
 			vertical-align: top
 			text-align: left
@@ -106,8 +116,16 @@
 				color: $special-color
 
 			img
-				width: 80%
+				width: 50%
 				margin-top: 30px
+
+				@media #{$tablet}
+					width: 75%
+					margin-top: 30px
+
+				@media #{$mobile}
+					width: 100%
+					margin-top: 20px
 
 		&-right
 			display: inline-block

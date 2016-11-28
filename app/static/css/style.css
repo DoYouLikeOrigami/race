@@ -386,8 +386,8 @@ li {
 
 @font-face {
   font-family: 'fontello';
-  src: url("/static/font/fontello.eot?71060486");
-  src: url("/static/font/fontello.eot?71060486#iefix") format("embedded-opentype"), url("/static/font/fontello.woff2?71060486") format("woff2"), url("/static/font/fontello.woff?71060486") format("woff"), url("/static/font/fontello.ttf?71060486") format("truetype"), url("/static/font/fontello.svg?71060486#fontello") format("svg");
+  src: url("/static/font/icons.eot?87146351");
+  src: url("/static/font/icons.eot?87146351#iefix") format("embedded-opentype"), url("/static/font/icons.woff2?87146351") format("woff2"), url("/static/font/icons.woff?87146351") format("woff"), url("/static/font/icons.ttf?87146351") format("truetype"), url("/static/font/icons.svg?87146351#icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -395,13 +395,13 @@ li {
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?71060486#fontello') format('svg');
-  }
+	@font-face {
+		font-family: 'fontello';
+		src: url('../font/fontello.svg?71060486#fontello') format('svg');
+	}
 }
 */
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]::before, [class*=" icon-"]::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -428,14 +428,47 @@ li {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-.icon-phone:before {
+.icon-phone::before {
   content: '\e800'; }
 
 /* '' */
-.icon-mail:before {
+.icon-mail::before {
   content: '\e805'; }
 
 /* '' */
+.icon-vk::before {
+  content: '\e800'; }
+
+/* '' */
+.icon-phone::before {
+  content: '\e802'; }
+
+/* '' */
+.icon-facebook::before {
+  content: '\f09a'; }
+
+/* '' */
+.icon-mail-alt::before {
+  content: '\f0e0'; }
+
+/* '' */
+.icon-instagram::before {
+  content: '\f16d'; }
+
+/* '' */
+.icon-file-archive::before {
+  content: '\f1c6';
+  font-size: 30px;
+  margin-right: 12px;
+  vertical-align: middle; }
+
+/* '' */
+@media screen and (max-width: 600px) {
+  .icon-file-archive::before {
+    font-size: 20px;
+    margin-right: 10px; }
+  /* '' */ }
+
 .btn {
   display: inline-block;
   padding: 20px 30px;
@@ -458,10 +491,12 @@ li {
     color: #0f0f11;
     background: #D6AD4E;
     border: none;
-    font-weight: 700;
-    max-width: 270px; }
+    font-weight: 700; }
     .btn--main:hover {
       background: #dbb763; }
+    @media screen and (max-width: 380px) {
+      .btn--main {
+        max-width: 270px; } }
   .btn--special {
     color: #0f0f11;
     background: #D6AD4E;
@@ -1578,6 +1613,11 @@ body.swal2-in {
     @media screen and (max-width: 380px) {
       .main-header__tel-number {
         font-size: 20px; } }
+    .main-header__tel-number i {
+      color: #D6AD4E; }
+      @media screen and (max-width: 600px) {
+        .main-header__tel-number i {
+          display: none; } }
 
 .main-nav {
   display: block;
@@ -1645,23 +1685,8 @@ body.swal2-in {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding: 40px 0 0;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    text-align: center; }
     @media screen and (max-width: 1024px) {
       .main-screen__wrap {
         padding: 20px 20px 0; } }
@@ -1681,7 +1706,10 @@ body.swal2-in {
     color: #505050;
     font-weight: 700;
     font-family: "Playfair Display SC", serif;
-    width: 60%; }
+    width: 60%;
+    margin-left: 2%;
+    display: inline-block;
+    vertical-align: middle; }
     @media screen and (max-width: 768px) {
       .main-screen__header {
         font-size: 36px;
@@ -1715,15 +1743,21 @@ body.swal2-in {
           margin-top: 10px; } }
     @media screen and (max-width: 768px) {
       .main-screen__header {
-        width: 100%; } }
+        width: 100%;
+        margin-left: 0; } }
     .main-screen__header em {
       font-style: normal;
       color: #EE0032; }
   .main-screen__img {
-    width: 33%; }
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle; }
     @media screen and (max-width: 768px) {
       .main-screen__img {
-        display: none; } }
+        width: 50%; } }
+    @media screen and (max-width: 600px) {
+      .main-screen__img {
+        width: 95%; } }
     .main-screen__img img {
       display: block;
       width: 100%; }
@@ -1754,6 +1788,7 @@ body.swal2-in {
       margin-right: 5%;
       max-width: 50%;
       display: inline-block;
+      position: relative;
       vertical-align: top;
       text-align: left; }
       @media screen and (max-width: 1024px) {
@@ -1780,8 +1815,16 @@ body.swal2-in {
         font-style: normal;
         color: #EE0032; }
       .main-screen__actions header img {
-        width: 80%;
+        width: 50%;
         margin-top: 30px; }
+        @media screen and (max-width: 768px) {
+          .main-screen__actions header img {
+            width: 75%;
+            margin-top: 30px; } }
+        @media screen and (max-width: 600px) {
+          .main-screen__actions header img {
+            width: 100%;
+            margin-top: 20px; } }
     .main-screen__actions-right {
       display: inline-block;
       width: 270px;
@@ -1795,7 +1838,7 @@ body.swal2-in {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 70%;
+  max-width: 90%;
   max-height: 100vh;
   padding: 10px 15px;
   background: #0f0f11;
@@ -1803,7 +1846,8 @@ body.swal2-in {
   z-index: 999; }
   @media screen and (max-width: 768px) {
     .popup {
-      max-width: 90%; } }
+      max-width: 90%;
+      overflow: scroll; } }
   @media screen and (max-width: 600px) {
     .popup {
       width: 100%;
@@ -1839,15 +1883,15 @@ body.swal2-in {
       .popup__img {
         width: 100%; } }
   .popup__body {
-    display: inline-block;
+    display: block;
+    box-sizing: border-box;
+    width: 700px;
+    max-width: 100%;
     text-align: center;
-    padding: 25px 0; }
+    padding: 25px; }
     @media screen and (max-width: 600px) {
       .popup__body {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
+        padding: 25px 0; } }
     .popup__body header {
       display: inline-block;
       vertical-align: middle;
@@ -1863,7 +1907,7 @@ body.swal2-in {
         font-size: 25px;
         line-height: 30px;
         text-transform: none; }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 768px) {
         .popup__body header {
           margin: 0 0 20px;
           width: 100%;
@@ -2038,6 +2082,7 @@ body.swal2-in {
 
 .call-to-action {
   padding: 80px 0;
+  position: relative;
   text-align: center; }
   @media screen and (max-width: 1024px) {
     .call-to-action {
@@ -2045,7 +2090,7 @@ body.swal2-in {
   .call-to-action--contract {
     background: url("/static/img/call-to-action/contract.jpg") no-repeat 105% center;
     background-size: auto 100%;
-    background-color: #e5e2dd; }
+    background-color: #EDE9E6; }
     @media screen and (max-width: 768px) {
       .call-to-action--contract {
         background: #e5e2dd; } }
@@ -2082,7 +2127,8 @@ body.swal2-in {
   .result__left {
     width: 32%;
     margin-right: 5%;
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
     @media screen and (max-width: 768px) {
       .result__left {
         width: 90%;
@@ -2090,7 +2136,8 @@ body.swal2-in {
   .result__right {
     width: 50%;
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    vertical-align: top; }
     @media screen and (max-width: 768px) {
       .result__right {
         width: 90%;
@@ -2331,6 +2378,8 @@ body.swal2-in {
         line-height: 25px; }
         .contacts-section__tel-number:last-of-type {
           margin-bottom: 0; } }
+    .contacts-section__tel-number i {
+      color: #D6AD4E; }
 
 .services-list {
   display: block;
@@ -2470,30 +2519,37 @@ body.swal2-in {
     background: #F5F5F5; }
     .flex-block--team .flex-block__item {
       border: none;
-      text-align: left; }
+      text-align: left;
+      margin: 0 15px;
+      width: auto; }
+      @media screen and (max-width: 768px) {
+        .flex-block--team .flex-block__item {
+          margin: 0 10px; } }
+      @media screen and (max-width: 600px) {
+        .flex-block--team .flex-block__item {
+          width: 40%; } }
+      @media screen and (max-width: 380px) {
+        .flex-block--team .flex-block__item {
+          margin: 0 5px; } }
     .flex-block--team .flex-block__img {
-      margin-bottom: 40px;
-      width: 200px;
-      height: 200px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
+      margin: 0 auto 30px;
       overflow: hidden; }
-      @media screen and (max-width: 1024px) {
-        .flex-block--team .flex-block__img {
-          width: 180px;
-          height: 180px; } }
       @media screen and (max-width: 768px) {
         .flex-block--team .flex-block__img {
-          width: 120px;
-          height: 120px;
+          width: 180px;
+          height: 180px;
           margin-bottom: 15px; } }
       @media screen and (max-width: 600px) {
         .flex-block--team .flex-block__img {
-          width: 70px;
-          height: 70px; } }
+          width: 150px;
+          height: 150px; } }
       @media screen and (max-width: 380px) {
         .flex-block--team .flex-block__img {
-          width: 90px;
-          height: 90px; } }
+          width: 100px;
+          height: 100px; } }
       .flex-block--team .flex-block__img img {
         display: block;
         width: 100%; }
@@ -2717,6 +2773,11 @@ body.swal2-in {
         -ms-flex-pack: center;
             justify-content: center;
     z-index: 2; }
+    @media screen and (max-width: 600px) {
+      .portfolio__text {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box; } }
     .portfolio__text p {
       display: block;
       font-size: 22px;
@@ -2845,7 +2906,8 @@ body.swal2-in {
     margin: 0 auto;
     height: 100vh;
     min-height: 450px;
-    text-align: right; }
+    text-align: right;
+    line-height: 100vh; }
     @media screen and (max-width: 600px) {
       .descr-block__wrap {
         min-height: 420px; } }
@@ -2856,6 +2918,7 @@ body.swal2-in {
     display: inline-block;
     vertical-align: middle;
     text-align: left;
+    line-height: normal;
     width: 720px;
     max-width: 100%;
     z-index: 2; }
@@ -2901,15 +2964,8 @@ body.swal2-in {
     .descr-block__link:hover {
       opacity: 1; }
   .descr-block__actions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    display: block;
+    text-align: center; }
     @media screen and (max-width: 380px) {
       .descr-block__actions {
         -ms-flex-wrap: wrap;
@@ -2918,15 +2974,16 @@ body.swal2-in {
             -ms-flex-pack: center;
                 justify-content: center; } }
   .descr-block__btn {
-    display: block;
+    display: inline-block;
     box-sizing: border-box;
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    width: 47%;
+    vertical-align: middle;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
     text-align: center;
     padding: 5px 15px;
+    margin: 0 1%;
     border: 1px solid #f9d498;
     background-color: #f9d498;
     color: #444;
@@ -2937,9 +2994,10 @@ body.swal2-in {
         font-size: 14px; } }
     @media screen and (max-width: 380px) {
       .descr-block__btn {
-        -ms-flex-preferred-size: 90%;
-            flex-basis: 90%;
-        margin-bottom: 20px; } }
+        width: 90%;
+        margin: 0 0 20px; }
+        .descr-block__btn:last-of-type {
+          margin: 0; } }
     .descr-block__btn:hover {
       background-color: #f3ac38;
       border-color: #f3ac38; }
@@ -2989,6 +3047,7 @@ body.swal2-in {
       display: block;
       margin: 0 auto;
       height: 300px;
+      max-width: 100%;
       border: 2px solid #0f0f11; }
       @media screen and (max-width: 1024px) {
         .img-text__img img {

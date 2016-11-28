@@ -13,16 +13,22 @@ section#contacts.contacts-section
 						br
 						| Завод
 				.contacts-section__tel
-					a.contacts-section__tel-number(href="tel:78122442706") 8 (812) 244-27-06
-					a.contacts-section__tel-number(href="tel:78007075164") 8 (800) 707-51-64
+					a.contacts-section__tel-number(href="tel:78122442706")
+						i.icon-phone
+						| 8 (812) 244-27-06
+					a.contacts-section__tel-number(href="tel:78007075164")
+						i.icon-phone
+						| 8 (800) 707-51-64
 					a.btn.btn--small.btn--special.js-show-call-popup(href="#") Заказать обратный звонок
 				.contacts-section__address
-					a(href="mailto:zakaz@geraldzavod.ru") zakaz@geraldzavod.ru
+					a(href="mailto:zakaz@geraldzavod.ru")
+						i.icon-mail-alt
+						|zakaz@geraldzavod.ru
 					br
 					| Санкт-Петербург, пр. Елизарова 34, БЦ "KROL"
 
 			.contacts-section__right
-				form.form.form--column(method="post" action="/send-mail")
+				form.form.form--column(method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!")
 					header.form__header
 						| Напишите нам по любым вопросам.
 					input.form__input(type="email" name="email" placeholder="Ваш email")

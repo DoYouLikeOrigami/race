@@ -55,7 +55,7 @@ window.onload = function() {
 					if (!phone) phone = "Не заполнено";
 					if (!name) name = "Не заполнено";
 					if (!email) email = "Не заполнено";
-					if (!msg) email = "Не заполнено";
+					if (!msg) msg = "Не заполнено";
 
 					json = {
 						phone: phone,
