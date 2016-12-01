@@ -15,7 +15,7 @@
 				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить макет")
+				input.btn.btn--main(type="submit" value="Получить макет" onclick="ga('send', 'event', 'knopka', 'ORDER3'); yaCounter39059545.reachGoal('ORDER3'); return true;")
 
 .popup.popup--js-art
 	a.popup__close.js--close-popup(href="#")
@@ -26,7 +26,7 @@
 		.popup__right
 			form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение 20 минут!")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить эскизы")
+				input.btn.btn--main(type="submit" value="Получить эскизы" onclick="ga('send', 'event', 'knopka', 'ORDER4'); yaCounter39059545.reachGoal('ORDER4'); return true;")
 
 .popup.popup--js-error
 	a.popup__close.js--close-popup(href="#")
@@ -58,7 +58,7 @@
 		.popup__right
 			form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-				input.btn.btn--main(type="submit" value="Заказать звонок")
+				input.btn.btn--main(type="submit" value="Заказать звонок" onclick="ga('send', 'event', 'knopka', 'ORDER1'); yaCounter39059545.reachGoal('ORDER1'); return true;")
 
 .popup.popup--js-contract
 	a.popup__close.js--close-popup(href="#")
@@ -71,7 +71,7 @@
 		.popup__right
 			form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение 20 минут!")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить договор")
+				input.btn.btn--main(type="submit" value="Получить договор" onclick="ga('send', 'event', 'knopka', 'ORDER6'); yaCounter39059545.reachGoal('ORDER6'); return true;")
 
 .popup.popup--js-commerce
 	a.popup__close.js--close-popup(href="#")
@@ -83,7 +83,7 @@
 			form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Мы ответим Вам на заявку в течение 20 минут!")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Отправить заявку")
+				input.btn.btn--main(type="submit" value="Отправить заявку" onclick="ga('send', 'event', 'knopka', 'ORDER5'); yaCounter39059545.reachGoal('ORDER5'); return true;")
 
 .popup.popup--js-gos
 	a.popup__close.js--close-popup(href="#")
