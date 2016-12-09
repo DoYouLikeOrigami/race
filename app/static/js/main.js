@@ -80,7 +80,7 @@ window.onload = function() {
 			}
 
 			return showPopup(errPopup);
-		}
+		};
 
 		function showSuccPopup(text) {
 			var succPopup = document.querySelector('.popup--js-success');
@@ -90,7 +90,7 @@ window.onload = function() {
 			}
 
 			return showPopup(succPopup);
-		}
+		};
 
 		function send(json, method, action, succMsg) {
 			var xhr = new XMLHttpRequest();
@@ -109,7 +109,7 @@ window.onload = function() {
 					if (showSuccPopup(succMsg)) return true;
 				}
 			}
-		}
+		};
 
 		popupsBindClose();
 

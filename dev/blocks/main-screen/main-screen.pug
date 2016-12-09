@@ -13,9 +13,9 @@ section.main-screen#main-screen
 			em бесплатно
 			img(src="/static/img/main-screen/maket.jpg")
 		.main-screen__actions-right
-			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!" onsubmit="yaCounter41243534.reachGoal('ORDER2'); return true;")
 				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.form__input(type="mail" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить макет" onclick="ga('send', 'event', 'knopka', 'ORDER2'); yaCounter41243534.reachGoal('ORDER2'); return true;")
+				input.btn.btn--main(type="submit" value="Получить макет")
 
