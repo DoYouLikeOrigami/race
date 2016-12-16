@@ -3,15 +3,22 @@
 		span &#10006;
 	img.popup__img(src="")
 
+.popup.popup--service.popup--js-service
+	a.popup__close.js--close-popup(href="#")
+		span &#10006;
+	.popup__container
+		.popup__wrapper
+		.swiper-button-prev.swiper-button-white.popup__button-prev.popup__button--js-move.popup__button--fade
+		.swiper-button-next.swiper-button-white.popup__button-next.popup__button--js-move
+
 .popup.popup--js-order
 	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
-			| Оставьте заявку и получите разработку макета&nbsp;
-			em бесплатно
+			| Оставьте заявку и мы свяжемся с вами в течение 5 минут
 		.popup__right
-			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер свяжется с Вами в течение 20 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER3'); return true;")
+			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер свяжется с Вами в течение 5 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER3'); return true;")
 				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
@@ -24,7 +31,7 @@
 		header
 			small Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера
 		.popup__right
-			form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение 20 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER4'); return true;")
+			form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение 5 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER4'); return true;")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
 				input.btn.btn--main(type="submit" value="Получить эскизы")
 
@@ -48,15 +55,14 @@
 			| Мы скоро свяжемся с Вами!
 		a.js--close-popup.btn.btn--main(href="#") Понял
 
-
 .popup.popup--js-call
 	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
-			| Введите номер телефона и в течение 20 минут мы Вам перезвоним
+			| Введите номер телефона и в течение 2 минут мы Вам перезвоним
 		.popup__right
-			form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер скоро перезвонит Вам!" onsubmit="yaCounter41243534.reachGoal('ORDER1'); return true;")
+			form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер сейчас перезвонит вам!" onsubmit="yaCounter41243534.reachGoal('ORDER1'); return true;")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.btn.btn--main(type="submit" value="Заказать звонок")
 
@@ -69,7 +75,7 @@
 			span E-mail&nbsp;
 			| и мы&nbsp;отправим Вам шаблон договора
 		.popup__right
-			form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение 20 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER6'); return true;")
+			form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение 5 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER6'); return true;")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
 				input.btn.btn--main(type="submit" value="Получить договор")
 
@@ -80,7 +86,7 @@
 		header
 			| Оставьте заявку на подготовку коммерческого предложения
 		.popup__right
-			form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Мы ответим Вам на заявку в течение 20 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER5'); return true;")
+			form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Мы ответим Вам на заявку в течение 5 минут!" onsubmit="yaCounter41243534.reachGoal('ORDER5'); return true;")
 				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
 				input.form__input(type="email" name="email" placeholder="Ваш email")
 				input.btn.btn--main(type="submit" value="Отправить заявку")
