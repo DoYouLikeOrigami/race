@@ -26,6 +26,10 @@
 		width: 100%
 		max-width: 100%
 
+	&--service
+		@media #{$tablet}
+			overflow: hidden
+
 	&--active
 		display: block
 
@@ -45,6 +49,7 @@
 		text-align: center
 
 		background-color: $akcent-bg
+		z-index: 5
 
 		span
 			color: $font-alt-color
@@ -59,10 +64,12 @@
 	&__img
 		display: block
 		max-width: 100%
-		max-height: 90vh
+		height: 90vh
 
 		@media #{$mobile}
 			width: 100%
+			height: auto
+			max-height: 90vh
 
 	&__body
 		display: block
@@ -146,6 +153,7 @@
 				line-height: 20px
 				font-family: $headers-font
 				transition: $effect-time
+				text-decoration: underline
 
 				&:hover
 					color: $akcent-color
@@ -153,3 +161,32 @@
 	&__actions
 		text-align: center
 		padding: 20px 0
+
+	&__wrapper
+		position: relative
+
+		@media #{$mobile}
+			width: 320px
+			margin: 0 auto
+
+	&__slide
+		display: block
+		position: absolute
+
+		top: 0
+		left: 0
+
+		transition: $effect-time
+		opacity: 0
+
+		@media #{$mobile}
+			width: 100%
+
+		&--active
+			opacity: 1
+			position: relative
+
+	&__button--fade
+		opacity: .5
+		transition: $effect-time
+

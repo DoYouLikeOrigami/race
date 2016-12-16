@@ -6,7 +6,7 @@
 
 	&::before
 		@include before_darken
-		background: rgba(0, 0, 0, .4)
+		background: rgba(0, 0, 0, .55)
 
 	&__wrap
 		@include wrap
@@ -41,7 +41,7 @@
 		font-family: $headers-font
 		color: #f9d498
 
-		margin-bottom: 40px
+		margin-bottom: 20px
 
 		@media #{$mobile}
 			font-size: $fontMd
@@ -74,14 +74,14 @@
 		margin-bottom: 10px
 
 	&__link
-		color: #f9d498
-		opacity: .8
-		font-size: $fontSm
+		color: darken(#f9d498, 20%)
+		font-size: $fontMd
 		line-height: 20px
 		font-family: $headers-font
+		text-decoration: underline
 
-		&:hover
-			opacity: 1
+		@media #{$mobile}
+			font-size: $fontSm
 
 	&__actions
 		display: block
