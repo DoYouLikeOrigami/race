@@ -106,7 +106,9 @@ window.onload = function() {
 					if (showErrPopup('Что-то не так на сервере. Позвоните нам.')) return true;
 				} else {
 					console.info(xhr.responseText);
-					if (showSuccPopup(succMsg)) return true;
+					location.assign("/thankyou");
+					//if (showSuccPopup(succMsg)) return true;
+					return true;
 				}
 			}
 		};
@@ -194,6 +196,151 @@ window.onload = function() {
 					showPopup(imgPopup);
 				});
 			});
+		};
+
+		popupsServiceBindOpen();
+
+		function popupsServiceBindOpen() {
+			var serviceBtns = document.querySelectorAll('.js-show-service-popup'),
+					servicePopup = document.querySelector('.popup--js-service'),
+					servicePopupWrapper = servicePopup.querySelector('.popup__wrapper'),
+					serviceMoveBtns = servicePopup.querySelectorAll('.popup__button--js-move');
+
+			Array.prototype.forEach.call(serviceBtns, function(serviceBtn, index) {
+				serviceBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+
+					var clickImg = this,
+							images = clickImg.dataset.img.split(', '),
+							folder = clickImg.dataset.folder,
+							servicePopupImg;
+
+					if (!images || !folder) {
+						return;
+					}
+
+					servicePopupWrapper.innerHTML = '';
+
+					Array.prototype.forEach.call(images, function(img, index) {
+						var imgSrc = '/static/img/' + clickImg.dataset.folder + '/' + images[index];
+
+						servicePopupImg = document.createElement('div');
+						servicePopupImg.className = 'popup__slide';
+						servicePopupImg.innerHTML = '<img class="popup__img" src="' + imgSrc + '">';
+						servicePopupWrapper.appendChild(servicePopupImg);
+					});
+
+					document.querySelector('.popup__slide').classList.add('popup__slide--active');
+					serviceMoveBtns[0].classList.add('popup__button--fade');
+					serviceMoveBtns[1].classList.remove('popup__button--fade');
+
+					showPopup(servicePopup);
+				});
+			});
+		};
+
+		popupsServiceMoveSlides();
+
+		function popupsServiceMoveSlides() {
+			var serviceMoveBtns = document.querySelectorAll('.popup__button--js-move'),
+					servicePopup = document.querySelector('.popup--js-service'),
+					servicePopupWrapper = servicePopup.querySelector('.popup__wrapper');
+
+			Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+				serviceMoveBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+
+					var slides = servicePopupWrapper.querySelectorAll('.popup__slide'),
+							currentIndex,
+							newIndex,
+							slidesLength = slides.length,
+							btn = this;
+
+					if (slidesLength === 1) {
+						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+							serviceMoveBtn.classList.add('popup__button--fade');
+						});
+
+						return;
+					};
+
+					// Находим индекс текущего
+					Array.prototype.forEach.call(slides, function(slide, index) {
+						if (slide.classList.contains('popup__slide--active')) {
+							currentIndex = index;
+						};
+					});
+
+					if (serviceMoveBtn.classList.contains('popup__button-prev')) {
+						if (currentIndex === 0) {
+							return;
+						}
+
+						newIndex = currentIndex - 1;
+
+						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+							if (serviceMoveBtn.classList.contains('popup__button-next')) {
+								serviceMoveBtn.classList.remove('popup__button--fade');
+							};
+						});
+					};
+
+					if (serviceMoveBtn.classList.contains('popup__button-next')) {
+						if (currentIndex === slidesLength - 1) {
+							return;
+						}
+
+						newIndex = currentIndex + 1;
+
+						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+							if (serviceMoveBtn.classList.contains('popup__button-prev')) {
+								serviceMoveBtn.classList.remove('popup__button--fade');
+							};
+						});
+					};
+
+					slides[newIndex].classList.add('popup__slide--active');
+					slides[currentIndex].classList.remove('popup__slide--active');
+
+					// Навешиваем неактивный класс на кнопку назад
+					if (newIndex === 0) {
+						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+							if (serviceMoveBtn.classList.contains('popup__button-prev')) {
+								serviceMoveBtn.classList.add('popup__button--fade');
+							};
+						});
+					};
+
+					// Навешиваем неактивный класс на кнопку вперёд
+					if (newIndex === slidesLength - 1) {
+						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
+							if (serviceMoveBtn.classList.contains('popup__button-next')) {
+								serviceMoveBtn.classList.add('popup__button--fade');
+							};
+						});
+					};
+
+					return;
+				});
+			});
+		};
+
+		mainScreenToggleImg();
+
+		function mainScreenToggleImg() {
+			var img = document.querySelector('.main-screen__img img'),
+					imgNumber = 1,
+					path = '/static/img/main-screen/';
+
+			var timer = setInterval(function() {
+				imgNumber++;
+
+				if (imgNumber > 6) {
+					imgNumber = 1;
+				};
+
+				img.src = path + imgNumber + '.jpg';
+			}, 3000);
 		};
 
 		// Попапы с заказами

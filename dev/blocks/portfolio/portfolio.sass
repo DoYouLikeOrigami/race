@@ -88,34 +88,34 @@
 				line-height: 20px
 
 
-.swiper-slide
-	background-size: cover
-	background-position: center
+	.swiper-slide
+		background-size: cover
+		background-position: center
 
-	display: flex
-	justify-content: center
-	align-items: center
+		display: flex
+		justify-content: center
+		align-items: center
 
-	&::before
-		@include before_darken
+		&::before
+			@include before_darken
 
-	&--thumbs
-		width: 25%
-		height: 100%
-		opacity: 0.4
-		cursor: pointer
+		&--thumbs
+			width: 25%
+			height: 100%
+			opacity: 0.4
+			cursor: pointer
 
-	&-active
-		opacity: 1
+		&-active
+			opacity: 1
 
-.swiper-button-next,
-.swiper-button-prev
-	width: 50px
-	height: 70px
-	margin-top: -35px
-	background-size: contain
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 50px
+		height: 70px
+		margin-top: -35px
+		background-size: contain
 
-	@media #{$mobile}
-		width: 35px
-		height: 50px
-		margin-top: -25px
+		@media #{$mobile}
+			width: 35px
+			height: 50px
+			margin-top: -25px
