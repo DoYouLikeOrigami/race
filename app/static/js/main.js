@@ -328,9 +328,11 @@ window.onload = function() {
 		mainScreenToggleImg();
 
 		function mainScreenToggleImg() {
-			var img = document.querySelector('.main-screen__img img'),
+			var container = document.querySelector('.main-screen__img'),
+					img = container.querySelector('img'),
 					imgNumber = 1,
-					path = '/static/img/main-screen/';
+					path = '/static/img/main-screen/',
+					innerTimer, innerTimer2;
 
 			var timer = setInterval(function() {
 				imgNumber++;
@@ -339,7 +341,13 @@ window.onload = function() {
 					imgNumber = 1;
 				};
 
-				img.src = path + imgNumber + '.jpg';
+				container.classList.add('main-screen__img--animated');
+				innerTimer = setTimeout(function() {
+					img.src = path + imgNumber + '.jpg';
+					innerTimer2 = setTimeout(function() {
+						container.classList.remove('main-screen__img--animated');
+					}, 400);
+				}, 350);
 			}, 3000);
 		};
 

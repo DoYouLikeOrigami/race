@@ -46,6 +46,11 @@
 		display: inline-block
 		vertical-align: middle
 
+		transition: $effect-time
+
+		&--animated
+			opacity: 0
+
 		@media #{$tablet}
 			width: 50%
 
@@ -137,3 +142,4 @@
 			display: inline-block
 			width: 270px
 			vertical-align: top
+

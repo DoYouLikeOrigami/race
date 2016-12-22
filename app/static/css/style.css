@@ -1764,7 +1764,11 @@ body.swal2-in {
   .main-screen__img {
     width: 33%;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+    .main-screen__img--animated {
+      opacity: 0; }
     @media screen and (max-width: 768px) {
       .main-screen__img {
         width: 50%; } }
