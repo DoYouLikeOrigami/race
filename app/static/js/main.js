@@ -325,6 +325,7 @@ window.onload = function() {
 			});
 		};
 
+		//if (window.innerWidth > 600)
 		mainScreenToggleImg();
 
 		function mainScreenToggleImg() {
