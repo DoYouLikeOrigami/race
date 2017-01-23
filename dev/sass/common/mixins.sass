@@ -34,37 +34,40 @@
 
 	margin: 0 0 60px
 
-	font-size: $fontLg
+	font-size: 30px
 	line-height: 40px
-	letter-spacing: 1px
+
+	font-family: $headers-font
 	color: $font-color
 	font-weight: bold
-	text-align: center
-	font-family: $default-font
-
-	@media #{$laptop}
-		margin-bottom: 40px
 
 	@media #{$tablet}
-		font-size: $fontXBig + 2
+		font-size: $fontBig
+		line-height: 35px
 
 	@media #{$mobile}
-		font-size: $fontBig
-		letter-spacing: 1px
-		margin-bottom: 40px
+		font-size: $fontMd
+		line-height: 26px
 
-	@media #{$mobileSm}
+	small
+		display: block
+		margin-top: 30px
+
 		font-size: $fontXMd
-		line-height: $fontXBig
-		margin-bottom: 30px
+		line-height: 30px
+
+		@media #{$tablet}
+			font-size: $fontMd
+			line-height: 25px
+			margin-top: 25px
 
 @mixin page_header
 	display: block
-	margin: 0
+	margin: 0 0 60px
 
-	text-align: left
-	font-size: $fontLg + 10
-	line-height: $fontLg + 10
+	text-align: center
+	font-size: 42px
+	line-height: 45px
 	letter-spacing: 1px
 	color: $font-color
 	font-weight: 700

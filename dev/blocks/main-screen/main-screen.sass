@@ -2,18 +2,14 @@
 	display: block
 	position: relative
 
+	background: #f0f0f0
+
 	&__wrap
 		@include wrap
 
-		padding: 40px 0 0
+		padding: 60px 0
 
 		text-align: center
-
-		&--left
-			text-align: left
-
-			.main-screen__header
-				margin-left: 0
 
 		@media #{$laptop}
 			padding: 20px 20px 0
@@ -26,19 +22,6 @@
 
 	&__header
 		@include page_header
-		width: 60%
-		margin-left: 2%
-
-		display: inline-block
-		vertical-align: middle
-
-		@media #{$tablet}
-			width: 100%
-			margin-left: 0
-
-		em
-			font-style: normal
-			color: $special-color
 
 	&__img
 		width: 33%
@@ -66,12 +49,6 @@
 
 		box-sizing: border-box
 
-		width: 100%
-		padding: 40px 0
-
-		margin-top: 40px
-		background: #f0f0f0
-
 		text-align: center
 
 		@media #{$laptop}
@@ -86,60 +63,36 @@
 		@media #{$mobile}
 			padding: 20px 15px
 
-		header
-			font-size: 50px
-			line-height: 60px
-			font-family: $headers-font
-			font-weight: 700
-
-			margin-right: 5%
-			max-width: 50%
-
-			display: inline-block
-			position: relative
-
-			vertical-align: top
-			text-align: left
-
-			@media #{$laptop}
-				font-size: 45px
-				line-height: 55px
-
-				max-width: 57%
-				margin-right: 3%
-
-			@media #{$tablet}
-				max-width: 100%
-				flex-basis: 100%
-
-				margin: 0 0 20px
-				line-height: 50px
-
-			@media #{$mobile}
-				font-size: $fontXBig + 5
-				line-height: $fontXBig + 5
-
-			@media #{$mobileSm}
-				font-size: $fontBig
-
-			em
-				font-style: normal
-				color: $special-color
-
-			img
-				width: 50%
-				margin-top: 30px
-
-				@media #{$tablet}
-					width: 75%
-					margin-top: 30px
-
-				@media #{$mobile}
-					width: 100%
-					margin-top: 20px
-
+		&-left,
 		&-right
 			display: inline-block
-			width: 270px
+
+			width: 45%
+			min-width: 270px
+
 			vertical-align: top
 
+		&-img
+			display: block
+
+			max-width: 270px
+			margin: 0 auto
+
+			img
+				display: inline-block
+				width: 100%
+
+	&__adv
+		display: block
+
+		padding: 0
+		margin: 0 0 60px
+
+		text-align: left
+		font-size: 24px
+
+		li
+			margin-bottom: 30px
+
+			&:last-of-type
+				margin-bottom: 0

@@ -1,41 +1,30 @@
 section#contacts.contacts-section
 	.contacts-section__wrap
-		header.contacts-section__header Свяжитесь с нами по любым вопросам
+		header.contacts-section__header Наши контакты
 
 		.contacts-section__flex
 			.contacts-section__left
-				.contacts-section__logo
-					img(src="/static/img/main-header/logo.png" alt="")
-					span
-						| Петербургский
-						br
-						| Геральдический
-						br
-						| Завод
 				.contacts-section__tel
 					a.contacts-section__tel-number(href="tel:78122442706")
 						i.icon-phone
 						| 8 (812) 244-27-06
-					a.contacts-section__tel-number(href="tel:78007075164")
-						i.icon-phone
-						| 8 (800) 707-51-64
 					a.btn.btn--small.btn--special.js-show-call-popup(href="#") Заказать обратный звонок
 				.contacts-section__address
 					a(href="mailto:zakaz@geraldzavod.ru")
 						i.icon-mail-alt
 						|zakaz@geraldzavod.ru
-					br
-					| Санкт-Петербург, пр. Елизарова 34, БЦ "KROL"
 
 			.contacts-section__right
 				form.form.form--column(method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!")
 					header.form__header
-						| Напишите нам по любым вопросам.
-					input.form__input(type="email" name="email" placeholder="Ваш email")
-					textarea.form__textarea(name="msg" placeholder="Ваше сообщение" rows="5")
-					input.btn.btn--main(value="Отправить" type="submit")
+						| Ответим на любые вопросы
 
-		script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=UOBw4PZgf8proO2JUJ8fRbW6rSj7DKKr&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+					label.form__label
+						p Ваш вопрос
+						textarea.form__textarea(name="msg" placeholder="Напишите ваш вопрос" rows="5")
 
+					label.form__label
+						p Ваш контакт
+						input.form__input(type="email" name="email" placeholder="Телефон или email")
 
-
+					button.btn.btn--main(type="submit") Получить ответ

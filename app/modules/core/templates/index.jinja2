@@ -18,270 +18,41 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="main-nav">
-				<ul class="main-nav__list">
-					<li class="main-nav__item"><a class="main-nav__link" href="#main-screen">Главная</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#services">Изделия</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#portfolio">Опыт</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#result">Качество</a></li>
-					<li class="main-nav__item"><a class="main-nav__link" href="#flex">Клиенты</a></li>
-				</ul>
-			</div>
 			<header class="main-header">
 				<div class="main-header__wrap">
-					<div class="main-header__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Петербургский<br>Геральдический<br>Завод</span></div>
-					<div class="main-header__address">Санкт-Петербург,<br>пр. Елизарова 34, БЦ "KROL"<br><a href="mailto:zakaz@geraldzavod.ru"><i class="icon-mail-alt"></i>zakaz@geraldzavod.ru</a></div>
-					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706"><i class="icon-phone"></i>8 (812) 244-27-06</a><a class="main-header__tel-number" href="tel:+78007075164"><i class="icon-phone"></i>8 (800) 707-51-64</a><a class="btn btn--mobile-hidden btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
+					<div class="main-header__logo"><span>Первый центр по оказанию предрейсовых услуг<br>в Санкт-Петербурге</span></div>
+					<div class="main-header__tel"><a class="main-header__tel-number" href="tel:+78122442706"><i class="icon-phone"></i>8 (812) 244-27-06</a><a class="btn btn--mobile-hidden btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
 				</div>
 			</header>
-			<section class="main-screen" id="main-screen">
+			<section class="main-screen">
 				<div class="main-screen__wrap">
-					<div class="main-screen__img"><img src="/static/img/main-screen/1.jpg" alt="Изготовление значков, медалей и монет с доставкой по всей России"></div>
-					<h1 class="main-screen__header">Изготовление значков, медалей и&nbsp;монет<br><em>с&nbsp;доставкой по&nbsp;всей России</em><small>Собственное производство с&nbsp;гарантией сроков</small></h1>
-				</div>
-				<div class="main-screen__actions">
-					<header>Получите разработку макета&nbsp;<em>бесплатно</em><img src="/static/img/main-screen/maket.jpg"></header>
-					<div class="main-screen__actions-right">
-						<form class="form form--column form--small" action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
-							<input class="form__input form__input--name" type="text" name="name" placeholder="Ваше имя">
-							<input class="form__input" type="tel" name="phone" placeholder="Ваш номер телефона">
-							<input class="form__input" type="mail" name="email" placeholder="Ваш email">
-							<input class="btn btn--main" type="submit" value="Получить макет">
-						</form>
-					</div>
-				</div>
-			</section>
-			<section class="img-text img-text--map">
-				<div class="img-text__wrap">
-					<div class="img-text__text">
-						<h3 class="img-text__header">Работаем со всеми регионами РФ. Доставка по России до дверей – бесплатно.</h3>
-					</div>
-					<div class="img-text__img"><img src="/static/img/img-text/map.jpg" alt="Работаем со всеми регионами РФ. Доставка до двери – бесплатно."></div>
-				</div>
-			</section>
-			<section class="services-list" id="services">
-				<div class="services-list__wrap">
-					<h2 class="services-list__header">Мы изготавливаем</h2>
-					<ul class="services-list__list">
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/znaki" data-img="0.jpg, 1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.png, 6.png, 7.png"><img src="/static/img/services-list/1.jpg" alt="Нагрудные знаки"></a>
-							<div class="services-list__link">
-								<p>Нагрудные знаки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/medali" data-img="1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg"><img src="/static/img/services-list/2.jpg" alt="Медали на колодке"></a>
-							<div class="services-list__link">
-								<p>Медали на колодке</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/znachki" data-img="1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg, 6.jpg, 7.jpg, 8.jpg, 9.jpg, 10.jpg, 11.jpg"><img src="/static/img/services-list/3.jpg" alt="Значки"></a>
-							<div class="services-list__link">
-								<p>Значки</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/sport" data-img="1.jpg, 2.jpg, 3.jpg, 4.png, 5.png"><img src="/static/img/services-list/4.jpg" alt="Спортивные медали"></a>
-							<div class="services-list__link">
-								<p>Спортивные медали</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/moneti" data-img="1.jpg, 2.jpg"><img src="/static/img/services-list/5.jpg" alt="Монеты"></a>
-							<div class="services-list__link">
-								<p>Монеты</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/souvenir" data-img="1.jpg, 2.jpg"><img src="/static/img/services-list/6.jpg" alt="Сувенирные медали"></a>
-							<div class="services-list__link">
-								<p>Сувенирные медали</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-						<li class="services-list__item services-list__item--big"><a class="services-list__img js-show-service-popup" href="#" data-folder="popup/drag" data-img="1.jpg, 2.jpg, 3.jpg, 4.jpg, 5.jpg, 6.jpg, 7.jpg"><img src="/static/img/services-list/7.jpg" alt="Изделия из Драгоценных металлов"></a>
-							<div class="services-list__link">
-								<p>Изделия из Драгоценных металлов</p><a class="btn btn--small btn--special js-show-order-popup" href="#">Заказать расчёт</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="portfolio" id="portfolio">
-				<div class="swiper-container portfolio__top portfolio__top--js-own">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/about.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Наше производство</h3>
-							</div>
+					<h1 class="main-screen__header">Проводим предрейсовые и послерейсовые медицинские осмотры в Санкт-Петербурге</h1>
+					<div class="main-screen__actions">
+						<div class="main-screen__actions-left">
+							<ul class="main-screen__adv">
+								<li>Работаем 24/7</li>
+								<li>Как на вашей, так и своей территории</li>
+								<li>В наличии все необходимые лицензии</li>
+							</ul>
+							<div class="main-screen__actions-img"><img src="/static/img/main-screen/maket.jpg"></div>
 						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/1.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header">30 000<small>изделий<br>в месяц</small></h3>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/2.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Ювелирное<br>литье</h3>
-								<p>Отливаем изделие любой формы<br>из серебра, золота, латуни или мельхиора</p>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/3.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Автоматизированная<br>полировка</h3>
-								<p>Уменьшает ручной труд<br>и снижает стоимость конечного продукта</p>
-							</div>
-						</div>
-						<!--.swiper-slide(style="background-image:url(http://lorempixel.com/1200/1200/nature/1)")
-						.portfolio__text
-							h3.portfolio__text-header
-								| Ручная доработка
-							p
-								| Все штампы дорабатываются вручную в соответствии с традициями монетного двора, что обеспечивает максимальное качество и детализацию изделия
-						
-						-->
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/400.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header portfolio__text-header--small">Пресс с усилием<br>в 400 тонн</h3>
-								<p>Обеспечивает максимальную четкость рельефа</p>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image:url(/static/img/portfolio/press.jpg)">
-							<div class="portfolio__text">
-								<h3 class="portfolio__text-header">До 8000<small>заготовок<br>за смену</small></h3>
-								<p>Производит вырубной пресс</p>
-							</div>
-						</div>
-					</div>
-					<!-- Add Arrows-->
-					<div class="swiper-button-next swiper-button-white"></div>
-					<div class="swiper-button-prev swiper-button-white"></div>
-				</div>
-				<div class="swiper-container portfolio__thumbs portfolio__thumbs--js-own">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/about.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/1.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/2.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/3.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/400.jpg)"></div>
-						<div class="swiper-slide swiper-slide--thumbs" style="background-image:url(/static/img/portfolio/press.jpg)"></div>
-					</div>
-				</div>
-			</section>
-			<section class="person-block">
-				<div class="person-block__wrap">
-					<div class="person-block__left">
-						<div class="person-block__img"><img src="/static/img/person-block/artist.jpg" alt="профессиональный художник Виктор Жеравин"></div>
-					</div>
-					<div class="person-block__right">
-						<header class="person-block__header">Над Вашим эскизом будет работать профессиональный художник</header>
-						<div class="person-block__desc">Виктор Жеравин:
-							<ul>
-								<li>Дизайнерский стаж 15 лет</li>
-								<li>Разработал более 1000 эскизов нагрудных знаков и медалей</li>
-								<li>Победил в 21 дизайнерском конкурсе</li>
-							</ul>Ознакомьтесь с примерами его эскизов
-						</div>
-						<div class="person-block__gallery"><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-1.jpg"><img src="/static/img/person-block/img-1-sm.jpg" alt=""></a><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-2.jpg"><img src="/static/img/person-block/img-2-sm.jpg" alt=""></a><a class="person-block__gallery-img js-show-img-popup" href="#" data-img="/static/img/person-block/img-3.jpg"><img src="/static/img/person-block/img-3-sm.jpg" alt=""></a></div>
-					</div>
-				</div>
-			</section>
-			<div class="call-to-action">
-				<div class="call-to-action__wrap">
-					<header class="call-to-action__header">Посмотрите другие&nbsp;работы нашего&nbsp;художника</header><a class="btn btn--main js-show-art-popup" href="#"><i class="icon-file-archive"></i>Скачать другие работы нашего художника</a>
-				</div>
-			</div>
-			<section class="result" id="result">
-				<h2 class="result__header">Наши работы</h2>
-				<div class="result__wrap">
-					<div class="result__left">
-						<div class="result__work"><img src="/static/img/result/work-11.jpg"></div>
-					</div>
-					<div class="result__right">
-						<div class="result__descr">
-							<header>Нагрудный&nbsp;знак «50&nbsp;лет академии&nbsp;ФСО»</header>
-							<p class="result__descr-material">Материал: Нейзильбер и латунь</p>
-							<p class="result__descr-number">Тираж 2500 шт</p>
-						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Нагрудный&amp;nbsp;знак «50&amp;nbsp;лет академии&amp;nbsp;ФСО»" data-material="Нейзильбер и латунь" data-number="2500 шт"><img src="/static/img/result/work-11.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «55&amp;nbsp;лет ЭС&amp;nbsp;г.&amp;nbsp;Салават»" data-material="Серебро 925 и латунь с позолотой" data-number="80 шт"><img src="/static/img/result/work-12.jpg"></a><a class="result__slides-item" href="#" data-header="Значки «Аксалта»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="100 шт"><img src="/static/img/result/work-13.jpg"></a></div>
-					</div>
-				</div>
-			</section>
-			<section class="result">
-				<div class="result__wrap">
-					<div class="result__left">
-						<div class="result__work"><img src="/static/img/result/work-22.jpg"></div>
-					</div>
-					<div class="result__right">
-						<div class="result__descr">
-							<header>Медаль «50&nbsp;лет академии ФСО»</header>
-							<p class="result__descr-material">Материал: Латунь</p>
-							<p class="result__descr-number">Тираж 3500 шт</p>
-						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Медаль «50&amp;nbsp;лет академии ФСО»" data-material="Латунь" data-number="3500 шт"><img src="/static/img/result/work-22.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «Куликово&amp;nbsp;поле»" data-material="Цинк с покрытием медью" data-number="120 шт"><img src="/static/img/result/work-21.jpg"></a><a class="result__slides-item" href="#" data-header="Медаль «70&amp;nbsp;лет Калининграду»" data-material="Латунь" data-number="7700 шт"><img src="/static/img/result/work-23.jpg"></a></div>
-					</div>
-				</div>
-			</section>
-			<section class="result">
-				<div class="result__wrap">
-					<div class="result__left">
-						<div class="result__work"><img src="/static/img/result/work-31.jpg"></div>
-					</div>
-					<div class="result__right">
-						<div class="result__descr">
-							<header>Фрачник «РССУ&nbsp;50&nbsp;лет»</header>
-							<p class="result__descr-material">Материал: Латунь</p>
-							<p class="result__descr-number">Тираж 500 шт</p>
-						</div>
-						<div class="result__slides"><a class="result__slides-item result__slides-item--active" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Латунь" data-number="500 шт"><img src="/static/img/result/work-31.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «РССУ&amp;nbsp;50&amp;nbsp;лет»" data-material="Серебро 925 с позолотой" data-number="500 шт"><img src="/static/img/result/work-32.jpg"></a><a class="result__slides-item" href="#" data-header="Фрачник «Инженерно-технический факультет&amp;nbsp;ВИТУ»" data-material="Серебро 925 и серебро 925 с позолотой" data-number="20 шт"><img src="/static/img/result/work-33.jpg"></a></div>
-					</div>
-				</div>
-			</section>
-			<section class="flex-block" id="flex">
-				<div class="flex-block__wrap">
-					<h2 class="flex-block__header">Отзывы о работе с нами</h2>
-					<div class="flex-block__list"><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-1.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-2.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-3.jpg" alt="Отзыв"></a><a class="flex-block__item js-show-img-popup" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-4.jpg" alt="Отзыв"></a></div>
-				</div>
-			</section>
-			<section class="descr-block">
-				<div class="descr-block__wrap">
-					<div class="descr-block__content">
-						<h2 class="descr-block__header">Государственные закупки</h2>
-						<p class="descr-block__descr">За 2 года мы приняли участие в более чем 150 государственных тендерах и исполнили 32 госконтракта.</p>
-						<p class="descr-block__descr">Исполненные госконтракты:</p>
-						<ul class="descr-block__list">
-							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3390301679016000019" target="_blank">Изготовление медалей «70&nbsp;лет Калининграду»</a></li>
-							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=3290401600816000018" target="_blank">Изготовление и&nbsp;поставка нагрудного знака «Почетный гражданин МО&nbsp;«Котлас»</a></li>
-							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=2027413693416000029" target="_blank">Изготовление медалей для&nbsp;администрации города&nbsp;Уфа</a></li>
-							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000098" target="_blank">Изготовление ордена «Дружба&nbsp;народов»</a></li>
-							<li class="descr-block__item"><a class="descr-block__link" href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2770401203715000033" target="_blank">Изготовление сувенирных монет «Знаки Зодиака»</a></li>
-						</ul>
-						<div class="descr-block__actions"><a class="descr-block__btn js-show-commerce-popup" href="#">Оставьте заявку на коммерческое предложение</a><a class="descr-block__btn descr-block__btn--secondary js-show-gos-popup" href="#">Посмотрите другие выполненные заказы</a></div>
-					</div>
-				</div>
-			</section>
-			<div class="call-to-action call-to-action--contract">
-				<div class="call-to-action__wrap">
-					<header class="call-to-action__header">Даем&nbsp;гарантию, что ваши&nbsp;изделия будут&nbsp;сделаны ограниченным тиражом и&nbsp;не&nbsp;будут проданы третьим&nbsp;лицам. Мы&nbsp;прописываем&nbsp;это в&nbsp;договоре.</header><a class="btn btn--main js-show-contract-popup" href="#">Получите шаблон договора</a>
-				</div>
-			</div>
-			<section class="flex-block flex-block--team" id="flex">
-				<div class="flex-block__wrap">
-					<h2 class="flex-block__header">Наша команда</h2>
-					<div class="flex-block__list">
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/team-section/one.jpg" alt="Менеджер по работе с клиентами">
-							<p class="flex-block__descr">Наталья Сергеева</p>
-							<p class="flex-block__descr">Менеджер по работе с клиентами</p>
-						</div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/team-section/two.jpg" alt="Коммерческий директор">
-							<p class="flex-block__descr">Ирина Чихачева</p>
-							<p class="flex-block__descr">Коммерческий директор</p>
-						</div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/team-section/three.jpg" alt="Начальник производства ">
-							<p class="flex-block__descr">Евгений Голубев</p>
-							<p class="flex-block__descr">Начальник производства</p>
-						</div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/team-section/five.jpg" alt="Помощник директора">
-							<p class="flex-block__descr">Светлана Банчужная</p>
-							<p class="flex-block__descr">Помощник директора</p>
-						</div>
-						<div class="flex-block__item"><img class="flex-block__img" src="/static/img/team-section/four.jpg" alt="Директор">
-							<p class="flex-block__descr">Владислав Аксенов</p>
-							<p class="flex-block__descr">Директор</p>
+						<div class="main-screen__actions-right">
+							<form class="form form--column form--small" action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
+								<header class="form__header">Оставьте заявку на расчёт цены осмотра</header>
+								<label class="form__label">
+									<p>Ваши контактные данные&nbsp;<em>(обязательно)</em></p>
+									<input class="form__input form__input--name" type="text" name="contact" placeholder="Телефон или email">
+								</label>
+								<label class="form__label">
+									<p>Режим осмотра</p>
+									<input class="form__input" type="text" name="time" placeholder="Частота и дни недели">
+								</label>
+								<label class="form__label">
+									<p>Количество водителей</p>
+									<input class="form__input" type="number" name="number" placeholder="Число">
+								</label>
+								<button class="btn btn--main" type="submit">Рассчитать цену осмотра</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -289,29 +60,64 @@
 			<section class="img-text">
 				<div class="img-text__wrap">
 					<div class="img-text__text">
-						<h3 class="img-text__header">Свидетельство о постановке на учет в государственной пробирной инспекции. Каждое наше изделие из драгоценного металла имеет государственное пробирное клеймо.</h3>
-					</div><a class="img-text__img js-show-img-popup" href="#"><img src="/static/img/img-text/img.jpg" alt="Свидетельство о постановке на учет"></a>
+						<h3 class="img-text__header">Избавим вас от рисков</h3>
+						<p>Предприятие получает штрафы при отсутствии предрейсового осмотра водителя. Государство заботится о безопасности на дорогах и медосмотр - один из способов её обеспечения.</p>
+						<p>Мы обладаем требуемыми законом кабинетом и штатом сертифицированных медицинских сотрудников. Согласно ФЗ №NNNN с ГГГГ года только работники с медицинским образованием, прошедшие специальные курсы, могут проводить предрейсовый осмотр.</p>
+						<p>Для вашего удобства, мы можем разместить медицинский кабинет у вас на предприятии. В случае небольшого количества водителей вам будет выгоднее проходить медосмотр в нашем кабинете.</p>
+					</div>
+					<div class="img-text__img"><img src="/static/img/img-text/map.jpg" alt="Избавим вас от рисков"></div>
+				</div>
+			</section>
+			<section class="info-section">
+				<div class="info-section__wrap">
+					<h2 class="info-section__header">Предрейсовые осмотры проходят по следующим правилам</h2>
+					<div class="info-section__info">
+						<ul>
+							<li>Проверяется каждый водитель за исключением категории работников экстренных служб</li>
+							<li>Процедура должна быть выполнена до выезда в рейс и входит в рабочее время водителя</li>
+							<li>Медосмотр проводится в оборудованном кабинете размером от 12 квадратных метров</li>
+							<li>Основная задача проверки — выяснение готовности к вождению автотранспорта</li>
+							<li>Средняя длительность осмотра 8 минут</li>
+							<li>В журнале предрейсовых медосмотров отмечается его результат. Результат дублируется в путевых листах водителей</li>
+							<li>Пригодность к поездке подтвержается соответствующим штампом</li>
+							<li>В случае недопуска уведомляется руководство предприятия</li>
+						</ul>
+						<p>Недопуск может быть получен при выявлении признаков употребления алкоголя, наркотиктов или психотропных веществ, отходящих от нормы пульса или давления или симптомов серьёзной болезни</p>
+					</div>
+				</div>
+			</section>
+			<section class="flex-block" id="flex">
+				<div class="flex-block__wrap">
+					<h3 class="flex-block__header">Важность проведения медосмотров</h3>
+					<div class="flex-block__list"><a class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-1.jpg" alt="Отзыв">
+							<p class="flex-block__descr">Законодательство по проведению предрейсовых осмотров</p></a><a class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-2.jpg" alt="Отзыв">
+							<p class="flex-block__descr">Сводка из новостей<br><i>«К чему приводит отсутствие проверки водителей»</i></p></a><a class="flex-block__item" href="#"><img class="flex-block__img" src="/static/img/flex-block/img-3.jpg" alt="Отзыв">
+							<p class="flex-block__descr">Что проверяется на осмотре</p></a></div>
 				</div>
 			</section>
 			<section class="contacts-section" id="contacts">
 				<div class="contacts-section__wrap">
-					<header class="contacts-section__header">Свяжитесь с нами по любым вопросам</header>
+					<header class="contacts-section__header">Наши контакты</header>
 					<div class="contacts-section__flex">
 						<div class="contacts-section__left">
-							<div class="contacts-section__logo"><img src="/static/img/main-header/logo.png" alt=""><span>Петербургский<br>Геральдический<br>Завод</span></div>
-							<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706"><i class="icon-phone"></i>8 (812) 244-27-06</a><a class="contacts-section__tel-number" href="tel:78007075164"><i class="icon-phone"></i>8 (800) 707-51-64</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
-							<div class="contacts-section__address"><a href="mailto:zakaz@geraldzavod.ru"><i class="icon-mail-alt"></i>zakaz@geraldzavod.ru</a><br>Санкт-Петербург, пр. Елизарова 34, БЦ "KROL"</div>
+							<div class="contacts-section__tel"><a class="contacts-section__tel-number" href="tel:78122442706"><i class="icon-phone"></i>8 (812) 244-27-06</a><a class="btn btn--small btn--special js-show-call-popup" href="#">Заказать обратный звонок</a></div>
+							<div class="contacts-section__address"><a href="mailto:zakaz@geraldzavod.ru"><i class="icon-mail-alt"></i>zakaz@geraldzavod.ru</a></div>
 						</div>
 						<div class="contacts-section__right">
 							<form class="form form--column" method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!">
-								<header class="form__header">Напишите нам по любым вопросам.</header>
-								<input class="form__input" type="email" name="email" placeholder="Ваш email">
-								<textarea class="form__textarea" name="msg" placeholder="Ваше сообщение" rows="5"></textarea>
-								<input class="btn btn--main" value="Отправить" type="submit">
+								<header class="form__header">Ответим на любые вопросы</header>
+								<label class="form__label">
+									<p>Ваш вопрос</p>
+									<textarea class="form__textarea" name="msg" placeholder="Напишите ваш вопрос" rows="5"></textarea>
+								</label>
+								<label class="form__label">
+									<p>Ваш контакт</p>
+									<input class="form__input" type="email" name="email" placeholder="Телефон или email">
+								</label>
+								<button class="btn btn--main" type="submit">Получить ответ</button>
 							</form>
 						</div>
 					</div>
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=UOBw4PZgf8proO2JUJ8fRbW6rSj7DKKr&amp;amp;width=100%25&amp;amp;height=300&amp;amp;lang=ru_RU&amp;amp;sourceType=constructor&amp;amp;scroll=true"></script>
 				</div>
 			</section>
 			<div class="popup popup--js-img"><a class="popup__close js--close-popup" href="#"><span>&#10006;</span></a><img class="popup__img" src=""></div>
@@ -410,7 +216,7 @@
 			<div class="overlay"></div>
 			<script src="/static/js/libs.js"></script>
 			<script src="/static/js/swiper.min.js"></script>
-			<script src="/static/js/main.js"></script>
+			<!--script(src="/static/js/main.js")-->
 			<!-- Yandex.Metrika counter-->
 			<script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41243534 = new Ya.Metrika({ id:41243534, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
 			<noscript>

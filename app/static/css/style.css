@@ -514,7 +514,7 @@ li {
   .btn--small {
     padding: 5px 15px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px; }
     @media screen and (max-width: 1024px) {
       .btn--small {
@@ -589,7 +589,12 @@ li {
             flex-direction: column;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch; }
+            align-items: stretch;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    background-color: royalblue;
+    color: #fff; }
     .form--column .form__input,
     .form--column .form__textarea {
       margin-bottom: 20px;
@@ -657,24 +662,26 @@ li {
         .form--cta .form__input {
           margin: 0 0 30px; } }
   .form__label {
-    display: inline-block;
-    margin: 0 25px 20px 0; }
-    @media screen and (max-width: 600px) {
-      .form__label {
-        margin: 0 0 20px; } }
-    .form__label:nth-of-type(2n) {
-      margin-right: 0; }
+    display: block;
+    margin: 0 0 15px;
+    text-align: left; }
+    .form__label p {
+      margin-bottom: 5px;
+      font-size: 20px;
+      line-height: 20px; }
+      .form__label p em {
+        color: yellow; }
   .form__header {
     display: block;
-    margin-bottom: 40px;
-    font-size: 30px;
-    line-height: 40px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: left;
     font-family: "Playfair Display SC", serif; }
     @media screen and (max-width: 768px) {
       .form__header {
-        font-size: 25px;
-        line-height: 30px;
-        margin-bottom: 20px; } }
+        font-size: 20px;
+        margin-bottom: 15px; } }
   .form__input, .form__textarea {
     display: block;
     box-sizing: border-box;
@@ -1508,10 +1515,7 @@ body.swal2-in {
 
 .main-header {
   display: block;
-  padding: 15px 0;
-  margin-top: 55px; }
-  .main-header--no-margin {
-    margin-top: 0; }
+  padding: 15px 0; }
   @media screen and (max-width: 1024px) {
     .main-header {
       padding: 10px 0; } }
@@ -1603,8 +1607,8 @@ body.swal2-in {
   .main-header__tel-number {
     display: block;
     margin-bottom: 5px;
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 32px;
+    line-height: 32px;
     font-weight: bold;
     color: #0f0f11; }
     .main-header__tel-number:hover {
@@ -1687,19 +1691,16 @@ body.swal2-in {
 
 .main-screen {
   display: block;
-  position: relative; }
+  position: relative;
+  background: #f0f0f0; }
   .main-screen__wrap {
     display: block;
     position: relative;
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-    padding: 40px 0 0;
+    padding: 60px 0;
     text-align: center; }
-    .main-screen__wrap--left {
-      text-align: left; }
-      .main-screen__wrap--left .main-screen__header {
-        margin-left: 0; }
     @media screen and (max-width: 1024px) {
       .main-screen__wrap {
         padding: 20px 20px 0; } }
@@ -1711,18 +1712,14 @@ body.swal2-in {
         padding: 20px 20px 0; } }
   .main-screen__header {
     display: block;
-    margin: 0;
-    text-align: left;
-    font-size: 50px;
-    line-height: 50px;
+    margin: 0 0 60px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 45px;
     letter-spacing: 1px;
     color: #505050;
     font-weight: 700;
-    font-family: "Playfair Display SC", serif;
-    width: 60%;
-    margin-left: 2%;
-    display: inline-block;
-    vertical-align: middle; }
+    font-family: "Playfair Display SC", serif; }
     @media screen and (max-width: 768px) {
       .main-screen__header {
         font-size: 36px;
@@ -1754,13 +1751,6 @@ body.swal2-in {
       @media screen and (max-width: 380px) {
         .main-screen__header small {
           margin-top: 10px; } }
-    @media screen and (max-width: 768px) {
-      .main-screen__header {
-        width: 100%;
-        margin-left: 0; } }
-    .main-screen__header em {
-      font-style: normal;
-      color: #EE0032; }
   .main-screen__img {
     width: 33%;
     display: inline-block;
@@ -1781,10 +1771,6 @@ body.swal2-in {
   .main-screen__actions {
     display: block;
     box-sizing: border-box;
-    width: 100%;
-    padding: 40px 0;
-    margin-top: 40px;
-    background: #f0f0f0;
     text-align: center; }
     @media screen and (max-width: 1024px) {
       .main-screen__actions {
@@ -1797,55 +1783,28 @@ body.swal2-in {
     @media screen and (max-width: 600px) {
       .main-screen__actions {
         padding: 20px 15px; } }
-    .main-screen__actions header {
-      font-size: 50px;
-      line-height: 60px;
-      font-family: "Playfair Display SC", serif;
-      font-weight: 700;
-      margin-right: 5%;
-      max-width: 50%;
+    .main-screen__actions-left, .main-screen__actions-right {
       display: inline-block;
-      position: relative;
-      vertical-align: top;
-      text-align: left; }
-      @media screen and (max-width: 1024px) {
-        .main-screen__actions header {
-          font-size: 45px;
-          line-height: 55px;
-          max-width: 57%;
-          margin-right: 3%; } }
-      @media screen and (max-width: 768px) {
-        .main-screen__actions header {
-          max-width: 100%;
-          -ms-flex-preferred-size: 100%;
-              flex-basis: 100%;
-          margin: 0 0 20px;
-          line-height: 50px; } }
-      @media screen and (max-width: 600px) {
-        .main-screen__actions header {
-          font-size: 35px;
-          line-height: 35px; } }
-      @media screen and (max-width: 380px) {
-        .main-screen__actions header {
-          font-size: 25px; } }
-      .main-screen__actions header em {
-        font-style: normal;
-        color: #EE0032; }
-      .main-screen__actions header img {
-        width: 50%;
-        margin-top: 30px; }
-        @media screen and (max-width: 768px) {
-          .main-screen__actions header img {
-            width: 75%;
-            margin-top: 30px; } }
-        @media screen and (max-width: 600px) {
-          .main-screen__actions header img {
-            width: 100%;
-            margin-top: 20px; } }
-    .main-screen__actions-right {
-      display: inline-block;
-      width: 270px;
+      width: 45%;
+      min-width: 270px;
       vertical-align: top; }
+    .main-screen__actions-img {
+      display: block;
+      max-width: 270px;
+      margin: 0 auto; }
+      .main-screen__actions-img img {
+        display: inline-block;
+        width: 100%; }
+  .main-screen__adv {
+    display: block;
+    padding: 0;
+    margin: 0 0 60px;
+    text-align: left;
+    font-size: 24px; }
+    .main-screen__adv li {
+      margin-bottom: 30px; }
+      .main-screen__adv li:last-of-type {
+        margin-bottom: 0; }
 
 .popup {
   display: none;
@@ -2048,85 +2007,65 @@ body.swal2-in {
 .info-section {
   display: block;
   position: relative;
-  padding: 180px 0;
-  background: url(../img/info-section/bg.jpg);
-  background-size: cover; }
+  padding: 60px 0; }
   @media screen and (max-width: 768px) {
     .info-section {
       padding: 50px 0; } }
   @media screen and (max-width: 600px) {
     .info-section {
       padding: 40px 20px; } }
-  .info-section--social {
-    background: #D6AD4E;
-    padding: 40px 0; }
-    @media screen and (max-width: 768px) {
-      .info-section--social {
-        padding: 20px 0; } }
-  .info-section::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 0;
-    background: rgba(0, 0, 0, 0.6); }
   .info-section__wrap {
     display: block;
     position: relative;
     max-width: 1200px;
     padding: 0 15px;
-    margin: 0 auto;
-    z-index: 1; }
-  .info-section__cta {
-    font-size: 40px;
-    color: #AAA;
-    text-align: center; }
-    .info-section__cta p {
-      margin-bottom: 40px; }
-  .info-section__text {
+    margin: 0 auto; }
+  .info-section__header {
     display: block;
-    max-width: 480px;
-    margin: 0 auto;
-    font-size: 25px;
-    color: #fff;
-    font-style: italic;
+    position: relative;
+    margin: 0 0 60px;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: "Playfair Display SC", serif;
+    color: #505050;
+    font-weight: bold;
     text-align: center; }
     @media screen and (max-width: 768px) {
-      .info-section__text {
-        font-size: 22px; } }
+      .info-section__header {
+        font-size: 25px;
+        line-height: 35px; } }
     @media screen and (max-width: 600px) {
-      .info-section__text {
+      .info-section__header {
         font-size: 18px;
-        letter-spacing: 1px; } }
-    .info-section__text::before {
-      content: '"';
+        line-height: 26px; } }
+    .info-section__header small {
       display: block;
-      color: #D6AD4E;
-      margin-bottom: 15px;
-      font-size: 55px;
-      line-height: 18px; }
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
       @media screen and (max-width: 768px) {
-        .info-section__text::before {
-          line-height: 0;
-          font-size: 40px; } }
-      @media screen and (max-width: 600px) {
-        .info-section__text::before {
-          display: none; } }
-  .info-section__blocks {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .info-section__block-title {
-    color: #fff; }
-  .info-section__block-txt {
-    color: #fff; }
+        .info-section__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
+  .info-section__info {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 20px; }
+    .info-section__info ul {
+      padding: 0 0 0 20px;
+      margin: 0 0 40px; }
+      .info-section__info ul li {
+        margin-bottom: 10px;
+        list-style-type: disc; }
+        .info-section__info ul li:last-of-type {
+          margin-bottom: 0; }
+    .info-section__info p {
+      margin-bottom: 20px; }
+      .info-section__info p:last-of-type {
+        margin-bottom: 0; }
 
 .call-to-action {
   padding: 80px 0;
@@ -2194,33 +2133,33 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
-    letter-spacing: 1px;
+    font-family: "Playfair Display SC", serif;
     color: #505050;
     font-weight: bold;
-    text-align: center;
-    font-family: "PT Serif", serif;
     font-size: 30px;
     color: #D6AD4E;
     font-family: "Playfair Display SC", serif;
     font-weight: 400; }
-    @media screen and (max-width: 1024px) {
-      .result__header {
-        margin-bottom: 40px; } }
     @media screen and (max-width: 768px) {
       .result__header {
-        font-size: 32px; } }
+        font-size: 25px;
+        line-height: 35px; } }
     @media screen and (max-width: 600px) {
       .result__header {
-        font-size: 25px;
-        letter-spacing: 1px;
-        margin-bottom: 40px; } }
-    @media screen and (max-width: 380px) {
-      .result__header {
-        font-size: 22px;
-        line-height: 30px;
-        margin-bottom: 30px; } }
+        font-size: 18px;
+        line-height: 26px; } }
+    .result__header small {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .result__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
   .result__work {
     display: block;
     border-radius: 50%;
@@ -2347,45 +2286,36 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
-    letter-spacing: 1px;
+    font-family: "Playfair Display SC", serif;
     color: #505050;
     font-weight: bold;
-    text-align: center;
-    font-family: "PT Serif", serif;
-    font-size: 38px;
-    line-height: 38px;
-    font-family: "Playfair Display SC", serif;
-    letter-spacing: 1px;
-    text-align: left; }
-    @media screen and (max-width: 1024px) {
-      .contacts-section__header {
-        margin-bottom: 40px; } }
+    text-align: center; }
     @media screen and (max-width: 768px) {
       .contacts-section__header {
-        font-size: 32px; } }
+        font-size: 25px;
+        line-height: 35px; } }
     @media screen and (max-width: 600px) {
       .contacts-section__header {
-        font-size: 25px;
-        letter-spacing: 1px;
-        margin-bottom: 40px; } }
-    @media screen and (max-width: 380px) {
-      .contacts-section__header {
-        font-size: 22px;
-        line-height: 30px;
-        margin-bottom: 30px; } }
+        font-size: 18px;
+        line-height: 26px; } }
+    .contacts-section__header small {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .contacts-section__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
   .contacts-section__address {
     display: block;
     font-size: 20px;
-    line-height: 26px; }
-    @media screen and (max-width: 600px) {
-      .contacts-section__address {
-        font-size: 18px;
-        line-height: 20px; } }
+    line-height: 20px; }
     .contacts-section__address a {
-      color: #D6AD4E;
-      text-decoration: underline; }
+      color: #D6AD4E; }
   .contacts-section__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2414,9 +2344,9 @@ body.swal2-in {
         margin-bottom: 20px; } }
   .contacts-section__tel-number {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: bold;
     color: #505050; }
     .contacts-section__tel-number:hover {
@@ -2455,33 +2385,33 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
-    letter-spacing: 1px;
+    font-family: "Playfair Display SC", serif;
     color: #505050;
     font-weight: bold;
-    text-align: center;
-    font-family: "PT Serif", serif;
     color: #D6AD4E;
     font-family: "Playfair Display SC", serif;
     font-size: 40px;
     letter-spacing: 3px; }
-    @media screen and (max-width: 1024px) {
-      .services-list__header {
-        margin-bottom: 40px; } }
     @media screen and (max-width: 768px) {
       .services-list__header {
-        font-size: 32px; } }
+        font-size: 25px;
+        line-height: 35px; } }
     @media screen and (max-width: 600px) {
       .services-list__header {
-        font-size: 25px;
-        letter-spacing: 1px;
-        margin-bottom: 40px; } }
-    @media screen and (max-width: 380px) {
-      .services-list__header {
-        font-size: 22px;
-        line-height: 30px;
-        margin-bottom: 30px; } }
+        font-size: 18px;
+        line-height: 26px; } }
+    .services-list__header small {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .services-list__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
   .services-list__list {
     display: inline-block;
     text-align: center;
@@ -2603,17 +2533,6 @@ body.swal2-in {
       .flex-block--team .flex-block__img img {
         display: block;
         width: 100%; }
-    .flex-block--team .flex-block__descr {
-      font-size: 18px;
-      line-height: 20px;
-      margin-bottom: 20px;
-      color: #505050;
-      font-family: "Playfair Display SC", serif; }
-      @media screen and (max-width: 768px) {
-        .flex-block--team .flex-block__descr {
-          font-size: 14px;
-          line-height: 15px;
-          margin-bottom: 15px; } }
   .flex-block__wrap {
     display: block;
     position: relative;
@@ -2624,59 +2543,69 @@ body.swal2-in {
     display: block;
     position: relative;
     margin: 0 0 60px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
-    letter-spacing: 1px;
+    font-family: "Playfair Display SC", serif;
     color: #505050;
     font-weight: bold;
-    text-align: center;
-    font-family: "PT Serif", serif; }
-    @media screen and (max-width: 1024px) {
-      .flex-block__header {
-        margin-bottom: 40px; } }
+    text-align: center; }
     @media screen and (max-width: 768px) {
       .flex-block__header {
-        font-size: 32px; } }
+        font-size: 25px;
+        line-height: 35px; } }
     @media screen and (max-width: 600px) {
       .flex-block__header {
-        font-size: 25px;
-        letter-spacing: 1px;
-        margin-bottom: 40px; } }
-    @media screen and (max-width: 380px) {
-      .flex-block__header {
-        font-size: 22px;
-        line-height: 30px;
-        margin-bottom: 30px; } }
+        font-size: 18px;
+        line-height: 26px; } }
+    .flex-block__header small {
+      display: block;
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 30px; }
+      @media screen and (max-width: 768px) {
+        .flex-block__header small {
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 25px; } }
   .flex-block__list {
     display: block;
     text-align: center; }
   .flex-block__item {
     display: inline-block;
-    width: 200px;
+    width: 300px;
     box-sizing: border-box;
     overflow: hidden;
-    border: 1px solid #505050;
-    margin-right: 20px;
-    vertical-align: top; }
+    margin-right: 40px;
+    vertical-align: top;
+    text-align: center; }
     .flex-block__item:last-of-type {
-      margin-right: 0; }
+      margin-right: 0;
+      margin-bottom: 0; }
     @media screen and (max-width: 1024px) {
       .flex-block__item {
-        width: 180px; } }
+        width: 260px; } }
     @media screen and (max-width: 768px) {
       .flex-block__item {
-        width: 120px;
-        margin-right: 12px; } }
+        width: 240px;
+        margin-right: 20px; } }
     @media screen and (max-width: 600px) {
-      .flex-block__item {
-        width: 23%; } }
-    @media screen and (max-width: 380px) {
       .flex-block__item {
         width: 45%;
         margin-bottom: 20px; } }
+    @media screen and (max-width: 380px) {
+      .flex-block__item {
+        width: 90%; } }
     .flex-block__item img {
-      display: block;
-      width: 100%; }
+      display: inline-block;
+      width: 100%;
+      max-width: 240px;
+      border: 1px solid #000; }
+  .flex-block__descr {
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 20px;
+    color: #505050;
+    font-family: "Playfair Display SC", serif; }
 
 .person-block {
   padding: 80px 0;
@@ -3064,32 +2993,16 @@ body.swal2-in {
   @media screen and (max-width: 600px) {
     .img-text {
       padding: 30px 0; } }
-  .img-text--map {
-    background: #ececec; }
-    .img-text--map .img-text__header {
-      font-size: 40px;
-      line-height: 50px; }
-      @media screen and (max-width: 1024px) {
-        .img-text--map .img-text__header {
-          font-size: 30px;
-          line-height: 45px; } }
-      @media screen and (max-width: 600px) {
-        .img-text--map .img-text__header {
-          font-size: 25px;
-          line-height: 35px; } }
-    .img-text--map .img-text__img img {
-      border: none; }
   .img-text__wrap {
     display: block;
     position: relative;
     max-width: 1200px;
     padding: 0 15px;
-    margin: 0 auto;
-    text-align: center; }
+    margin: 0 auto; }
   .img-text__img {
     display: inline-block;
     position: relative;
-    max-width: 45%;
+    max-width: 40%;
     vertical-align: middle; }
     @media screen and (max-width: 600px) {
       .img-text__img {
@@ -3107,21 +3020,27 @@ body.swal2-in {
           height: auto; } }
   .img-text__text {
     display: inline-block;
-    width: 45%;
+    width: 50%;
     margin-right: 5%;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: left; }
     @media screen and (max-width: 600px) {
       .img-text__text {
         width: 100%;
         margin: 0 0 30px; } }
+    .img-text__text p {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 20px; }
   .img-text__header {
     display: block;
-    margin: 0;
+    position: relative;
+    margin: 0 0 60px;
     font-size: 30px;
-    line-height: 35px;
+    line-height: 40px;
     font-family: "Playfair Display SC", serif;
-    color: #505050; }
+    color: #505050;
+    font-weight: bold; }
     @media screen and (max-width: 768px) {
       .img-text__header {
         font-size: 25px;

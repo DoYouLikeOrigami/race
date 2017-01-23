@@ -1,80 +1,46 @@
 .info-section
-    display: block
-    position: relative
+	display: block
+	position: relative
 
-    padding: 180px 0
-    background: url(../img/info-section/bg.jpg)
-    background-size: cover
+	padding: 60px 0
 
-    @media #{$tablet}
-        padding: 50px 0
+	@media #{$tablet}
+		padding: 50px 0
 
-    @media #{$mobile}
-        padding: 40px 20px
+	@media #{$mobile}
+		padding: 40px 20px
 
-    &--social
-        background: $akcent-color
-        padding: 40px 0
+	&__wrap
+		@include wrap
 
-        @media #{$tablet}
-            padding: 20px 0
+	&__header
+		@include section_header
+		text-align: center
 
-    &::before
-        @include before_darken
-        background: rgba(0, 0, 0, .6)
+	&__info
+		display: block
+		max-width: 800px
 
-    &__wrap
-        @include wrap
-        z-index: 1
+		margin: 0 auto
 
-    &__cta
-        font-size: $fontLg
-        color: $font-secondary-color
-        text-align: center
+		font-size: 18px
+		line-height: 20px
 
-        p
-            margin-bottom: 40px
+		ul
+			padding: 0 0 0 20px
+			margin: 0 0 40px
 
-    &__text
-        display: block
+			li
+				margin-bottom: 10px
+				list-style-type: disc
 
-        max-width: 480px
-        margin: 0 auto
+				&:last-of-type
+					margin-bottom: 0
 
-        font-size: $fontBig
-        color: $secondary-color
-        font-style: italic
-        text-align: center
+		p
+			margin-bottom: 20px
 
-        @media #{$tablet}
-            font-size: $fontXMd
+			&:last-of-type
+				margin-bottom: 0
 
-        @media #{$mobile}
-            font-size: $fontMd
-            letter-spacing: 1px
-
-        &::before
-            content: '"'
-            display: block
-            color: $akcent-color
-            margin-bottom: 15px
-            font-size: $fontXLg
-            line-height: $fontMd
-
-            @media #{$tablet}
-                line-height: 0
-                font-size: $fontLg
-
-            @media #{$mobile}
-                display: none
-
-    &__blocks
-        display: flex
-        justify-content: space-between
-
-    &__block
-        &-title
-            color: #fff
-        &-txt
-            color: #fff
 

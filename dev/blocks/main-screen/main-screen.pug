@@ -1,21 +1,35 @@
-section.main-screen#main-screen
+section.main-screen
 	.main-screen__wrap
-		.main-screen__img
-			img(src="/static/img/main-screen/1.jpg" alt="Изготовление значков, медалей и монет с доставкой по всей России")
 		h1.main-screen__header
-			| Изготовление значков, медалей и&nbsp;монет
-			br
-			em с&nbsp;доставкой по&nbsp;всей России
-			small Собственное производство с&nbsp;гарантией сроков
-	.main-screen__actions
-		header
-			| Получите разработку макета&nbsp;
-			em бесплатно
-			img(src="/static/img/main-screen/maket.jpg")
-		.main-screen__actions-right
-			form.form.form--column.form--small(action="/get-maket" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
-				input.form__input.form__input--name(type="text" name="name" placeholder="Ваше имя")
-				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-				input.form__input(type="mail" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить макет")
+			| Проводим предрейсовые и послерейсовые медицинские осмотры в Санкт-Петербурге
+
+		.main-screen__actions
+			.main-screen__actions-left
+				ul.main-screen__adv
+					li Работаем 24/7
+					li Как на вашей, так и своей территории
+					li В наличии все необходимые лицензии
+				.main-screen__actions-img
+					img(src="/static/img/main-screen/maket.jpg")
+
+			.main-screen__actions-right
+				form.form.form--column.form--small(action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+
+					header.form__header
+						| Оставьте заявку на расчёт цены осмотра
+
+					label.form__label
+						p Ваши контактные данные&nbsp;
+							em (обязательно)
+						input.form__input.form__input--name(type="text" name="contact" placeholder="Телефон или email")
+
+					label.form__label
+						p Режим осмотра
+						input.form__input(type="text" name="time" placeholder="Частота и дни недели")
+
+					label.form__label
+						p Количество водителей
+						input.form__input(type="number" name="number" placeholder="Число")
+
+					button.btn.btn--main(type="submit") Рассчитать цену осмотра
 

@@ -51,23 +51,12 @@
 					display: block
 					width: 100%
 
-			&__descr
-				font-size: $fontMd
-				line-height: 20px
-				margin-bottom: 20px
-				color: $font-color
-				font-family: $headers-font
-
-				@media #{$tablet}
-					font-size: $fontXSm
-					line-height: 15px
-					margin-bottom: 15px
-
 	&__wrap
 		@include wrap
 
 	&__header
 		@include section_header
+		text-align: center
 
 	&__list
 		display: block
@@ -75,36 +64,49 @@
 
 	&__item
 		display: inline-block
-		width: 200px
+		width: 300px
 
 		box-sizing: border-box
 
 		overflow: hidden
 
-		border: 1px solid $font-color
-
-		margin-right: 20px
+		margin-right: 40px
 
 		vertical-align: top
+		text-align: center
 
 		&:last-of-type
 			margin-right: 0
+			margin-bottom: 0
 
 		@media #{$laptop}
-			width: 180px
+			width: 260px
 
 		@media #{$tablet}
-			width: 120px
+			width: 240px
 
-			margin-right: 12px
+			margin-right: 20px
 
 		@media #{$mobile}
-			width: 23%
-
-		@media #{$mobileSm}
 			width: 45%
 			margin-bottom: 20px
 
+		@media #{$mobileSm}
+			width: 90%
+
 		img
-			display: block
+			display: inline-block
 			width: 100%
+			max-width: 240px
+
+			border: 1px solid #000
+
+	&__descr
+		font-size: 18px
+		line-height: 20px
+
+		margin-top: 20px
+
+		color: $font-color
+		font-family: $headers-font
+
