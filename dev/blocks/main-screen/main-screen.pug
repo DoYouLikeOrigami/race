@@ -1,35 +1,51 @@
 section.main-screen
 	.main-screen__wrap
-		h1.main-screen__header
-			| Проводим предрейсовые и послерейсовые медицинские осмотры в Санкт-Петербурге
 
-		.main-screen__actions
-			.main-screen__actions-left
-				ul.main-screen__adv
-					li Работаем 24/7
-					li Как на вашей, так и своей территории
-					li В наличии все необходимые лицензии
-				.main-screen__actions-img
-					img(src="/static/img/main-screen/maket.jpg")
+		.main-screen__left
+			.main-screen__left-wrap
+				.main-screen__top
+					p
+						| Первый центр по оказанию
+						br
+						| предрейсовых услуг в Санкт-Петербурге
 
-			.main-screen__actions-right
-				form.form.form--column.form--small(action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+				h1.main-screen__header
+					| Проводим предрейсовые и послерейсовые
+					em медицинские осмотры в Санкт-Петербурге
 
-					header.form__header
-						| Оставьте заявку на расчёт цены осмотра
+				ul.main-screen__info
+					li
+						span Работаем 24/7
+					li
+						span Как на вашей, так и своей территории
+					li
+						span В наличии все необходимые лицензии
 
-					label.form__label
-						p Ваши контактные данные&nbsp;
-							em (обязательно)
-						input.form__input.form__input--name(type="text" name="contact" placeholder="Телефон или email")
+		.main-screen__right
+			.main-screen__right-wrap
+				.main-screen__top
+					a.main-screen__tel(href="tel:+78128557575") +7 (812) 855-75-75
+					br
+					a.main-screen__btn(href="#") Заказать звонок
 
-					label.form__label
-						p Режим осмотра
-						input.form__input(type="text" name="time" placeholder="Частота и дни недели")
+				.main-screen__right-content
+					h2.main-screen__right-header
+						span Оставьте заявку на расчёт цены осмотра
 
-					label.form__label
-						p Количество водителей
-						input.form__input(type="number" name="number" placeholder="Число")
+					.main-screen__form
+						form(action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
 
-					button.btn.btn--main(type="submit") Рассчитать цену осмотра
+							label
+								p Ваши контактные данные *
+								input(type="text" name="contact" placeholder="Телефон или email")
+
+							label
+								p Режим осмотра
+								input(type="text" name="time" placeholder="Частота и дни недели")
+
+							label
+								p Количество водителей
+								input(type="number" name="number" placeholder="Число")
+
+							button.btn.btn--main(type="submit") Рассчитать цену осмотра
 

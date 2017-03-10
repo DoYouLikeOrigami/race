@@ -7,92 +7,181 @@
 	&__wrap
 		@include wrap
 
-		padding: 60px 0
+		display: flex
+		justify-content: center
+		align-items: stretch
 
-		text-align: center
+	&__left,
+	&__right
+		width: 50%
+		flex: 1 1 50%
 
-		@media #{$laptop}
-			padding: 20px 20px 0
+		display: flex
 
-		@media #{$tablet}
-			padding: 30px 20px 0
+	&__left
+		background: rgba(0, 0, 200, .5)
+		justify-content: flex-end
 
-		@media #{$mobileSm}
-			padding: 20px 20px 0
+	&__left-wrap,
+	&__right-wrap
+		max-width: 700px
+		width: 100%
+
+	&__left-wrap
+		padding-left: 10%
+
+	&__top
+		padding: 20px
+
+		text-align: right
+
+		p
+			font-size: 18px
+			line-height: 25px
+
+			vertical-align: middle
+			color: #fff
 
 	&__header
 		@include page_header
 
-	&__img
-		width: 33%
-
-		display: inline-block
-		vertical-align: middle
-
-		transition: $effect-time
-
-		&--animated
-			opacity: 0
-
-		@media #{$tablet}
-			width: 50%
-
-		@media #{$mobile}
-			width: 95%
-
-		img
-			display: block
-			width: 100%
-
-	&__actions
-		display: block
-
-		box-sizing: border-box
-
-		text-align: center
-
-		@media #{$laptop}
-			margin-top: 20px
-
-		@media #{$tablet}
-			margin-top: 30px
-			padding: 40px 20px
-
-			text-align: center
-
-		@media #{$mobile}
-			padding: 20px 15px
-
-		&-left,
-		&-right
-			display: inline-block
-
-			width: 45%
-			min-width: 270px
-
-			vertical-align: top
-
-		&-img
-			display: block
-
-			max-width: 270px
-			margin: 0 auto
-
-			img
-				display: inline-block
-				width: 100%
-
-	&__adv
+	&__info
 		display: block
 
 		padding: 0
-		margin: 0 0 60px
+		margin: 0
 
 		text-align: left
-		font-size: 24px
+		line-height: 30px
 
 		li
-			margin-bottom: 30px
+			display: block
+			margin-bottom: 15px
 
 			&:last-of-type
 				margin-bottom: 0
+
+			&::before
+				content: ""
+
+				display: inline-block
+				vertical-align: middle
+				box-sizing: border-box
+
+				margin-right: 30px
+
+				width: 30px
+				height: 30px
+
+				border: 4px solid rgba(255, 255, 255, .5)
+				border-radius: 50%
+
+			span
+				font-size: 24px
+				line-height: 30px
+				vertical-align: middle
+
+	&__tel
+		display: inline-block
+
+		font-size: 26px
+		line-height: 30px
+		vertical-align: middle
+
+		color: $font-color
+		text-decoration: none
+
+	&__btn
+		display: inline-block
+
+		font-size: 14px
+		line-height: 20px
+		vertical-align: middle
+
+		padding-left: 5px
+		border-left: 2px solid $akcent-color
+
+		color: $font-color
+		text-decoration: none
+
+		transition: .3s
+
+		&:hover
+			background-color: $akcent-color
+
+	&__right-content
+		background: grey
+
+	&__right-header
+		display: block
+
+		padding: 80px 0
+		margin: 0
+
+		background: rgba(200, 0, 0, .3)
+
+		text-align: center
+		font-size: 36px
+		line-height: 40px
+
+		span
+			display: inline-block
+			max-width: 500px
+			text-align: left
+
+	&__form
+		display: block
+		text-align: right
+
+		form
+			display: inline-block
+			position: relative
+
+			padding: 20px 50px
+
+			background-color: $font-color
+			text-align: center
+
+			&::before
+				content: ""
+
+				display: block
+				position: absolute
+
+				left: 0
+				top: 50%
+
+				transform: translate(-50%, -50%) rotate(45deg)
+
+				width: 40px
+				height: 40px
+
+				background-color: red
+
+		label
+			display: block
+			margin-bottom: 20px
+
+		p
+			font-size: 20px
+			line-height: 30px
+			color: $font-secondary-color
+
+		input
+			display: block
+
+			font-size: 20px
+			line-height: 50px
+
+			width: 250px
+			margin: 5px auto 0
+
+			background-color: grey
+			border: none
+
+			color: $font-color
+			text-align: center
+
+			&::placeholder
+				color: $font-color
+				text-align: center

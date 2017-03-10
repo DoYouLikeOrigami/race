@@ -3,8 +3,9 @@
 	display: block
 	position: relative
 
-	max-width: 1200px
-	padding: 0 15px
+	min-width: 1000px
+
+	padding: 0
 	margin: 0 auto
 
 @mixin page_section
@@ -41,14 +42,6 @@
 	color: $font-color
 	font-weight: bold
 
-	@media #{$tablet}
-		font-size: $fontBig
-		line-height: 35px
-
-	@media #{$mobile}
-		font-size: $fontMd
-		line-height: 26px
-
 	small
 		display: block
 		margin-top: 30px
@@ -63,48 +56,56 @@
 
 @mixin page_header
 	display: block
-	margin: 0 0 60px
+	position: relative
 
-	text-align: center
-	font-size: 42px
-	line-height: 45px
-	letter-spacing: 1px
-	color: $font-color
+	margin: 40px 0
+
+	font-size: 50px
+	line-height: 50px
 	font-weight: 700
-	font-family: $headers-font
+	letter-spacing: 1px
 
-	@media #{$tablet}
-		font-size: $fontLg - 4
-		line-height: $fontLg + 5
+	max-width: 500px
 
-	@media #{$mobile}
-		font-size: $fontBig
-		line-height: $fontBig + 10
+	&::after
+		content: ""
 
-	small
 		display: block
-		margin-top: 20px
+		position: absolute
 
-		font-size: $fontXBig
+		right: 0
+		top: 50%
+
+		width: 15px
+		height: 15px
+
+		border-width: 0 4px 4px 0
+		border-color: #fff
+		border-style: solid
+
+		transform: rotate(-45deg) translateY(-50%)
+
+	em
+		display: block
+		position: relative
+
+		margin-top: 10px
+
+		font-size: 36px
 		line-height: 40px
-		color: $font-color
-		font-weight: 700
-		font-family: $default-font
-		letter-spacing: 1px
+		font-style: normal
 
-		@media #{$laptop}
-			margin-top: 20px
-			font-size: $fontXBig - 2
+		&::before
+			content: ""
 
-		@media #{$tablet}
-			font-size: $fontBig
+			display: block
 
-		@media #{$mobile}
-			font-size: $fontBigMd
-			line-height: $fontBigMd + 10
+			margin-bottom: 6px
 
-		@media #{$mobileSm}
-			margin-top: 10px
+			width: 50px
+			height: 4px
+
+			background: #fff
 
 @mixin attention-header
 	display: block
