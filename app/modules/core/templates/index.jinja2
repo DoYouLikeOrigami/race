@@ -5,15 +5,10 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<!--SEO-->
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="author" content="">
+		<meta name="description" content="Предрейсовые и послерейсовые осмотры в Санкт-Петербурге">
 		<link rel="stylesheet" href="/static/css/swiper.min.css">
 		<link rel="stylesheet" href="/static/css/style.css">
-		<link rel="slylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=PT+Serif&amp;amp;subset=cyrillic">
-		<title>Геральдический Завод
+		<title>Предрейсовые и послерейсовые осмотры в Санкт-Петербурге
 		</title>
 	</head>
 	<body>
@@ -22,7 +17,7 @@
 				<div class="main-screen__wrap">
 					<div class="main-screen__left">
 						<div class="main-screen__left-wrap">
-							<div class="main-screen__top">
+							<div class="main-screen__top main-screen__top--left">
 								<p>Первый центр по оказанию<br>предрейсовых услуг в Санкт-Петербурге</p>
 							</div>
 							<h1 class="main-screen__header">Проводим предрейсовые и послерейсовые<em>медицинские осмотры в Санкт-Петербурге</em></h1>
@@ -35,9 +30,9 @@
 					</div>
 					<div class="main-screen__right">
 						<div class="main-screen__right-wrap">
-							<div class="main-screen__top"><a class="main-screen__tel" href="tel:+78128557575">+7 (812) 855-75-75</a><br><a class="main-screen__btn" href="#">Заказать звонок</a></div>
+							<div class="main-screen__top main-screen__top--right"><a class="main-screen__tel" href="tel:+78128557575">+7 (812) 855-75-75</a><br><a class="main-screen__btn" href="#">Заказать звонок</a></div>
 							<div class="main-screen__right-content">
-								<h2 class="main-screen__right-header"><span>Оставьте заявку на расчёт цены осмотра</span></h2>
+								<h2 class="main-screen__right-header">Оставьте заявку на расчёт<br>цены осмотра</h2>
 								<div class="main-screen__form">
 									<form action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!">
 										<label>
@@ -60,38 +55,63 @@
 					</div>
 				</div>
 			</section>
-			<!--include ../blocks/img-text/img-text-2.pug-->
+			<section class="img-text">
+				<div class="img-text__wrap">
+					<h2 class="img-text__header">Избавим вас от рисков</h2>
+					<article class="img-text__article">
+						<div class="img-text__img"><img src="/static/img/img-text/one.jpg" alt="Избавим вас от рисков"></div>
+						<div class="img-text__text">
+							<p>Предприятие получает штрафы при отсутствии предрейсового осмотра водителя. Государство заботится о безопасности на дорогах и медосмотр - один из способов её обеспечения.</p>
+						</div>
+					</article>
+					<article class="img-text__article">
+						<div class="img-text__text">
+							<p>Мы обладаем требуемыми законом кабинетом и штатом сертифицированных медицинских сотрудников. Согласно ФЗ №NNNN с ГГГГ года только работники с медицинским образованием, прошедшие специальные курсы, могут проводить предрейсовый осмотр.</p>
+						</div>
+						<div class="img-text__img"><img src="/static/img/img-text/two.jpg" alt="Избавим вас от рисков"></div>
+					</article>
+					<article class="img-text__article">
+						<div class="img-text__img"><img src="/static/img/img-text/three.png" alt="Избавим вас от рисков"></div>
+						<div class="img-text__text">
+							<p>Для вашего удобства, мы можем разместить медицинский кабинет у вас на предприятии. В случае небольшого количества водителей вам будет выгоднее проходить медосмотр в нашем кабинете.</p>
+						</div>
+					</article>
+				</div>
+			</section>
 			<!--include ../blocks/info-section/info-section.pug-->
 			<!--include ../blocks/flex-block/flex-block.pug-->
-			<!--include ../blocks/contacts-section/contacts-section.pug-->
+			<section class="contacts-section">
+				<div class="contacts-section__wrap">
+					<div class="contacts-section__left">
+						<header class="contacts-section__header">Наши контакты</header>
+						<div class="contacts-section__left-content">
+							<ul class="contacts-section__contacts">
+								<li><a href="tel"><i class="icon-mail-alt"></i>mail@mail.ru</a></li>
+								<li><a href="mailto"><i class="icon-phone"></i>+7 (999) 999-99-99</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="contacts-section__right">
+						<form class="form" method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!">
+							<header class="form__header">Ответим на любые вопросы</header>
+							<label class="form__label">
+								<p>Ваш вопрос</p>
+								<textarea class="form__textarea" name="msg" rows="5"></textarea>
+							</label>
+							<label class="form__label">
+								<p>Ваш контакт</p>
+								<input class="form__input" type="text" name="contact" placeholder="Телефон или email">
+							</label>
+							<button class="btn btn--main" type="submit">Получить ответ</button>
+						</form>
+					</div>
+				</div>
+			</section>
 			<!--include ../blocks/popup/popup.pug-->
 			<div class="overlay"></div>
 			<script src="/static/js/libs.js"></script>
 			<script src="/static/js/swiper.min.js"></script>
 			<!--script(src="/static/js/main.js")-->
-			<!-- Yandex.Metrika counter-->
-			<script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41243534 = new Ya.Metrika({ id:41243534, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
-			<noscript>
-				<div><img src="https://mc.yandex.ru/watch/41243534" style="position:absolute; left:-9999px" alt=""></div>
-			</noscript>
-			<!-- Piwik-->
-			<script type="text/javascript">
-				var _paq = _paq || [];
-				// tracker methods like "setCustomDimension" should be called before "trackPageView"
-				_paq.push(['trackPageView']);
-				_paq.push(['enableLinkTracking']);
-				(function() {
-					var u="//stat.z-gu.ru/";
-						_paq.push(['setTrackerUrl', u+'piwik.php']);
-						_paq.push(['setSiteId', '28']);
-						var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-						g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-					})();
-			</script>
-			<noscript>
-				<p><img src="//stat.z-gu.ru/piwik.php?idsite=28&amp;rec=1" style="border:0" alt=""></p>
-			</noscript>
-			<!-- End Piwik Code-->
 		</div>
 	</body>
 </html>

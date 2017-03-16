@@ -1,30 +1,30 @@
-section#contacts.contacts-section
+section.contacts-section
 	.contacts-section__wrap
-		header.contacts-section__header Наши контакты
 
-		.contacts-section__flex
-			.contacts-section__left
-				.contacts-section__tel
-					a.contacts-section__tel-number(href="tel:78122442706")
-						i.icon-phone
-						| 8 (812) 244-27-06
-					a.btn.btn--small.btn--special.js-show-call-popup(href="#") Заказать обратный звонок
-				.contacts-section__address
-					a(href="mailto:zakaz@geraldzavod.ru")
-						i.icon-mail-alt
-						|zakaz@geraldzavod.ru
+		.contacts-section__left
+			header.contacts-section__header Наши контакты
+			.contacts-section__left-content
+				ul.contacts-section__contacts
+					li
+						a(href="tel")
+							i.icon-mail-alt
+							|mail@mail.ru
+					li
+						a(href="mailto")
+							i.icon-phone
+							| +7 (999) 999-99-99
 
-			.contacts-section__right
-				form.form.form--column(method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!")
-					header.form__header
-						| Ответим на любые вопросы
+		.contacts-section__right
+			form.form(method="post" action="/send-mail" data-succmsg="Мы получили ваше сообщение. Ответим Вам в ближайшее время!")
+				header.form__header
+					| Ответим на любые вопросы
 
-					label.form__label
-						p Ваш вопрос
-						textarea.form__textarea(name="msg" placeholder="Напишите ваш вопрос" rows="5")
+				label.form__label
+					p Ваш вопрос
+					textarea.form__textarea(name="msg" rows="5")
 
-					label.form__label
-						p Ваш контакт
-						input.form__input(type="email" name="email" placeholder="Телефон или email")
+				label.form__label
+					p Ваш контакт
+					input.form__input(type="text" name="contact" placeholder="Телефон или email")
 
-					button.btn.btn--main(type="submit") Получить ответ
+				button.btn.btn--main(type="submit") Получить ответ

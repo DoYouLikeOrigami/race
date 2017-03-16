@@ -2,8 +2,6 @@
 	display: block
 	position: relative
 
-	background: #f0f0f0
-
 	&__wrap
 		@include wrap
 
@@ -19,7 +17,8 @@
 		display: flex
 
 	&__left
-		background: rgba(0, 0, 200, .5)
+		background: url(../img/main-screen/left-bg.jpg)
+		background-size: cover
 		justify-content: flex-end
 
 	&__left-wrap,
@@ -35,9 +34,15 @@
 
 		text-align: right
 
+		&--left
+			padding: 25px 20px
+
+		&--right
+			width: 90%
+
 		p
-			font-size: 18px
-			line-height: 25px
+			font-size: 16px
+			line-height: 20px
 
 			vertical-align: middle
 			color: #fff
@@ -53,6 +58,8 @@
 
 		text-align: left
 		line-height: 30px
+		font-size: 22px
+		font-family: $semibold-font
 
 		li
 			display: block
@@ -77,16 +84,17 @@
 				border-radius: 50%
 
 			span
-				font-size: 24px
-				line-height: 30px
 				vertical-align: middle
 
 	&__tel
 		display: inline-block
 
-		font-size: 26px
+		font-size: 22px
 		line-height: 30px
+		letter-spacing: 1px
 		vertical-align: middle
+
+		font-family: $bold-font
 
 		color: $font-color
 		text-decoration: none
@@ -98,8 +106,10 @@
 		line-height: 20px
 		vertical-align: middle
 
+		font-family: $semibold-font
+
 		padding-left: 5px
-		border-left: 2px solid $akcent-color
+		border-left: 4px solid $akcent-color
 
 		color: $font-color
 		text-decoration: none
@@ -110,24 +120,22 @@
 			background-color: $akcent-color
 
 	&__right-content
-		background: grey
+		background: url(../img/main-screen/right-bg.jpg)
+		background-size: cover
 
 	&__right-header
 		display: block
 
-		padding: 80px 0
+		padding: 125px 0 110px 160px
 		margin: 0
 
-		background: rgba(200, 0, 0, .3)
+		background: url(../img/main-screen/square.png) no-repeat 0 center
+		background-size: 50%
 
-		text-align: center
-		font-size: 36px
+		font-size: 34px
 		line-height: 40px
 
-		span
-			display: inline-block
-			max-width: 500px
-			text-align: left
+		font-family: $bold-font
 
 	&__form
 		display: block
@@ -137,10 +145,17 @@
 			display: inline-block
 			position: relative
 
+			width: 50%
+			box-sizing: border-box
+
 			padding: 20px 50px
 
 			background-color: $font-color
 			text-align: center
+
+			font-size: 16px
+			line-height: 20px
+			color: $font-secondary-color
 
 			&::before
 				content: ""
@@ -151,32 +166,29 @@
 				left: 0
 				top: 50%
 
-				transform: translate(-50%, -50%) rotate(45deg)
+				width: 60px
+				height: 60px
 
-				width: 40px
-				height: 40px
+				transform: translate(-30%, -50%)
 
-				background-color: red
+				background: url(../img/main-screen/triangle.png) no-repeat 0 center
+				background-size: contain
 
 		label
 			display: block
 			margin-bottom: 20px
 
-		p
-			font-size: 20px
-			line-height: 30px
-			color: $font-secondary-color
-
 		input
 			display: block
 
-			font-size: 20px
-			line-height: 50px
+			line-height: 40px
 
 			width: 250px
 			margin: 5px auto 0
 
-			background-color: grey
+			font-family: $semibold-font
+
+			background-color: rgba(255, 255, 255, .5)
 			border: none
 
 			color: $font-color

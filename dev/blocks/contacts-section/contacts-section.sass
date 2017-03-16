@@ -1,108 +1,97 @@
 .contacts-section
-	padding: 60px 0 0
-
 	&__wrap
 		@include wrap
+		display: flex
+		align-items: stretch
 
-	&__flex
+	&__left,
+	&__right
+		display: flex
+		position: relative
+
+		flex-direction: column
+
+		flex: 1 1 50%
+		max-width: 50%
+
+	&__left::after
+		content: ""
+
 		display: block
-		margin-bottom: 40px
+		position: absolute
 
-		@media #{$mobile}
-			margin-bottom: 20px
+		right: 0
+		bottom: 6%
+		transform: translateX(50%)
 
-	&__left
-		width: 35%
-		display: inline-block
+		width: 45%
+		height: 5%
 
-		vertical-align: top
-
-		margin-right: 5%
-
-		@media #{$laptop}
-			width: 45%
-
-		@media #{$tablet}
-			width: 50%
-
-		@media #{$mobile}
-			width: 100%
-			margin: 0 0 20px
+		background: url(../img/contacts-section/left-decor.jpg) right center no-repeat
+		background-size: contain
 
 	&__right
-		width: 30%
-		display: inline-block
+		background: url(../img/contacts-section/right.jpg) center
+		background-size: cover
 
-		vertical-align: top
+		padding: 145px 10% 40px 0
+		align-items: flex-end
 
-		@media #{$laptop}
-			width: 35%
+		&::before
+			content: ""
 
-		@media #{$tablet}
-			width: 45%
+			display: block
+			position: absolute
 
-		@media #{$mobile}
-			width: 100%
+			left: 0
+			bottom: 20%
 
+			height: 16%
+			width: 8%
+
+			background: url(../img/contacts-section/right-decor.jpg) left center no-repeat
+			background-size: contain
 
 	&__header
 		@include section_header
-		text-align: center
 
-	&__address
+		padding-left: 10%
+		margin: 40px 0
+
+	&__left-content
+		flex: 1 1 50%
+
+		background: url(../img/contacts-section/left.jpg) center
+		background-size: cover
+
+	&__contacts
 		display: block
 
-		font-size: 20px
-		line-height: 20px
+		padding: 80px 0 80px 10%
+		margin: 0
 
-		a
-			color: $akcent-color
+		background-color: rgba(0, 0, 0, .402)
 
-	&__logo
-		display: flex
-		align-items: center
-		margin-bottom: 40px
-
-		@media #{$tablet}
-			margin-bottom: 20px
-
-		img
+		li
 			display: block
-			max-width: 110px
-			margin-right: 18px
-
-		span
-			font-size: $fontMd
-
-			@media #{$mobile}
-				font-size: $fontSm
-
-	&__tel
-		display: block
-		margin-bottom: 40px
-
-		@media #{$tablet}
-			margin-bottom: 20px
-
-	&__tel-number
-		display: block
-
-		margin-bottom: 20px
-
-		font-size: 30px
-		line-height: 40px
-		font-weight: bold
-		color: $font-color
-
-		&:hover
-			text-decoration: underline
-
-		@media #{$mobile}
-			font-size: $fontBig
-			line-height: $fontBig
+			margin-bottom: 40px
 
 			&:last-of-type
 				margin-bottom: 0
 
-		i
-			color: $akcent-color
+			a
+				color: $font-secondary-color
+
+				font-size: 16px
+				line-height: 30px
+
+				vertical-align: middle
+
+				i
+					font-size: 25px
+					line-height: 30px
+
+					vertical-align: middle
+
+					margin-right: 40px
+

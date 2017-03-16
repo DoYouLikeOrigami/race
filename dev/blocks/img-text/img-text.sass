@@ -1,54 +1,174 @@
 .img-text
-	padding: 60px 0
-	background: $seconadry-bg
+	display: block
+	position: relative
+
+	background: url(../img/img-text/circles-bg.png) 150% -50% no-repeat
+	background-size: 50%
 
 	@media #{$mobile}
 		padding: 30px 0
 
 	&__wrap
 		@include wrap
+		padding: 140px 5% 120px
 
-	&__img
-		display: inline-block
-		position: relative
-		max-width: 40%
-		vertical-align: middle
+		&::before
+			content: ""
 
-		@media #{$mobile}
-			max-width: 400px
-			width: 90%
-
-		img
 			display: block
-			margin: 0 auto
+			position: absolute
 
-			height: 300px
-			max-width: 100%
+			left: 5%
+			top: -8px
 
-			border: 2px solid $akcent-bg
+			width: 35px
+			height: 120px
 
-			@media #{$laptop}
-				width: 100%
-				height: auto
-
-	&__text
-		display: inline-block
-		width: 50%
-
-		margin-right: 5%
-
-		vertical-align: top
-		text-align: left
-
-		@media #{$mobile}
-			width: 100%
-			margin: 0 0 30px
-
-		p
-			font-size: 18px
-			line-height: 20px
-
-			margin-bottom: 20px
+			background: url(../img/img-text/arrow.png) center no-repeat
+			background-size: contain
 
 	&__header
 		@include section_header
+
+	&__article
+		display: flex
+		position: relative
+
+		flex-direction: row
+		justify-content: space-between
+		align-items: stretch
+
+		margin-bottom: 80px
+
+		&:last-of-type
+			margin-bottom: 0
+
+		&:nth-of-type(2n)
+			.img-text__text
+				text-align: right
+				align-items: flex-end
+
+		&:first-of-type
+			.img-text__img::before
+				background: none
+
+		&:nth-of-type(2)
+			.img-text__text::before
+				content: "02"
+
+		&:nth-of-type(3)
+			&::before
+				content: ""
+
+				display: block
+				position: absolute
+
+				width: 5%
+				height: 80px
+
+				background: url(../img/img-text/corner.png) center no-repeat
+				background-size: contain
+
+				left: 50%
+				top: 0
+				transform: translate(-50%, -100%)
+
+			&::after
+				content: ""
+
+				display: block
+				position: absolute
+
+				width: 5%
+				height: 80px
+
+				background: url(../img/img-text/corner-bottom.png) center no-repeat
+				background-size: contain
+
+				right: 0
+				bottom: 0
+				transform: translate(100%, 100%)
+
+			.img-text__text::before
+				content: "03"
+
+			.img-text__img::before
+				background-image: url(../img/img-text/three-decor.png)
+				left: auto
+				right: 15%
+				width: 6%
+				height: 35%
+
+			.img-text__img::after
+				content: ""
+
+				display: block
+				position: absolute
+
+				right: 0
+				bottom: -69px
+
+				width: 196px
+				height: 49px
+
+				background: url(../img/img-text/heart-empty.png) 0 0, url(../img/img-text/heart-filled.png) 72px 0, url(../img/img-text/heart-filled.png) 144px 0
+				background-repeat: no-repeat
+				background-size: 52px 49px
+
+	&__img,
+	&__text
+		display: block
+		position: relative
+
+		flex: 1 1 47.5%
+		width: 47.5%
+		max-width: 47.5%
+
+	&__img
+
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			max-width: 150px
+			max-height: 240px
+
+			width: 25%
+			height: 55%
+
+			left: 25%
+			top: 0
+
+			transform: translateY(-30%)
+
+			background: url(../img/img-text/two-decor.png) center no-repeat
+			background-size: contain
+
+		img
+			display: block
+			width: 100%
+
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-start
+
+		font-size: 18px
+		line-height: 22px
+		font-family: $semibold-font
+
+		&::before
+			content: "01"
+
+			display: inline-block
+
+			font-size: 200px
+			line-height: 120px
+
+			border-bottom: 5px solid $akcent-color
+			margin-bottom: 20px
+
+

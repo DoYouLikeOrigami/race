@@ -1,13 +1,7 @@
 .btn
 	display: inline-block
-	padding: 20px 30px
 	box-sizing: border-box
 	text-align: center
-
-	text-transform: uppercase
-	letter-spacing: 1px
-	font-size: $fontXSm
-	background: #ccc
 
 	transition: $effect-time
 
@@ -19,13 +13,22 @@
 		font-size: $fontMicro
 
 	&--main
-		color: $akcent-bg
-		background: $akcent-color
-		border: none
-		font-weight: 700
+		color: $akcent-color
+		background: none
+		border: 2px solid $akcent-color
+
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 1px
+		font-family: $semibold-font
+
+		padding: 10px
+
+		width: 250px
 
 		&:hover
-			background: lighten($akcent-color, 5%)
+			background: $akcent-color
+			color: $font-secondary-color
 
 		@media #{$mobileSm}
 			max-width: 270px

@@ -20,24 +20,6 @@
 				&::placeholder
 					font-size: $fontMd
 
-	&--column
-		display: flex
-		flex-direction: column
-		align-items: stretch
-
-		max-width: 320px
-		margin: 0 auto
-		padding: 20px 25px
-
-		background-color: royalblue
-		color: #fff
-
-		.form__input,
-		.form__textarea
-			margin-bottom: 20px
-			width: 100%
-			min-width: 270px
-
 	&--footer
 		&:hover
 			.form__input,
@@ -114,76 +96,60 @@
 
 	&__label
 		display: block
-		margin: 0 0 15px
-
-		text-align: left
+		margin: 0 0 40px
 
 		p
-			margin-bottom: 5px
-			font-size: 20px
+			margin-bottom: 20px
+			font-size: 16px
 			line-height: 20px
 
-			em
-				color: yellow
+			font-family: $semibold-font
 
 	&__header
 		display: block
 
-		margin-bottom: 30px
+		margin-bottom: 60px
 
-		font-size: 24px
-		line-height: 30px
-		text-align: left
-
-		font-family: $headers-font
-
-		@media #{$tablet}
-			font-size: 20px
-
-			margin-bottom: 15px
+		font-size: 34px
+		line-height: 40px
+		font-family: $semibold-font
 
 	&__input,
 	&__textarea
-		display: block
+		display: inline-block
 		box-sizing: border-box
 
-		width: 270px
+		padding: 15px
 
-		padding: 20px 15px
-
-		border: 1px solid $input-border
-
-		font-size: $fontXSm
-		font-weight: 400
-		color: $akcent-color
+		font-size: 16px
+		line-height: 20px
 
 		transition: $effect-time
 		outline: $akcent-color
 
-		&::placeholder
-			font-size: $fontXSm
-			color: $font-par-color
+		background: rgba(255, 255, 255, .3)
+		border: none
 
 		&:hover,
 		&:focus
-			border-color: $akcent-color
+			background: rgb(255, 255, 255)
+
+		&::placeholder
+			color: $font-color
+			font-family: $semibold-font
 
 		&--name
 			@media #{$tablet}
 				display: none
+
+	&__input
+		width: 270px
+		text-align: center
 
 	&__textarea
 		display: block
 
 		width: 100%
 		max-width: 570px
-		margin-bottom: 20px
 
 		resize: none
-
-		@media #{$mobile}
-			width: 270px
-
-	&__submit
-		transition: $effect-time
-
