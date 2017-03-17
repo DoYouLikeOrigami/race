@@ -2,45 +2,172 @@
 	display: block
 	position: relative
 
-	padding: 60px 0
+	padding: 0 5% 0 0
 
-	@media #{$tablet}
-		padding: 50px 0
+	font-family: $bold-font
 
-	@media #{$mobile}
-		padding: 40px 20px
+	&::after
+		content: ""
+
+		display: block
+		position: absolute
+
+		right: 0
+		top: -7%
+
+		width: 2.5%
+		height: 90%
+
+		background: $seconadry-bg
 
 	&__wrap
 		@include wrap
 
+		&::after
+			content: ""
+
+			display: block
+			position: absolute
+
+			right: 0
+			top: 0
+
+			width: 150px
+			height: 30%
+
+			background: url(../img/info-section/decor.png) top right no-repeat
+			background-size: contain
+
+	&__content
+		display: block
+		position: relative
+
+		padding: 60px 0 80px 5.5%
+
+		background: $akcent-bg
+
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			width: 300px
+			height: 300px
+
+			background: $seconadry-bg
+			border-radius: 50%
+
+			top: 0
+			left: 0
+			transform: translateX(-50%)
+
+		&::after
+			content: ""
+
+			display: block
+			position: absolute
+
+			width: 150px
+			height: 35%
+
+			left: 0
+			bottom: 0
+
+			background: $footer-bottom-bg
+
+			z-index: 0
+
 	&__header
 		@include section_header
-		text-align: center
+		margin-bottom: 40px
 
 	&__info
 		display: block
-		max-width: 800px
+		position: relative
 
 		margin: 0 auto
 
-		font-size: 18px
-		line-height: 20px
+		font-size: 20px
+		line-height: 22px
 
-		ul
-			padding: 0 0 0 20px
-			margin: 0 0 40px
+		z-index: 1
 
-			li
-				margin-bottom: 10px
-				list-style-type: disc
+		li
+			margin-bottom: 30px
+			padding-left: 25px
 
-				&:last-of-type
-					margin-bottom: 0
+			line-height: 20px
+			vertical-align: middle
+
+			&:nth-of-type(2)::before
+				background: rgba(255, 255, 255, .4)
+
+			&:nth-of-type(3)::before
+				background: rgba(255, 255, 255, .6)
+
+			&:nth-of-type(4)::before
+				background: rgba(255, 255, 255, .8)
+
+			&:nth-of-type(5)::before
+				background: rgb(255, 255, 255)
+
+			&:nth-of-type(6)::before
+				background: $akcent-color
+
+			&:nth-of-type(7)::before
+				background: $akcent-color
+				opacity: .8
+
+			&:nth-of-type(8)::before
+				background: $akcent-color
+				opacity: .6
+
+			&::before
+				content: ""
+
+				display: inline-block
+
+				width: 22px
+				height: 22px
+
+				line-height: 22px
+				vertical-align: middle
+
+				border-radius: 50%
+				background: rgba(255, 255, 255, .1)
+
+				margin-right: 40px
+
+	&__attention
+		display: block
+		position: relative
+
+		padding-left: 150px
+
+		&::before
+			content: ""
+
+			display: block
+			position: absolute
+
+			width: 80px
+			height: 100%
+
+			top: 0
+			left: 70px
+
+			background: url(../img/info-section/arrow.png) center no-repeat
+			background-size: 17px
 
 		p
-			margin-bottom: 20px
+			display: block
 
-			&:last-of-type
-				margin-bottom: 0
+			border: 5px dashed $font-color
+			padding: 20px 15px
 
+			font-size: 20px
+			line-height: 22px
+			font-family: $semibold-font
 
+			color: $akcent-color
