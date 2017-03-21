@@ -493,7 +493,8 @@ li {
   box-sizing: border-box;
   text-align: center;
   -webkit-transition: 0.4s;
-  transition: 0.4s; }
+  transition: 0.4s;
+  outline: none; }
   .btn:active {
     -webkit-transform: translateY(3px);
             transform: translateY(3px); }
@@ -632,8 +633,9 @@ li {
     .form--footer .form__submit:hover {
       background-color: #f96041; }
   .form--popup .form__input {
-    margin-bottom: 30px;
-    border-color: #f96041; }
+    margin-bottom: 20px;
+    background-color: #68dbd8;
+    max-width: 250px; }
   .form--small .form__input {
     margin-bottom: 10px;
     padding: 15px; }
@@ -1913,7 +1915,7 @@ body.swal2-in {
   max-width: 90%;
   max-height: 100vh;
   padding: 10px 15px;
-  background: #68dbd8;
+  background: #fff;
   box-shadow: 0px 0px 8px #000;
   z-index: 999; }
   @media screen and (max-width: 768px) {
@@ -1924,9 +1926,6 @@ body.swal2-in {
     .popup {
       width: 100%;
       max-width: 100%; } }
-  @media screen and (max-width: 768px) {
-    .popup--service {
-      overflow: hidden; } }
   .popup--active {
     display: block; }
   .popup__close {
@@ -1940,16 +1939,11 @@ body.swal2-in {
     line-height: 40px;
     vertical-align: middle;
     text-align: center;
-    background-color: #68dbd8;
+    color: #4c4241;
     z-index: 5; }
-    .popup__close span {
-      color: #ececec; }
     .popup__close:hover span {
-      display: inline-block;
-      -webkit-transition: 0.4s ease-in;
-      transition: 0.4s ease-in;
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
       color: #f96041; }
   .popup__img {
     display: block;
@@ -1979,7 +1973,6 @@ body.swal2-in {
       line-height: 40px;
       text-transform: uppercase;
       font-family: "Bold", roboto;
-      color: #ececec;
       text-align: left; }
       .popup__body header small {
         font-size: 25px;
@@ -1993,7 +1986,7 @@ body.swal2-in {
           line-height: 30px; } }
       .popup__body header em {
         font-style: normal;
-        color: #68dbd8; }
+        color: #f96041; }
       .popup__body header span {
         white-space: nowrap; }
     .popup__body--column header {
@@ -2009,7 +2002,6 @@ body.swal2-in {
     display: block;
     font-size: 22px;
     line-height: 40px;
-    color: #ececec;
     font-family: "Bold", roboto;
     margin: 20px 0; }
   .popup__list li {

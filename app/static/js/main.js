@@ -4,23 +4,23 @@ window.onload = function() {
 		formsBindSubmit();
 
 		function formsBindSubmit() {
-			var forms = document.querySelectorAll('.form');
+			var forms = document.querySelectorAll('.js-submit-form');
 
 
 			Array.prototype.forEach.call(forms, function(form, index) {
 				form.addEventListener('submit', function(e) {
 					e.preventDefault();
 
-					var inputs = form.querySelectorAll('.form__input'),
+					var inputs = form.querySelectorAll('input'),
 							method = form.method,
 							action = form.action,
 							succMsg = form.dataset.succmsg,
-							submitBtn = form.querySelector('input[type="submit"]'),
+							submitBtn = form.querySelector('button[type="submit"]'),
 							submitBtnValue = submitBtn.value,
-							name,
-							phone,
-							email,
-							msg = form.querySelector('.form__textarea'),
+							contact,
+							driversNumber,
+							watchTime,
+							msg = form.querySelector('textarea'),
 							json;
 
 					if (!method || !action) {
@@ -29,38 +29,33 @@ window.onload = function() {
 					}
 
 					Array.prototype.forEach.call(inputs, function(input, index) {
-						if (input.name === "name") {
-							name = input.value;
+						if (input.name === "number") {
+							driversNumber = input.value;
 						}
 
-						if (input.name === "phone") {
-							phone = input.value;
+						if (input.name === "time") {
+							watchTime = input.value;
 						}
 
-						if (input.name === "email") {
-							email = input.value;
-						}
-
-						if (msg) {
-							msg = msg.value;
+						if (input.name === "contact") {
+							contact = input.value;
 						}
 					});
 
-					if (!phone && !email) {
-						console.error('no phone or email');
-						showErrPopup('Пожалуйста, введите вашу почту или телефон!');
+					if (!contact) {
+						console.error('no contact');
+						showErrPopup('Пожалуйста, оставьте ваши контакты!');
 						return;
 					}
 
-					if (!phone) phone = "Не заполнено";
-					if (!name) name = "Не заполнено";
-					if (!email) email = "Не заполнено";
-					if (!msg) msg = "Не заполнено";
+					if (!driversNumber) driversNumber = "Не заполнено";
+					if (!watchTime) watchTime = "Не заполнено";
+					if (msg) msg = msg.value || "Не заполнено";
 
 					json = {
-						phone: phone,
-						name: name,
-						email: email,
+						contact: contact,
+						number: driversNumber,
+						time: watchTime,
 						msg: msg
 					};
 
@@ -106,9 +101,9 @@ window.onload = function() {
 					if (showErrPopup('Что-то не так на сервере. Позвоните нам.')) return true;
 				} else {
 					console.info(xhr.responseText);
-					location.assign("/thankyou");
-					//if (showSuccPopup(succMsg)) return true;
-					return true;
+					//location.assign("/thankyou");
+					if (showSuccPopup(succMsg)) return true;
+					//return true;
 				}
 			}
 		};
@@ -169,8 +164,6 @@ window.onload = function() {
 			}
 		};
 
-		popupsImgBindOpen();
-
 		function popupsImgBindOpen() {
 			var imgBtns = document.querySelectorAll('.js-show-img-popup'),
 					imgPopup = document.querySelector('.popup--js-img'),
@@ -198,168 +191,9 @@ window.onload = function() {
 			});
 		};
 
-		popupsServiceBindOpen();
-
-		function popupsServiceBindOpen() {
-			var serviceBtns = document.querySelectorAll('.js-show-service-popup'),
-					servicePopup = document.querySelector('.popup--js-service'),
-					servicePopupWrapper = servicePopup.querySelector('.popup__wrapper'),
-					serviceMoveBtns = servicePopup.querySelectorAll('.popup__button--js-move');
-
-			Array.prototype.forEach.call(serviceBtns, function(serviceBtn, index) {
-				serviceBtn.addEventListener('click', function(e) {
-					e.preventDefault();
-
-					var clickImg = this,
-							images = clickImg.dataset.img.split(', '),
-							folder = clickImg.dataset.folder,
-							servicePopupImg;
-
-					if (!images || !folder) {
-						return;
-					}
-
-					servicePopupWrapper.innerHTML = '';
-
-					Array.prototype.forEach.call(images, function(img, index) {
-						var imgSrc = '/static/img/' + clickImg.dataset.folder + '/' + images[index];
-
-						servicePopupImg = document.createElement('div');
-						servicePopupImg.className = 'popup__slide';
-						servicePopupImg.innerHTML = '<img class="popup__img" src="' + imgSrc + '">';
-						servicePopupWrapper.appendChild(servicePopupImg);
-					});
-
-					document.querySelector('.popup__slide').classList.add('popup__slide--active');
-					serviceMoveBtns[0].classList.add('popup__button--fade');
-					serviceMoveBtns[1].classList.remove('popup__button--fade');
-
-					showPopup(servicePopup);
-				});
-			});
-		};
-
-		popupsServiceMoveSlides();
-
-		function popupsServiceMoveSlides() {
-			var serviceMoveBtns = document.querySelectorAll('.popup__button--js-move'),
-					servicePopup = document.querySelector('.popup--js-service'),
-					servicePopupWrapper = servicePopup.querySelector('.popup__wrapper');
-
-			Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-				serviceMoveBtn.addEventListener('click', function(e) {
-					e.preventDefault();
-
-					var slides = servicePopupWrapper.querySelectorAll('.popup__slide'),
-							currentIndex,
-							newIndex,
-							slidesLength = slides.length,
-							btn = this;
-
-					if (slidesLength === 1) {
-						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-							serviceMoveBtn.classList.add('popup__button--fade');
-						});
-
-						return;
-					};
-
-					// Находим индекс текущего
-					Array.prototype.forEach.call(slides, function(slide, index) {
-						if (slide.classList.contains('popup__slide--active')) {
-							currentIndex = index;
-						};
-					});
-
-					if (serviceMoveBtn.classList.contains('popup__button-prev')) {
-						if (currentIndex === 0) {
-							return;
-						}
-
-						newIndex = currentIndex - 1;
-
-						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-							if (serviceMoveBtn.classList.contains('popup__button-next')) {
-								serviceMoveBtn.classList.remove('popup__button--fade');
-							};
-						});
-					};
-
-					if (serviceMoveBtn.classList.contains('popup__button-next')) {
-						if (currentIndex === slidesLength - 1) {
-							return;
-						}
-
-						newIndex = currentIndex + 1;
-
-						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-							if (serviceMoveBtn.classList.contains('popup__button-prev')) {
-								serviceMoveBtn.classList.remove('popup__button--fade');
-							};
-						});
-					};
-
-					slides[newIndex].classList.add('popup__slide--active');
-					slides[currentIndex].classList.remove('popup__slide--active');
-
-					// Навешиваем неактивный класс на кнопку назад
-					if (newIndex === 0) {
-						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-							if (serviceMoveBtn.classList.contains('popup__button-prev')) {
-								serviceMoveBtn.classList.add('popup__button--fade');
-							};
-						});
-					};
-
-					// Навешиваем неактивный класс на кнопку вперёд
-					if (newIndex === slidesLength - 1) {
-						Array.prototype.forEach.call(serviceMoveBtns, function(serviceMoveBtn, index) {
-							if (serviceMoveBtn.classList.contains('popup__button-next')) {
-								serviceMoveBtn.classList.add('popup__button--fade');
-							};
-						});
-					};
-
-					return;
-				});
-			});
-		};
-
-		//if (window.innerWidth > 600)
-		mainScreenToggleImg();
-
-		function mainScreenToggleImg() {
-			var container = document.querySelector('.main-screen__img'),
-					img = container.querySelector('img'),
-					imgNumber = 1,
-					path = '/static/img/main-screen/',
-					innerTimer, innerTimer2;
-
-			var timer = setInterval(function() {
-				imgNumber++;
-
-				if (imgNumber > 6) {
-					imgNumber = 1;
-				};
-
-				container.classList.add('main-screen__img--animated');
-				innerTimer = setTimeout(function() {
-					img.src = path + imgNumber + '.jpg';
-					innerTimer2 = setTimeout(function() {
-						container.classList.remove('main-screen__img--animated');
-					}, 400);
-				}, 350);
-			}, 3000);
-		};
-
 		// Попапы с заказами
 
-		bindPopup('order');
-		bindPopup('commerce');
-		bindPopup('gos');
-		bindPopup('contract');
 		bindPopup('call');
-		bindPopup('art');
 
 		function bindPopup(mod) {
 			var btns = document.querySelectorAll('.js-show-' + mod +'-popup'),
@@ -374,82 +208,5 @@ window.onload = function() {
 			});
 		};
 
-		resultBlocks();
-
-		function resultBlocks() {
-			var resultBlocks = document.querySelectorAll('.result');
-
-			Array.prototype.forEach.call(resultBlocks, function(result, index) {
-				var workImg = result.querySelector('.result__work img'),
-						workHeader = result.querySelector('.result__descr header'),
-						workMaterial = result.querySelector('.result__descr-material'),
-						workNumber = result.querySelector('.result__descr-number'),
-						slides = result.querySelectorAll('.result__slides-item');
-
-				Array.prototype.forEach.call(slides, function(slide, index) {
-					slide.addEventListener('click', function(e) {
-						e.preventDefault();
-
-						var slide = this,
-								newImg = slide.querySelector('img').src,
-								newHeader = slide.dataset.header,
-								newMaterial = slide.dataset.material,
-								newNumber = slide.dataset.number;
-
-						Array.prototype.forEach.call(slides, function(slide, index) {
-							slide.classList.remove('result__slides-item--active');
-						});
-
-						slide.classList.add('result__slides-item--active');
-
-						workImg.src = newImg;
-						workHeader.innerHTML = newHeader;
-						workMaterial.innerHTML = 'Материал: ' + newMaterial;
-						workNumber.innerHTML = 'Тираж ' + newNumber;
-					})
-				});
-			});
-		};
-
 	})();
 }
-
-var portfolio__top__own = new Swiper('.portfolio__top--js-own', {
-	nextButton: '.swiper-button-next',
-	prevButton: '.swiper-button-prev',
-	spaceBetween: 10,
-	effect: 'fade'
-});
-
-var portfolio__thumbs__own = new Swiper('.portfolio__thumbs--js-own', {
-	spaceBetween: 10,
-	centeredSlides: true,
-	slidesPerView: 4,
-	touchRatio: 0.2,
-	slideToClickedSlide: true
-});
-
-
-portfolio__top__own.params.control = portfolio__thumbs__own;
-portfolio__thumbs__own.params.control = portfolio__top__own;
-
-
-var portfolio__top__china = new Swiper('.portfolio__top--js-china', {
-	nextButton: '.swiper-button-next',
-	prevButton: '.swiper-button-prev',
-	spaceBetween: 10,
-	autoplay: 3000,
-	effect: 'fade'
-});
-
-var portfolio__thumbs__china = new Swiper('.portfolio__thumbs--js-china', {
-	spaceBetween: 10,
-	centeredSlides: true,
-	slidesPerView: 4,
-	touchRatio: 0.2,
-	slideToClickedSlide: true
-});
-
-portfolio__top__china.params.control = portfolio__thumbs__china;
-portfolio__thumbs__china.params.control = portfolio__top__china;
-

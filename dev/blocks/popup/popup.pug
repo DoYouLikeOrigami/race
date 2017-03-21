@@ -1,16 +1,3 @@
-.popup.popup--js-img
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	img.popup__img(src="")
-
-.popup.popup--service.popup--js-service
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	.popup__container
-		.popup__wrapper
-		.swiper-button-prev.swiper-button-white.popup__button-prev.popup__button--js-move.popup__button--fade
-		.swiper-button-next.swiper-button-white.popup__button-next.popup__button--js-move
-
 .popup.popup--js-order
 	a.popup__close.js--close-popup(href="#")
 		span &#10006;
@@ -24,17 +11,6 @@
 				input.form__input(type="email" name="email" placeholder="Ваш email")
 				input.btn.btn--main(type="submit" value="Получить макет")
 
-.popup.popup--js-art
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	.popup__body
-		header
-			small Оставьте свой электронный адрес и мы отправим на него готовые эскизы нашего дизайнера
-		.popup__right
-			form.form.form--column(action="/get-art" method="post" data-succmsg="Эскизы придут к Вам в течение 5 минут!")
-				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить эскизы")
-
 .popup.popup--js-error
 	a.popup__close.js--close-popup(href="#")
 		span &#10006;
@@ -42,8 +18,8 @@
 		header
 			em Ошибка:
 		header.popup--js-text
-			| Пожалуйста, введите вашу почту или телефон!
-		a.js--close-popup.btn.btn--main(href="#") Понял
+			| Пожалуйста, введите вашу&nbsp;почту или&nbsp;телефон!
+		a.js--close-popup.btn.btn--main(href="#") Ок
 
 .popup.popup--js-success
 	a.popup__close.js--close-popup(href="#")
@@ -53,76 +29,15 @@
 			em Успех!
 		header.popup--js-text
 			| Мы скоро свяжемся с Вами!
-		a.js--close-popup.btn.btn--main(href="#") Понял
+		a.js--close-popup.btn.btn--main(href="#") Ок
 
 .popup.popup--js-call
 	a.popup__close.js--close-popup(href="#")
 		span &#10006;
 	.popup__body
 		header
-			| Введите номер телефона и в течение 2 минут мы Вам перезвоним
+			| Введите номер телефона и в&nbsp;течение 5&nbsp;минут мы&nbsp;вам перезвоним
 		.popup__right
-			form.form.form--column(action="/callback" method="post" data-succmsg="Наш менеджер сейчас перезвонит вам!")
-				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-				input.btn.btn--main(type="submit" value="Заказать звонок")
-
-.popup.popup--js-contract
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	.popup__body
-		header
-			| Введите свой&nbsp;
-			span E-mail&nbsp;
-			| и мы&nbsp;отправим Вам шаблон договора
-		.popup__right
-			form.form.form--column(action="/get-contract" method="post" data-succmsg="Шаблон договора придет к Вам в течение 5 минут!")
-				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Получить договор")
-
-.popup.popup--js-commerce
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	.popup__body
-		header
-			| Оставьте заявку на подготовку коммерческого предложения
-		.popup__right
-			form.form.form--column.form--small(action="/get-commerce" method="post" data-succmsg="Мы ответим Вам на заявку в течение 5 минут!")
-				input.form__input(type="tel" name="phone" placeholder="Ваш номер телефона")
-				input.form__input(type="email" name="email" placeholder="Ваш email")
-				input.btn.btn--main(type="submit" value="Отправить заявку")
-
-.popup.popup--js-gos
-	a.popup__close.js--close-popup(href="#")
-		span &#10006;
-	header.popup__header
-		| Другие выполненные госзаказы
-	ul.popup__list
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1666000830315000012" target="_blank")
-						| Изготовление медалей для&nbsp;УО&nbsp;РАН
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=3543900001315000023" target="_blank")
-						| Поставка наградных комплектов: медалей «За&nbsp;вклад в&nbsp;развитие Убинского&nbsp;района»
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=2027413693415000041" target="_blank")
-						| Изготовление медалей для&nbsp;администрации города&nbsp;Уфа
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0102200001514000020" target="_blank")
-					| Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Минспорта Республики&nbsp;Бурятия
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0347200004214000071" target="_blank")
-						| Изготовление нагрудных знаков для&nbsp;пожарно-спасательного центра г.&nbsp;Магадан
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0156200004914000031" target="_blank")
-					| Изготовление нагрудных знаков «Ветеран труда Пермского&nbsp;края»
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0148200005014000064" target="_blank")
-					| Изготовление наградного комплекта «Сергий&nbsp;Радонежский»
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0122200001014000334" target="_blank")
-					| Изготовление нагрудных знаков и&nbsp;медалей для&nbsp;Правительства Хабаровского&nbsp;края
-		li
-			a(href="http://www.zakupki.gov.ru/epz/contract/contractCard/payment-info-and-target-of-order.html?reestrNumber=0129200003714000064" target="_blank")
-					| Изготовление нагрудных знаков Волгоградской областной&nbsp;Думы
-	.popup__actions
-		a.btn.btn--special.btn--small.js-show-commerce-popup(href="#") Оставить заявку на коммерческое предложение
+			form.js-submit-form.form.form--popup(action="/callback" method="post" data-succmsg="Наш менеджер сейчас перезвонит&nbsp;вам!")
+				input.form__input(type="tel" name="contact" placeholder="Ваш номер телефона")
+				button.btn.btn--main(type="submit") Заказать звонок

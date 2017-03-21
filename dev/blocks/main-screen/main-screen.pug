@@ -29,7 +29,7 @@ section.main-screen
 				.main-screen__top.main-screen__top--right
 					a.main-screen__tel(href="tel:+78128557575") +7 (812) 855-75-75
 					br
-					a.main-screen__btn(href="#") Заказать звонок
+					a.main-screen__btn.js-show-call-popup(href="#") Заказать звонок
 
 				.main-screen__right-content
 					h2.main-screen__right-header
@@ -38,7 +38,7 @@ section.main-screen
 						| цены осмотра
 
 					.main-screen__form
-						form(action="/count" method="post" data-succmsg="Мы получили вашу заявку. Наш менеджер скоро свяжется с Вами!")
+						form.js-submit-form(action="/count" method="post" data-succmsg="Мы&nbsp;получили вашу&nbsp;заявку. Наш&nbsp;менеджер скоро свяжется с&nbsp;вами!")
 
 							label
 								p Ваши контактные данные *

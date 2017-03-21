@@ -13,7 +13,7 @@
 
 	padding: 10px 15px
 
-	background: $akcent-bg
+	background: $secondary-color
 	box-shadow: 0px 0px 8px #000
 
 	z-index: 999
@@ -25,10 +25,6 @@
 	@media #{$mobile}
 		width: 100%
 		max-width: 100%
-
-	&--service
-		@media #{$tablet}
-			overflow: hidden
 
 	&--active
 		display: block
@@ -47,18 +43,13 @@
 		line-height: 40px
 		vertical-align: middle
 		text-align: center
+		color: $font-color
 
-		background-color: $akcent-bg
 		z-index: 5
-
-		span
-			color: $font-alt-color
 
 		&:hover
 			span
-				display: inline-block
-				transition: $effect-time ease-in
-				transform: rotate(360deg)
+				transition: $effect-time
 				color: $akcent-color
 
 	&__img
@@ -96,7 +87,6 @@
 			line-height: 40px
 			text-transform: uppercase
 			font-family: $headers-font
-			color: $font-alt-color
 			text-align: left
 
 			small
@@ -114,7 +104,7 @@
 
 			em
 				font-style: normal
-				color: $special-color
+				color: $akcent-color
 
 			span
 				white-space: nowrap
@@ -137,7 +127,6 @@
 
 		font-size: $fontXMd
 		line-height: 40px
-		color: $font-alt-color
 		font-family: $headers-font
 
 		margin: 20px 0

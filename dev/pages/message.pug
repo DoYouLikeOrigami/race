@@ -13,24 +13,18 @@ html(lang="ru")
 				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
 					| {{ text }}
 				| {% endif %}
-				| {% if phone %}
+				| {% if contact %}
 				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
-					| Телефон клиента: {{ phone }}
+					| Контакт: {{ contact }}
 				| {% endif %}
-				| {% if name %}
+				| {% if watchTime %}
 				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
-					| Имя клиента: {{ name }}
+					| Удобное время осмотра: {{ watchTime }}
 				| {% endif %}
-				| {% if email %}
+				| {% if number %}
 				p(style="display: block; margin: 20px; font-size: 20px; line-height: 25px; color: #505050;")
-					| Email клиента: {{ email }}
+					| Число водителей: {{ number }}
 				| {% endif %}
 				small(style="display: block; margin: 0 20px 10px; font-size: 18px; color: #808080;")
 					| Время отправки:
 					| {{ time }}
-				hr
-				div(style="display: block; padding: 20px;")
-					div(style="font-size: 18px; line-height: 20px; color: #808080;")
-						| Сайт с любовью сделан студией Jokerinteractive&nbsp;
-						a(href="http://xn--80arbbtbnkgfccv3a.xn--p1ai/" target="_blank" style="color: #EE0032; text-decoration: none; font-style: italic;") Хочукрутойсайт.рф
-

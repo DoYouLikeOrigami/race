@@ -1,20 +1,20 @@
 <html>
 <body>
-  <h2>{{ subject }}</h2>
+	<h2>{{ subject }}</h2>
 
-  {% if text %}
-    <h4>{{ text }}</h4>
-  {% endif %}
-  {% if phone %}
-    <p>Телефон: {{ phone }}</p>
-  {% endif %}
-  {% if name %}
-    <p>Отправитель:  {{ name }}</p>
-  {% endif %}
-  {% if email %}
-    <p>Email: {{ email }} </p>
-  {% endif %}
+	{% if text %}
+		<h4>{{ text }}</h4>
+	{% endif %}
+	{% if contact %}
+		<p>Контакт: {{ contact }}</p>
+	{% endif %}
+	{% if watchTime %}
+		<p>Удобное время осмотра:  {{ watchTime }}</p>
+	{% endif %}
+	{% if number %}
+		<p>Число водителей: {{ number }} </p>
+	{% endif %}
 
-  <small>Время отправки: {{ time }}</small>
+	<small>Время отправки: {{ time }}</small>
 </body>
 </html>
